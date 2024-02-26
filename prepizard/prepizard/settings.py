@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'prepizard.wsgi.application'
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.mysql',
-		'NAME': 'prepizard',
+		'NAME': 'prep',
 		'USER': 'root',
-		'PASSWORD': 'ashharshdesh',
-		'HOST':'prepizard.c10wcu2syao7.ap-south-1.rds.amazonaws.com',
+		'PASSWORD': 'jojo',
+		'HOST':'localhost',
 		'PORT':'3306',
 	}
 }
