@@ -21,8 +21,9 @@ def register(request):
     return render(request,'base/register.html',context)
 
 
-
-
-
 def onlineIDE(request):
     return render(request,'base/onlineIDE.html')
+
+
+def ide(request,pk):
+    return HttpResponse("This is ide of lang "+pk)

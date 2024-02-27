@@ -13,6 +13,7 @@ urlpatterns = [
 
 
     path('onlineIDE/',views.onlineIDE,name="onlineIDE"),
+    path('ide/<str:pk>/',views.ide,name="ide"),
 
     
 ]
