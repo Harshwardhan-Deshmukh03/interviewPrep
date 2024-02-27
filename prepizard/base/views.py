@@ -20,3 +20,9 @@ def register(request):
     context={}
     return render(request,'base/register.html',context)
 
+
+
+
+
+def onlineIDE(request):
+    return render(request,'base/onlineIDE.html')

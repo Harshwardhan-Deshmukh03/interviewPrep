@@ -10,6 +10,10 @@ urlpatterns = [
     path('logout/',views.logout,name="logout"),
     path('register/',views.register,name="register"),
 
+
+
+    path('onlineIDE/',views.onlineIDE,name="onlineIDE"),
+
     
 ]
 
