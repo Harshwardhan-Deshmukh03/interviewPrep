@@ -1,0 +1,142 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>PREPIZARD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href='{% static "css/login.css" %}''>
+
+</head>
+<!--  added header here ................................................................................. --> 
+
+<!--.............................................................................................. -->
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+   
+    <div class="right">
+
+      <div class="right-inner">
+         <div class="bg-illustration">
+            <img src="https://i.ibb.co/Pcg0Pk1/logo.png" alt="logo">
+              
+      
+            <div class="burger-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+         
+            
+      
+          </div>
+         
+       </div>
+   </div> 
+
+  
+   <div class="left">
+      <div class="left-inner">
+
+         <div class="sign-in-form active">
+            <h1>SIGN IN</h1>
+            
+
+            <div class="seperator">
+               <span> </span>
+            </div>
+
+            <form action="">
+               <div class="form-group">
+                  <label for="">E-mail</label>
+                  <input type="email" placeholder="@mail.com">
+               </div>
+               <div class="form-group">
+                  <label for="">Password</label>
+                  <input type="password" class="error" placeholder="password">
+
+                  <div class="error-text">Must be 8 characters at least</div>
+               </div>
+               <div class="form-group remember-forgot">
+                  <div class="remember">
+                     <!-- <input type="checkbox" id="yes" name="bydefault" value="yes" class="form-checkbox">
+                     <label for="yes">Remeber me</label> -->
+                  </div>
+                  <div class="forgot">
+                     <a href="javascript:;" class="forgot-pass-link">Forgot Password?</a>
+                  </div>
+               </div>
+               <div class="form-group">
+                  <button>SIGN IN</button>
+               </div>
+               <div class="create-aacount">
+                  Not registered yet? <a href="{% url 'register' %}" class="text-underline sign-up-form-btn"> Create an Account</a>
+               </div>
+            </form>
+         </div>
+
+         <div class="forgot-pass-form">
+            <h1>Forgot Password?</h1>
+
+            <form action="">
+               <div class="form-group">
+                  <label for="">E-mail</label>
+                  <input type="email" placeholder="@mail.com">
+               </div>
+               <div class="form-group">
+                RESET PASSWORD
+                  <!-- <button>RESET PASSWORD</button> -->
+               </div>
+               <div class="create-aacount">
+                  <a href="javascript:;" class="go-to-sign-in">Go Back</a>
+               </div>
+            </form>
+         </div>
+      </div>
+
+      <div class="sign-up-form">
+         <h1>Sign up </h1>
+
+         
+
+         <div class="seperator">
+            <span></span>
+         </div>
+
+         <form action="">
+            <div class="form-group">
+               <label for="">Name Surname</label>
+               <input type="input" placeholder="Name Surname">
+            </div>
+            <div class="form-group">
+               <label for="">E-mail</label>
+               <input type="email" placeholder="@mail.com">
+            </div>
+            <div class="form-group">
+               <label for="">Password</label>
+               <input type="password" placeholder="password">
+
+            </div>
+            <div class="form-group">
+               <button>SIGN UP</button>
+            </div>
+            <div class="create-aacount">
+               Already registered? <a href="javascript:;" class="text-underline sign-in-form-btn"> Sign In</a>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+
+<a href="javascript:;" class="dark-mode-btn">
+   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <path d="M21.55 1C23.15 3.4 24.1 6.3 24.1 9.4C24.15 17.75 17.3 24.5 8.85 24.5C6 24.5 3.3 23.7 1 22.35C3.6 27.5 8.95 31 15.15 31C23.9 31 31 24 31 15.35C31 8.95 27.1 3.45 21.55 1Z" fill="black" />
+   </svg>
+</a>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src='{% static "js/login.js" %}'></script>
+
+</body>
+</html>
