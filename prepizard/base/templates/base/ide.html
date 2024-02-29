@@ -1,0 +1,30 @@
+{% extends "base/main.html" %} {% block content %}
+<hr />
+this is page for language {{pk}} language: {{lang}}
+<br />
+language_code:{{lang_code}}
+<br />
+
+<form action="" method="POST">
+  {% csrf_token %}
+
+  <label for="w3review"> Code </label>
+
+  <textarea id="code" name="code" rows="4" cols="50">
+{{snippet}}
+</textarea
+  >
+  <label for="input"> Input </label>
+
+  <textarea id="input" name="input" rows="4" cols="50">
+    {{input_data}}
+  </textarea>
+
+  <textarea id="myTextarea" readonly>
+    {{output}}
+  </textarea>
+  
+
+  <input type="submit" name="submit" />
+</form>
+{% endblock %}
