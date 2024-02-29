@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import render, redirect 
+from .utils import *
 # Create your views here.
 
 def home(request):
@@ -26,4 +27,33 @@ def onlineIDE(request):
 
 
 def ide(request,pk):
-    return HttpResponse("This is ide of lang "+pk)
+    try:
+        lang,lang_code,snippet=lookup(int(pk))
+    except:
+        return HttpResponse("Bad request")
+    # return HttpResponse("This is ide of lang "+pk)
+
+    if request.method=='POST':
+         code = request.POST.get('code', '')
+         input_data = request.POST.get('input', '')
+         output=output_response_ide(lang_code,code,input_data)
+         print(output)
+         context={
+            "pk":pk,
+            "lang":lang,
+            "lang_code":lang_code,
+            "snippet":code,
+            "input_data":input_data,
+            "output":output,
+            }
+         return render(request,'base/ide.html',context)
+    context={
+        "pk":pk,
+        "lang":lang,
+        "lang_code":lang_code,
+        "snippet":snippet,
+        "input_data":"",
+        "output":""
+
+    }
+    return render(request,"base/ide.html",context)
