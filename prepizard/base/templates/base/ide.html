@@ -1,30 +1,39 @@
-{% extends "base/main.html" %} {% block content %}
-<hr />
-this is page for language {{pk}} language: {{lang}}
-<br />
-language_code:{{lang_code}}
-<br />
 
-<form action="" method="POST">
-  {% csrf_token %}
+{% extends "base/main.html" %}
+{% load static %}
 
-  <label for="w3review"> Code </label>
+{% block content %}
+<hr>
 
-  <textarea id="code" name="code" rows="4" cols="50">
-{{snippet}}
-</textarea
-  >
-  <label for="input"> Input </label>
+{% comment %} <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href='{% static "css/ide.css" %}'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    <title>Prepizard</title>
+</head>  {% endcomment %}
+<body class="light-mode">
+<div class="container">
+     
+    <link rel="stylesheet" href='{% static "css/ide.css" %}'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    
+    
+    <div class="editor">
+        <div class="button-group">
+            <button class="btn-run">Run </button>
+            <button class="toggle-mode">mode</button>
+        </div>
+        <textarea class="code-area" rows="20" placeholder="Write your code here..."></textarea>
+    </div>
+    <div class="controls">
+        <textarea class="input" rows="5" placeholder="Provide input (if needed)"></textarea>
+        <textarea class="output" rows="5" placeholder="Output will be shown here" readonly></textarea>
 
-  <textarea id="input" name="input" rows="4" cols="50">
-    {{input_data}}
-  </textarea>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+<script src='{% static "js/ide.js" %}'></script>
 
-  <textarea id="myTextarea" readonly>
-    {{output}}
-  </textarea>
-  
-
-  <input type="submit" name="submit" />
-</form>
+</body>
 {% endblock %}
+
