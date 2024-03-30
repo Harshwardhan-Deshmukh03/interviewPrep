@@ -10,6 +10,8 @@
     height: 100vh;
 }
 
+
+
 .container {
     /* font-family: 'Courier New', Courier, monospace; */
     flex-grow: 1;
@@ -68,7 +70,7 @@
 }
 
 /* .controls {
-    width: 80%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -116,16 +118,25 @@
 }
 
 .editor {
-    width: 80%;
+    width: 100%;
     margin-bottom: 10px; /* Reduce the margin between the code area and the controls */
 }
 
 .controls {
-    width: 80%;
+    width: 100%;
     margin-top: -10px; /* Reduce the space between the code area and the controls */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+
+form {
+    width: 1000%;
+    max-width: 1400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
 
