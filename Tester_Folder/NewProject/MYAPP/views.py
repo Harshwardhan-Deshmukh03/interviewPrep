@@ -9,5 +9,7 @@ def home(request):
     return HttpResponse("HomePage")
 def contact(request):
     return render(request,'MYAPP/dashboard.html')
+def contact2(request):
+    return render(request,'MYAPP/dashboard.html')
 
 
