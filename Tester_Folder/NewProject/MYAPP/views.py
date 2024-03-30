@@ -8,6 +8,6 @@ from django.http import HttpResponse
 def home(request):
     return HttpResponse("HomePage")
 def contact(request):
-    return HttpResponse("ContactPage")
+    return render(request,'MYAPP/dashboard.html')
 
 
