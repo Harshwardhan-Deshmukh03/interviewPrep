@@ -78,14 +78,16 @@ WSGI_APPLICATION = 'prepizard.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.mysql',
 		'NAME': 'prep',
 		'USER': 'root',
-		'PASSWORD': 'Areum_02',
-		'HOST':'localhost',
-		'PORT':'3306',
+		'PASSWORD': 'Cleopatra#123',
+    	"HOST": "127.0.0.1",
+		'PORT':'8000',
 	}
 }
 
