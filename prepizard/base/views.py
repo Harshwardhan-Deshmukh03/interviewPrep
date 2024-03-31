@@ -57,3 +57,8 @@ def ide(request,pk):
 
     }
     return render(request,"base/ide.html",context)
+
+
+
+def land(request):
+    return render(request,'base/land.html')
