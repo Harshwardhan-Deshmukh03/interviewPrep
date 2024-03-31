@@ -24,6 +24,8 @@ def register(request):
 
 def onlineIDE(request):
     return render(request,'base/onlineIDE.html')
+def land(request):
+    return render(request,'base/landing_page.html')
 
 
 def ide(request,pk):
