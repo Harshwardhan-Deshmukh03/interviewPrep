@@ -7,8 +7,8 @@ urlpatterns = [
     path('',views.userhome,name="userhome"),
     path('adminhome/',views.adminhome,name="adminhome"),
 
-    path('login/',views.login,name="login"),
-    path('logout/',views.logout,name="logout"),
+    path('login/',views.loginPage,name="login"),
+    path('logout/',views.logoutUser,name="logout"),
     path('register/',views.register,name="register"),
 
 
@@ -16,10 +16,15 @@ urlpatterns = [
 
     path('onlineIDE/',views.onlineIDE,name="onlineIDE"),
     path('ide/<str:pk>/',views.ide,name="ide"),
+
+
+    path('mixide/',views.mixide,name="mix"),
+    path('adminhome/mixide/',views.mixide,name="mixide"),
+    # path('idecomb/',views.idecomb,name="comb"),
     
 
 
-    
+
     path('mcq/' , views.mcq ,name = "mcq"),
     path('profile/' , views.profile ,name = "profile"),
 

@@ -2,19 +2,27 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import render, redirect 
 from .utils import *
+from django.contrib import messages
+from .decorators import *
+from django.contrib.auth import authenticate,login,logout
+
+
+
 # Create your views here.
 
+
+
+# 
+
+@login_required(login_url='login')
 def home(request):
     return render(request,'base/home.html')
 
 
-def login(request):
-    context={}
-    return render(request,'base/login.html',context)
+# def login(request):
+#     context={}
+#     return render(request,'base/login.html',context)
 
-def logout(request):
-    context={}
-    return HttpResponse("This is logout page")
 
 
 def register(request):
@@ -23,42 +31,40 @@ def register(request):
 
 
 
-# @unauthenticated_user
-# def registerPage(request):
-#     form=CreateUserForm()
-#     if request.method=='POST':
-#         form = CreateUserForm(request.POST)
-#         if form.is_valid():
-#             user= form.save()
-#             username=form.cleaned_data.get('username')
-            
-#             messages.success(request, "Account was created for "+username )
-#             return redirect('login')
-#     context={'form':form}
-#     return render(request,'accounts/register.html',context)
+# 
 
 
+@unauthenticated_user
+def loginPage(request):
+    if request.method=="POST":
+        username=request.POST.get('username')
+        password=request.POST.get('password')
+        print(username)
+        print(password)
 
-# @unauthenticated_user
-# def loginPage(request):
-#     if request.method=="POST":
-#         username=request.POST.get('username')
-#         password=request.POST.get('password')
-
-
-#         user=authenticate(request,username=username,password=password)
-#         if user is not None:
-#             login(request,user)
-#             return redirect('home')
-#         else:
-#             messages.info(request,"Username or password is incorrect")
-#             return redirect('login')
-#     context={}
-#     return render(request,'accounts/login.html',context)
+        user=authenticate(request,username=username,password=password)
+        if user is not None:
+            login(request,user)
+            if request.user.groups.exists():
+                group=request.user.groups.all()[0].name
+            if group == 'Admin':
+                return redirect('adminhome')
+            return redirect('userhome')
+        else:
+            messages.info(request,"Username or password is incorrect")
+            return redirect('login')
+    context={}
+    return render(request,'base/login.html',context)
 
 
 
 
+
+
+
+def logoutUser(request):
+    logout(request)
+    return redirect('login')
 
 
 
@@ -68,7 +74,8 @@ def register(request):
 
 
 
-
+def mixide(request):
+    return render(request, 'base/mixide.html')
 
 
 
@@ -112,14 +119,24 @@ def ide(request,pk):
     }
     return render(request,"base/ide.html",context)
 
+
+
+
+# 
+
+@login_required(login_url='login')
 def userhome(request):
     return render(request,'base/userhome.html')
 
+
+
+# 
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['Admin'])
 def adminhome(request):
     return render(request,'base/adminhome.html')
 
-def land(request):
-    return render(request,'base/land.html')
 
 def mcq(request):
     return render(request,'base/mcq.html')
