@@ -36,13 +36,15 @@ def ide(request,pk):
     if request.method=='POST':
          code = request.POST.get('code', '')
          input_data = request.POST.get('input', '')
-         output=output_response_ide(lang_code,code,input_data)
+         print(code)
+         print(code.strip())
+         output=output_response_ide(lang_code,code.strip(),input_data)
          print(output)
          context={
             "pk":pk,
             "lang":lang,
             "lang_code":lang_code,
-            "snippet":code,
+            "snippet":code.strip(),
             "input_data":input_data,
             "output":output,
             }
@@ -51,7 +53,7 @@ def ide(request,pk):
         "pk":pk,
         "lang":lang,
         "lang_code":lang_code,
-        "snippet":snippet,
+        "snippet":snippet.strip(),
         "input_data":"",
         "output":""
 
