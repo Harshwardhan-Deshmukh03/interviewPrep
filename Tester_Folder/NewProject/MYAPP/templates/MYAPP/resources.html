@@ -1,0 +1,131 @@
+{% load static %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" crossorigin="anonymous">
+<link rel="stylesheet" href='{% static "css/resources.css" %}'>
+
+<div class="container2">
+  <div class="welcome">
+    <div class="content rounded-3 p-3">
+      <h1 class="fs-3">Welcome to Cheat Sheet</h1>
+      <p class="mb-0">Hello Jone Doe, welcome to your awesome dashboard!</p>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+  <div class="intro-text">
+    <p><strong>Gauge.</strong> A slick responsive theme equipped with
+      charts and gauges, as well as standard layouts for business
+      or portflio sites.</p>
+  </div>
+  </div>
+  
+  <!--site analysis section-->
+  <div class="container">
+  <div class="row">
+    <div class="column">
+     <a href="http://127.0.0.1:8000/index/">
+      <div class="card">
+        <div class="player">
+
+        <div class="player-text">Data Science</div>
+        </div>
+     </a>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <div class="player">
+        <div class="right-side-pageviews"></div>
+        <div class="left-side" style="transform: rotate(189deg)"></div>
+        <div class="player-text">29</div>
+      </div>
+        <p>Pageviews</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <div class="player">
+        <div class="right-side-online"></div>
+        <div class="left-side" style="transform: rotate(189deg)"></div>
+        <div class="player-text">76</div>
+      </div>
+        <p>Online Now</p>
+    </div>
+  </div>
+  
+  <div class="column">
+      <div class="card">
+         <div class="player">
+          <div class="right-side-logged"></div>
+          <div class="left-side" style="transform: rotate(189deg)"></div>
+          <div class="player-text">86</div>
+       </div>
+      <p>Logged In</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  <!--END OF site analysis section-->
+  
+  <!--Social Status section-->
+  <div class="container">
+  <div class="row">
+    <div class="column">
+      <div class="social twitter">
+        <h3>1,239</h3>
+        <p><i class="fa fa-bar-chart" style="font-size:24px"></i></p>
+        <p><i class="fa fa-twitter"> Tweets</i></p>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="social share">
+        <h3>2,911</h3>
+        <p><i class="fa fa-bar-chart" style="font-size:24px"></i></p>
+        <p><i class="fa fa-share-square"> Shares</i></p>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="social facebook">
+        <h3>2,031</h3>
+        <p><i class="fa fa-bar-chart" style="font-size:24px"></i></p>
+        <p><i class="fa fa-facebook-f"> Likes</i></p>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="social google">
+        <h3>291</h3>
+        <p><i class="fa fa-bar-chart" style="font-size:24px"></i></p>
+        <p><i class="fa fa-google-plus"></i></p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--END OF Social Status section-->
+  
+  <!--line and pie charts section-->
+  <div class="container">
+  <div class="row-chart">
+    <div id="chartContainer" style="height: 240px; width: 800px;"></div>
+    <div id="piechart"></div>
+  </div>
+  </div>
+  <!--END OF line and pie charts section-->
+  
+
+
+<script src='{% static "js/resources.js" %}'></script>
+<script src="https://www.gstatic.com/charts/loader.js" crossorigin="anonymous"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
