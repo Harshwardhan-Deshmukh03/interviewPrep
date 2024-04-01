@@ -1,21 +1,33 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const codeArea = document.querySelector('.code-area');
-    const outputArea = document.querySelector('.output');
-    const inputArea = document.querySelector('.input');
-    const runButton = document.querySelector('.btn-run');
+document.addEventListener("DOMContentLoaded", function() {
     const toggleModeButton = document.querySelector('.toggle-mode');
+    const body = document.body;
 
-    runButton.addEventListener('click', function () {
-        // Simulate running the code (Example: just echoing the input)
-        outputArea.textContent = inputArea.value;
-        // Syntax highlighting
-        hljs.highlightBlock(outputArea);
+    // Check if dark mode preference is already set
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+    // Set initial mode based on preference
+    if (isDarkMode) {
+        enableDarkMode();
+    }
+
+    // Toggle dark mode
+    toggleModeButton.addEventListener('click', function() {
+        if (isDarkMode) {
+            disableDarkMode();
+        } else {
+            enableDarkMode();
+        }
     });
 
-    toggleModeButton.addEventListener('click', function () {
-        document.body.classList.toggle('dark-mode');
-    });
+    function enableDarkMode() {
+        body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'true');
+        isDarkMode = true;
+    }
 
-    // Initial syntax highlighting
-    hljs.highlightBlock(codeArea);
+    function disableDarkMode() {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'false');
+        isDarkMode = false;
+    }
 });

@@ -22,6 +22,58 @@ def register(request):
     return render(request,'base/register.html',context)
 
 
+
+# @unauthenticated_user
+# def registerPage(request):
+#     form=CreateUserForm()
+#     if request.method=='POST':
+#         form = CreateUserForm(request.POST)
+#         if form.is_valid():
+#             user= form.save()
+#             username=form.cleaned_data.get('username')
+            
+#             messages.success(request, "Account was created for "+username )
+#             return redirect('login')
+#     context={'form':form}
+#     return render(request,'accounts/register.html',context)
+
+
+
+# @unauthenticated_user
+# def loginPage(request):
+#     if request.method=="POST":
+#         username=request.POST.get('username')
+#         password=request.POST.get('password')
+
+
+#         user=authenticate(request,username=username,password=password)
+#         if user is not None:
+#             login(request,user)
+#             return redirect('home')
+#         else:
+#             messages.info(request,"Username or password is incorrect")
+#             return redirect('login')
+#     context={}
+#     return render(request,'accounts/login.html',context)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def onlineIDE(request):
     return render(request,'base/onlineIDE.html')
 
@@ -59,3 +111,24 @@ def ide(request,pk):
 
     }
     return render(request,"base/ide.html",context)
+
+def userhome(request):
+    return render(request,'base/userhome.html')
+
+def adminhome(request):
+    return render(request,'base/adminhome.html')
+
+def land(request):
+    return render(request,'base/land.html')
+
+def mcq(request):
+    return render(request,'base/mcq.html')
+
+def profile(request):
+    return render(request,'base/profile.html')
+
+def python(request):
+    return render(request,'base/python.html')
+
+def practice(request):
+    return render(request,'base/practice.html')
