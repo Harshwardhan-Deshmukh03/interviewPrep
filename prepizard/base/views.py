@@ -14,7 +14,7 @@ from django.contrib.auth import authenticate,login,logout
 
 # 
 
-# @login_required(login_url='login')
+@login_required(login_url='login')
 def home(request):
     return render(request,'base/home.html')
 
@@ -34,7 +34,7 @@ def register(request):
 # 
 
 
-# @unauthenticated_user
+@unauthenticated_user
 def loginPage(request):
     if request.method=="POST":
         username=request.POST.get('username')
@@ -124,7 +124,7 @@ def ide(request,pk):
 
 # 
 
-# @login_required(login_url='login')
+@login_required(login_url='login')
 def userhome(request):
     return render(request,'base/userhome.html')
 
@@ -132,8 +132,8 @@ def userhome(request):
 
 # 
 
-# @login_required(login_url='login')
-# @allowed_users(allowed_roles=['Admin'])
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['Admin'])
 def adminhome(request):
     return render(request,'base/adminhome.html')
 
