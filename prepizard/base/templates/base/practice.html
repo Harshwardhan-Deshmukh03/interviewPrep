@@ -35,6 +35,7 @@
           <nav class="menu open-current-submenu">
             <ul>
               <li class="menu-header"><span> GENERAL </span></li>
+
               <li class="menu-item sub-menu" id="userMenu">
                 <a href="#">
                     <span class="menu-icon">
@@ -45,7 +46,7 @@
                 <div class="sub-menu-list" style="display: none;">
                     <ul>
                         <li class="menu-item">
-                            <a href="#">Profile</a>
+                            <a href="{% url 'profile' %}">Profile</a>
                         </li>
                         <li class="menu-item">
                             <a href="#">Logout</a>
@@ -55,7 +56,7 @@
             </li>
               
               <li class="menu-item sub-menu">
-                <a href="#">
+                <a href="{% url 'about' %}">
                   <span class="menu-icon">
                    <i class="fa-solid fa-user-group" style="color: #e6e6e6;"></i>
                   </span>
@@ -68,18 +69,10 @@
                   
                 </div>
               </li>
-              {% comment %} <li class="menu-item sub-menu">
-                <a href="#">
-                  <span class="menu-icon">
-                   <i class="fa-solid fa-user-magnifying-glass" style="color: #e6e6e6;"></i>
-                  </span>
-                  <span class="menu-title">Practice</span>
-                </a>
-                
-              </li> {% endcomment %}
+              
               
               <li class="menu-item sub-menu">
-                <a href="#">
+                <a href="{% url 'about' %}" >
                   <span class="menu-icon">
                     <i class="ri-global-fill"></i>
                   </span>
@@ -90,7 +83,7 @@
                 </div>
               </li>
               <li class="menu-item sub-menu">
-                <a href="#">
+                <a href="{% url 'resources' %}">
                   <span class="menu-icon">
                     <i class="ri-book-2-fill"></i>
                   </span>
@@ -101,7 +94,7 @@
                 </div>
               </li>
               <li class="menu-item sub-menu">
-                <a href="#">
+                <a href="{% url 'onlineIDE' %}">
                   <span class="menu-icon">
                    <i class="ri-paint-brush-fill"></i>
                   </span>

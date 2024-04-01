@@ -149,3 +149,10 @@ def python(request):
 
 def practice(request):
     return render(request,'base/practice.html')
+
+
+def about(request):
+    return render(request, 'about.html')
+
+def resources(request):
+    return render(request, 'resources.html')
