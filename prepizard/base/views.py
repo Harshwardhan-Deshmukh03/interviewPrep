@@ -65,3 +65,12 @@ def land(request):
 
 def mcq(request):
     return render(request,'base/mcq.html')
+
+def profile(request):
+    return render(request,'base/profile.html')
+
+def python(request):
+    return render(request,'base/python.html')
+
+def practice(request):
+    return render(request,'base/practice.html')

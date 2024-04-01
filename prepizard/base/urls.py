@@ -17,6 +17,10 @@ urlpatterns = [
     #added new
     path('land/' , views.land ,name = "land"),
     path('mcq/' , views.mcq ,name = "mcq"),
+    path('profile/' , views.profile ,name = "profile"),
+
+    path('python/' , views.python ,name = "python"),
+    path('practice/' , views.practice ,name = "practice"),
     
 
     
