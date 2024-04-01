@@ -16,6 +16,7 @@ urlpatterns = [
     path('ide/<str:pk>/',views.ide,name="ide"),
     #added new
     path('land/' , views.land ,name = "land"),
+    path('mcq/' , views.mcq ,name = "mcq"),
     
 
     

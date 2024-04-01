@@ -770,7 +770,9 @@
       240deg,
       rgb(124, 136, 224) 0%,
       #c3f4fc 100%
+    
     );
+    width : 100% ;
   }
   
   .activity-two {
@@ -1282,6 +1284,7 @@
     .left-bottom {
       grid-template-columns: 100%;
       gap: 0;
+      width :100%;
     }
   
     .right-content {

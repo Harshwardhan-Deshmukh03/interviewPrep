@@ -62,3 +62,6 @@ def ide(request,pk):
 
 def land(request):
     return render(request,'base/land.html')
+
+def mcq(request):
+    return render(request,'base/mcq.html')
