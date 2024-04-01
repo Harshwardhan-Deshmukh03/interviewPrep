@@ -1,0 +1,5629 @@
+{% comment %} {% extends "base/main.html" %} {% endcomment %}
+{% load static %}
+
+
+
+<link rel="stylesheet" href='{% static "css/adminhome.css" %}'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css'>
+<link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
+<link rel='stylesheet' href='https://fonts.googleaphttps://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.cssis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-P0D0rqiGpblz5bd+VZ/euHJh2Q7gJXkecqpgQ7pvu3qJbV7axu8fMMDZ7xbOEF+fmBtHKfYXscBdb7m3xq3zJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+{% block content %}
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css'>
+<link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
+<link rel='stylesheet' href='https://fonts.googleaphttps://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.cssis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-P0D0rqiGpblz5bd+VZ/euHJh2Q7gJXkecqpgQ7pvu3qJbV7axu8fMMDZ7xbOEF+fmBtHKfYXscBdb7m3xq3zJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<div class="layout has-sidebar fixed-sidebar fixed-header">
+    <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
+      <a id="btn-collapse" class="sidebar-collapser"><i class="ri-arrow-left-s-line"></i></a>
+      <div class="image-wrapper">
+        <img src="assets/images/sidebar-bg.jpg" alt="sidebar background" />
+      </div>
+      <div class="sidebar-layout">
+        <div class="sidebar-header">
+          <div class="pro-sidebar-logo">
+            <div>P</div>
+            <h5>PrepIzard</h5>
+          </div>
+        </div>
+        <div class="sidebar-content">
+          <nav class="menu open-current-submenu">
+            <ul>
+              <li class="menu-header"><span> GENERAL </span></li>
+              <li class="menu-item sub-menu">
+                <a href="#">
+                  <span class="menu-icon">
+                   <i class="fa-solid fa-user" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">User</span>
+                  
+                </a>
+                <div class="sub-menu-list">
+                  <ul>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Grid</span>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Layout</span>
+                      </a>
+                    </li>
+                    <li class="menu-item sub-menu">
+                      <a href="#">
+                        <span class="menu-title">Forms</span>
+                      </a>
+                      <div class="sub-menu-list">
+                        <ul>
+                          <li class="menu-item">
+                            <a href="#">
+                              <span class="menu-title">Input</span>
+                            </a>
+                          </li>
+                          <li class="menu-item">
+                            <a href="#">
+                              <span class="menu-title">Select</span>
+                            </a>
+                          </li>
+                          <li class="menu-item sub-menu">
+                            <a href="#">
+                              <span class="menu-title">More</span>
+                            </a>
+                            <div class="sub-menu-list">
+                              <ul>
+                                <li class="menu-item">
+                                  <a href="#">
+                                    <span class="menu-title">CheckBox</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item">
+                                  <a href="#">
+                                    <span class="menu-title">Radio</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item sub-menu">
+                                  <a href="#">
+                                    <span class="menu-title">Want more ?</span>
+                                    <span class="menu-suffix">&#x1F914;</span>
+                                  </a>
+                                  <div class="sub-menu-list">
+                                    <ul>
+                                      <li class="menu-item">
+                                        <a href="#">
+                                          <span class="menu-prefix">&#127881;</span>
+                                          <span class="menu-title">You made it </span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              
+              <li class="menu-item sub-menu">
+                <a href="#">
+                  <span class="menu-icon">
+                   <i class="fa-solid fa-user-group" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">About Us</span>
+                  <span class="menu-suffix">
+                    <span class="badge primary">Hot</span>
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  <ul>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Grid</span>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Layout</span>
+                      </a>
+                    </li>
+                    <li class="menu-item sub-menu">
+                      <a href="#">
+                        <span class="menu-title">Forms</span>
+                      </a>
+                      <div class="sub-menu-list">
+                        <ul>
+                          <li class="menu-item">
+                            <a href="#">
+                              <span class="menu-title">Input</span>
+                            </a>
+                          </li>
+                          <li class="menu-item">
+                            <a href="#">
+                              <span class="menu-title">Select</span>
+                            </a>
+                          </li>
+                          <li class="menu-item sub-menu">
+                            <a href="#">
+                              <span class="menu-title">More</span>
+                            </a>
+                            <div class="sub-menu-list">
+                              <ul>
+                                <li class="menu-item">
+                                  <a href="#">
+                                    <span class="menu-title">CheckBox</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item">
+                                  <a href="#">
+                                    <span class="menu-title">Radio</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item sub-menu">
+                                  <a href="#">
+                                    <span class="menu-title">Want more ?</span>
+                                    <span class="menu-suffix">&#x1F914;</span>
+                                  </a>
+                                  <div class="sub-menu-list">
+                                    <ul>
+                                      <li class="menu-item">
+                                        <a href="#">
+                                          <span class="menu-prefix">&#127881;</span>
+                                          <span class="menu-title">You made it </span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item sub-menu">
+                <a href="#">
+                  <span class="menu-icon">
+                   <i class="fa-solid fa-user-magnifying-glass" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Practice</span>
+                </a>
+                
+              </li>
+              
+              <li class="menu-item sub-menu">
+                <a href="#">
+                  <span class="menu-icon">
+                    <i class="ri-global-fill"></i>
+                  </span>
+                  <span class="menu-title">Practice</span>
+                </a>
+                <div class="sub-menu-list">
+                  <ul>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Google maps</span>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Open street map</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item sub-menu">
+                <a href="#">
+                  <span class="menu-icon">
+                    <i class="ri-book-2-fill"></i>
+                  </span>
+                  <span class="menu-title">Resources</span>
+                </a>
+                <div class="sub-menu-list">
+                  <ul>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Pie chart</span>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Line chart</span>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Bar chart</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item sub-menu">
+                <a href="#">
+                  <span class="menu-icon">
+                   <i class="ri-paint-brush-fill"></i>
+                  </span>
+                  <span class="menu-title">onlineIDE</span>
+                </a>
+                <div class="sub-menu-list">
+                  <ul>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Dark</span>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Light</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-header" style="padding-top: 20px"><span> EXTRA </span></li>
+              
+            </ul>
+          </nav>
+        </div>
+        
+      </div>
+    </aside>
+    <div id="overlay" class="overlay"></div>
+    <div class="layout">
+      <span class="content">
+      
+            <div>
+              <!-- <nav class="nav navbar-top primary">
+                <a  href="/"><img src="assets/images/ide_logo1.png" alt="Online IDE" class="nav_logo" width="185" height="40"></a>
+            </nav> -->
+        
+              
+              <div class="main-content d-flex">
+                <div id="sidebar-left-ad">
+                  <!-- Ezoic - sidebar_left - sidebar -->
+                  <span id="ezoic-pub-ad-placeholder-101"></span
+                  ><span
+                    data-ez-ph-id="101"
+                    style="
+                      margin-top: 10px !important;
+                      margin-bottom: 10px !important;
+                      min-width: 160px;
+                      min-height: 600px;
+                      max-width: 100% !important;
+                      padding: 0;
+                      float: none !important;
+                      margin-right: auto !important;
+                      margin-left: auto !important;
+                      display: block !important;
+                      text-align: center !important;
+                      line-height: 0px;
+                    "
+                  ></span>
+                  <!-- End Ezoic - sidebar_left - sidebar -->
+                </div>
+                <div class="container" id="container">
+                  <!-- Ezoic - under_page_title - under_page_title -->
+                  <!-- <div id="ezoic-pub-ad-placeholder-103"> </div> -->
+                  <!-- End Ezoic - under_page_title - under_page_title -->
+                  <div id="header-control">
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-default btn-custom"
+                        id="open_file"
+                        onclick="openFile(dispFile)"
+                        data-toggle="tooltip"
+                        data-container="body"
+                        data-placement="right"
+                        title="Open File from Disk"
+                      >
+                        <i class="fas fa-folder-open"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-default btn-custom"
+                        onclick="save_code_modal()"
+                        id="save_file"
+                        data-toggle="tooltip"
+                        data-container="body"
+                        data-placement="right"
+                        title="Save File to Disk - F9"
+                      >
+                        <i class="fas fa-save"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-default btn-custom"
+                        onclick="share_code_modal()"
+                        data-toggle="tooltip"
+                        data-container="body"
+                        data-placement="right"
+                        title="Share Code - F10"
+                      >
+                        <i class="fas fa-share-alt"></i>
+                      </button>
+                    </div>
+        
+                    <div class="btn-group setting-btn" role="group">
+                      <button
+                        type="button"
+                        class="btn btn-default"
+                        id="toggle-theme"
+                        data-toggle="tooltip"
+                        data-container="body"
+                        data-placement="left"
+                        title="Change Theme"
+                      >
+                        <i class="fas fa-moon fa-lg"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-default"
+                        onclick="about_modal()"
+                        id="info"
+                        data-toggle="tooltip"
+                        data-container="body"
+                        data-placement="left"
+                        title="About Site"
+                      >
+                        <i class="fas fa-info-circle"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-default"
+                        onclick="ace_setting()"
+                        id="setting"
+                        data-toggle="tooltip"
+                        data-container="body"
+                        data-placement="left"
+                        title="Settings"
+                      >
+                        <i class="fas fa-cogs"></i>
+                      </button>
+                    </div>
+        
+                    <div
+                      class="ui fluid selection dropdown"
+                      id="lang-select"
+                      data-toggle="popover"
+                      data-trigger="manual"
+                      data-placement="left"
+                      data-content="Select the programming language"
+                    >
+                      <i class="dropdown icon"></i>
+                      <div class="default text">Language</div>
+                      <div class="menu">
+                        <div class="item" data-value="c">
+                          <img
+                            class="ui mini image"
+                            alt="C"
+                            src="https://www.online-ide.com/assets/images/languages/c.svg"
+                          />C
+                        </div>
+                        <div class="item" data-value="cpp">
+                          <img
+                            class="ui mini image"
+                            alt="C++"
+                            src="https://www.online-ide.com/assets/images/languages/cpp.svg"
+                          />C++
+                        </div>
+                        <div class="item" data-value="python3">
+                          <img
+                            class="ui mini image"
+                            alt="Python3"
+                            src="https://www.online-ide.com/assets/images/languages/python.svg"
+                          />Python 3
+                        </div>
+                        <div class="item" data-value="java">
+                          <img
+                            class="ui mini image"
+                            alt="Java"
+                            src="https://www.online-ide.com/assets/images/languages/java.svg"
+                          />Java
+                        </div>
+                        <div class="item" data-value="php">
+                          <img
+                            class="ui mini image"
+                            alt="php"
+                            src="https://www.online-ide.com/assets/images/languages/php.svg"
+                          />PHP
+                        </div>
+                        <div class="item" data-value="ruby">
+                          <img
+                            class="ui mini image"
+                            alt="Ruby"
+                            src="https://www.online-ide.com/assets/images/languages/ruby.svg"
+                          />Ruby
+                        </div>
+                        <!-- <div class="item" data-value="javascript"><img class="ui mini image" alt="Javascript" src="assets/images/languages/javascript.svg">JavaScript</div> -->
+                        <!-- <div class="item" data-value="csharp"><img class="ui mini image" alt="C#" src="assets/images/languages/csharp.svg">C#</div> -->
+                        <div class="item" data-value="rlang">
+                          <img
+                            class="ui mini image"
+                            alt="R"
+                            src="https://www.online-ide.com/assets/images/languages/rlang.svg"
+                          />R
+                        </div>
+                        <div class="item" data-value="golang">
+                          <img
+                            class="ui mini image"
+                            alt="Go-Lang"
+                            src="https://www.online-ide.com/assets/images/languages/go.svg"
+                          />Go Lang
+                        </div>
+                        <div class="item" data-value="bash">
+                          <img
+                            class="ui mini image"
+                            alt="Bash"
+                            src="https://www.online-ide.com/assets/images/languages/bash.svg"
+                          />Bash
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="mi" class="split">
+                    <div id="editor-main">
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li class="active" id="editor-1">
+                          <a data-toggle="tab">main.py</a>
+                        </li>
+                        <li id="new_file_btn">
+                          <button
+                            type="button"
+                            class="btn btn-default btn-sm add-editor"
+                            id="create_tab"
+                            data-title="New File"
+                          >
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </li>
+                      </ul>
+        
+                      <div id="editor"></div>
+                      <div class="boxed" id="editor_footer"></div>
+                    </div>
+        
+                    <div class="control-bar">
+                      <div id="control-btn">
+                        <button
+                          type="button"
+                          class="btn btn-success btn-sm"
+                          id="run-btn"
+                          onclick="run_python()"
+                          data-toggle="popover"
+                          data-placement="bottom"
+                          data-trigger="hover"
+                          data-content="F8"
+                        >
+                          <i class="fa fa-play"></i> <strong>Run</strong>
+                        </button>
+                      </div>
+                      <a
+                        tabindex="0"
+                        type="button"
+                        class="btn btn-default btn-sm"
+                        id="share-btn"
+                        onclick="share_code_modal()"
+                        data-toggle="popover"
+                        data-placement="right"
+                        data-trigger="hover"
+                        data-content="Share the code to your friends and colleagues"
+                        ><i class="fa fa-share"></i> <strong>Share</strong></a
+                      >
+                      <input
+                        class="textbox"
+                        type="text"
+                        id="input_arguments"
+                        placeholder=" Command Line Arguments"
+                      />
+                    </div>
+                  </div>
+        
+                  <div id="d" class="split">
+                    <div class="boxed1" id="output_header">
+                      <div id="hint-section"></div>
+                      <div class="btn-group status" id="tool-btn">
+                        <button
+                          type="button"
+                          data-toggle="tooltip"
+                          data-container="body"
+                          data-placement="right"
+                          title="Copy to Clipboard"
+                          class="btn btn-default btn-sm status"
+                          onclick="copy_output()"
+                        >
+                          <i class="fas fa-copy"></i>
+                        </button>
+                        <button
+                          type="button"
+                          data-toggle="tooltip"
+                          data-container="body"
+                          data-placement="right"
+                          title="Download"
+                          class="btn btn-default btn-sm status"
+                          onclick="download_modal()"
+                        >
+                          <i class="fas fa-download"></i>
+                        </button>
+                        <button
+                          type="button"
+                          data-toggle="tooltip"
+                          data-container="body"
+                          data-placement="right"
+                          title="Clear"
+                          class="btn btn-default btn-sm status"
+                          onclick="clear_output()"
+                        >
+                          <i class="fas fa-eraser"></i>
+                        </button>
+                      </div>
+                      <button
+                        type="button"
+                        data-toggle="tooltip"
+                        data-container="body"
+                        data-placement="right"
+                        title="Expand/Collapse"
+                        class="btn btn-default btn-sm status"
+                        id="term-expand"
+                        onclick="term_expand()"
+                      >
+                        <i class="fas fa-expand-alt fa-lg"></i>
+                      </button>
+                       
+                      <div id="output-status"></div>
+                    </div>
+        
+                    <div id="terminal">
+                      <div id="progress-status"></div>
+                      <div class="boxed2" id="output">
+                        <div class="wrapper" id="wrap"></div>
+                        <form id="term-form">
+                          <input id="term-input" autocomplete="off" />
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div id="info">
+                    <!-- Ezoic - under_first_paragraph - under_first_paragraph -->
+                    <span id="ezoic-pub-ad-placeholder-104"></span
+                    ><span
+                      data-ez-ph-id="104"
+                      style="
+                        min-width: 728px;
+                        padding: 0;
+                        margin-top: 10px !important;
+                        margin-bottom: 10px !important;
+                        margin-left: auto !important;
+                        text-align: center !important;
+                        max-width: 100% !important;
+                        line-height: 0px;
+                        float: none !important;
+                        margin-right: auto !important;
+                        display: block !important;
+                        min-height: 90px;
+                      "
+                    ></span>
+                    <!-- End Ezoic - under_first_paragraph - under_first_paragraph -->
+        
+                   
+                   
+                </div>
+                <div id="sidebar-right-ad">
+                  <!-- Ezoic - sidebar_right - top_of_page -->
+                  <span id="ezoic-pub-ad-placeholder-102"></span
+                  ><span
+                    data-ez-ph-id="102"
+                    style="
+                      margin-right: auto !important;
+                      margin-bottom: 5px !important;
+                      text-align: center !important;
+                      line-height: 0px;
+                      margin-top: 5px !important;
+                      margin-left: auto !important;
+                      display: block !important;
+                      min-width: 160px;
+                      min-height: 600px;
+                      max-width: 100% !important;
+                      padding: 0;
+                      float: none !important;
+                    "
+                  ></span>
+                  <!-- End Ezoic - sidebar_right - top_of_page -->
+                </div>
+              </div>
+        
+              <!-- Save Result modal -->
+              <div class="modal fade" tabindex="-1" role="dialog" id="downloadResult">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <h3 class="modal-title">Download Result</h3>
+                    </div>
+        
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                          <label for="name">File Name:</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="download_file_name"
+                            value="main_output.txt"
+                          />
+                        </div>
+                      </form>
+                    </div>
+        
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-default"
+                        data-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button
+                        type="submit"
+                        class="btn btn-primary"
+                        onclick="download_output()"
+                        data-dismiss="modal"
+                      >
+                        Download
+                      </button>
+                    </div>
+                  </div>
+                  <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+              </div>
+              <!-- /.modal -->
+        
+              <!-- Delete Editor Tab modal -->
+              <div class="modal fade" tabindex="-1" role="dialog" id="closeEditorTab">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <h3 class="modal-title" id="close_file_title">Close File</h3>
+                    </div>
+        
+                    <div class="modal-body">
+                      <p>
+                        Your changes will be lost. Are you sure you want to Close the
+                        file ?
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-default"
+                        data-dismiss="modal"
+                      >
+                        No
+                      </button>
+                      <button
+                        type="submit"
+                        class="btn btn-primary"
+                        onclick="close_editor_tab()"
+                        data-dismiss="modal"
+                      >
+                        Yes
+                      </button>
+                    </div>
+                  </div>
+                  <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+              </div>
+              <!-- /.modal -->
+        
+              <!-- Delete Editor Tab modal -->
+              <div class="modal fade" tabindex="-1" role="dialog" id="saveEditorTab">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <h3 class="modal-title" id="save_file_title">Save</h3>
+                    </div>
+        
+                    <div class="modal-body">
+                      <p>Do you want to save the file ?</p>
+                      <form>
+                        <div class="form-group">
+                          <label for="name">File Name:</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="code_file_name"
+                            value="main.py"
+                          />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-default"
+                        data-dismiss="modal"
+                      >
+                        No
+                      </button>
+                      <button
+                        type="submit"
+                        class="btn btn-primary"
+                        onclick="download_code()"
+                        data-dismiss="modal"
+                      >
+                        Yes
+                      </button>
+                    </div>
+                  </div>
+                  <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+              </div>
+              <!-- /.modal -->
+        
+              <!-- Share modal -->
+              <div class="modal fade" tabindex="-1" role="dialog" id="shareModal">
+                <div class="modal-dialog" role="document" id="share-dialog">
+                  <div class="modal-content" id="share-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <h3 class="modal-title" id="share_code">Share the Code</h3>
+                    </div>
+        
+                    <div class="modal-body">
+                      <!-- <p>Do you want to save the file ?</p> -->
+                      <form>
+                        <div class="form-group">
+                          <label for="name">Expiry Period:</label>
+                          <select class="form-control" id="expiry_select">
+                            <option value="1">24 hour</option>
+                            <option value="30">1 month</option>
+                            <option selected="" value="180">6 month</option>
+                            <option value="-1">Never</option>
+                          </select>
+                        </div>
+                      </form>
+                      <br />
+                      <button
+                        type="submit"
+                        class="btn btn-primary"
+                        onclick="share_code()"
+                        data-dismiss="modal"
+                        id="share-btn-modal"
+                      >
+                        Share
+                      </button>
+                    </div>
+        
+                    <!-- <div class="modal-footer">
+                    </div> -->
+                  </div>
+                  <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+              </div>
+              <!-- /.modal -->
+        
+              <!-- Share modal After -->
+              <div class="modal fade" tabindex="-1" role="dialog" id="shareModalAfter">
+                <div class="modal-dialog" role="document" id="share-dialog-after">
+                  <div class="modal-content" id="share-content-after">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <h3 class="modal-title" id="share_code">Share the Code</h3>
+                    </div>
+        
+                    <div class="modal-body">
+                      <!-- <p>Do you want to save the file ?</p> -->
+                      <form>
+                        <div class="form-group">
+                          <label for="name">URL:</label
+                          ><span id="share-copy" onclick="copy_share_url()"
+                            ><i class="far fa-copy"></i
+                          ></span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="share_url_box"
+                            value="http://localhost:8888/onlineide/code/HoiJqp9nQT"
+                            readonly=""
+                          />
+                        </div>
+                      </form>
+                      <div
+                        class="addthis_inline_share_toolbox_7qby"
+                        id="addthis_share_modal"
+                      ></div>
+                    </div>
+                    <!-- <div class="modal-footer">
+                    </div> -->
+                  </div>
+                  <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+              </div>
+              <!-- /.modal -->
+        
+              <!-- About Site modal -->
+              <div class="modal" tabindex="-1" role="dialog" id="aboutSiteModal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      
+                    </div>
+        
+                    <div class="modal-body abountModalBody">
+                      
+        
+                      <h3><strong>Keyboard Shortcuts</strong></h3>
+                      <ul style="font-size: larger">
+                        <li>Run Code - F8</li>
+                        <li>Share Code - F9</li>
+                        <li>Save Code - F10</li>
+                        <li>Open Editor Command Palette - F1</li>
+                      </ul>
+        
+                      <h3><strong>Report a bug</strong></h3>
+                      <p>
+                        If you encounter a bug or have questions or suggestions for
+                        improvements, please report it via feedback.
+                      </p>
+        
+                      <h3><strong>Data policy</strong></h3>
+                      <p>
+                        No data is saved in the server. The code is sent to the server
+                        for execution and will be cleared after completion. Shared Code
+                        will be saved in the server till the selected expiry period.
+                      </p>
+                    </div>
+        
+                    <div class="modal-footer">
+                    
+                      <button
+                        type="submit"
+                        class="btn btn-default"
+                        data-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                  <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+              </div>
+              <!-- /.modal -->
+        
+              <script type="text/javascript">
+                ace.require("ace/ext/language_tools");
+                var editor = ace.edit("editor");
+                ace.require("ace/ext/settings_menu").init(editor);
+                var editor_cnt = 1,
+                  editor_index = 1,
+                  active_editor = 1,
+                  editor_session = [];
+                var request, init_ts, open_file_name;
+                var lang = "python3";
+                default_content = get_script(lang);
+                var prev_result = "in";
+                var site_url = "https://www.online-ide.com/";
+                var base_url = "https://www.online-ide.com/";
+                var share_url = base_url;
+                var exe_cnt = 0;
+                var addthis_share = {
+                  url: share_url,
+                  // title: "THE TITLE",
+                  // description: "THE DESCRIPTION",
+                  // media: "THE IMAGE"
+                };
+        
+                var isMobile = window.orientation > -1;
+        
+                toastr.options = {
+                  closeButton: true,
+                  debug: false,
+                  newestOnTop: true,
+                  positionClass: "toast-top-right",
+                  preventDuplicates: true,
+                  preventOpenDuplicates: true,
+                  maxOpened: 1,
+                  onclick: null,
+                  showDuration: "100",
+                  hideDuration: "1000",
+                  timeOut: "3000",
+                  extendedTimeOut: "1000",
+                  showEasing: "swing",
+                  hideEasing: "linear",
+                  // "showMethod": "show",
+                  // "hideMethod": "hide"
+                };
+        
+                var instance = Split(["#mi", "#d"], {
+                  direction: "vertical",
+                  sizes: [66, 28],
+                  gutterSize: 5,
+                  cursor: "row-resize",
+                  minSize: [0, 180],
+                  onDrag: function () {
+                    editor.resize();
+                  },
+                });
+        
+                function term_expand() {
+                  var element = document.getElementById("term-expand").innerHTML;
+                  if (element === '<i class="fas fa-expand-alt fa-lg"></i>') {
+                    instance.setSizes([0, 94]);
+                    editor.resize();
+                    document.getElementById("term-expand").innerHTML =
+                      '<i class="fas fa-compress-alt fa-lg"></i>';
+                  } else {
+                    instance.setSizes([66, 28]);
+                    editor.resize();
+                    document.getElementById("term-expand").innerHTML =
+                      '<i class="fas fa-expand-alt fa-lg"></i>';
+                  }
+                  $("#term-expand").blur();
+                  $('[data-toggle="tooltip"]').tooltip("hide");
+                }
+        
+                editor.setOptions({
+                  enableBasicAutocompletion: true, // the editor completes the statement when you hit Ctrl + Space
+                  enableLiveAutocompletion: true, // the editor completes the statement while you are typing
+                  enableSnippets: true,
+                  showPrintMargin: false, // hides the vertical limiting strip
+                  fixedWidthGutter: true,
+                  autoScrollEditorIntoView: true,
+                  copyWithEmptySelection: true,
+                  highlightActiveLine: false,
+                });
+        
+                editor.setTheme("ace/theme/textmate");
+                // editor.setTheme("ace/theme/tomorrow_night_bright");
+                editor.container.style.lineHeight = 1.5;
+        
+                editor_session[0] = ace.createEditSession(
+                  default_content,
+                  "ace/mode/python"
+                );
+                editor.setSession(editor_session[0]);
+                var active_editor_id = $("#editor-1").children("a");
+                var active_file_name = "main.py";
+                var repl_host = get_host();
+                var command_list = [];
+                var command_index = 0;
+                var cur_cmd;
+                var hint_glow;
+        
+                var y = document.getElementById("editor_footer");
+                var output = document.getElementById("output");
+                var exec_detail = document.getElementById("output-status");
+                var progress_status = document.getElementById("progress-status");
+        
+                $(function () {
+                  $('[data-toggle="tooltip"]').tooltip({
+                    delay: { show: 750, hide: 50 },
+                  });
+                });
+        
+                $(function () {
+                  $('[data-toggle="popover"]').popover({
+                    delay: { show: 0, hide: 0 },
+                  });
+                });
+        
+                $(".popover-dismiss").popover({
+                  trigger: "hover",
+                });
+        
+                editor.session.setMode("ace/mode/" + get_mode(lang));
+        
+                $("#lang-select").dropdown("set selected", lang);
+                document.getElementById("editor-1").innerHTML =
+                  '<a data-toggle="tab">' + get_scriptname(lang) + "</a>";
+        
+                $("#lang-select").dropdown("setting", "onChange", function (value) {
+                  lang = value;
+                  editor.session.setMode("ace/mode/" + get_mode(lang));
+                  $("#lang-select").popover("hide");
+                  document.getElementById("editor-1").innerHTML =
+                    '<a data-toggle="tab">' + get_scriptname(lang) + "</a>";
+                  if (editor_session[0].getValue() === default_content) {
+                    default_content = get_script(lang);
+                    editor_session[0].setValue(default_content);
+                    editor.focus();
+                    editor.navigateFileEnd();
+                  }
+                });
+        
+                $(".nav-tabs")
+                  .on("click", "a", function (e) {
+                    // e.stopPropagation();
+                    e.preventDefault();
+                    detail_chk = e.detail === undefined ? 1 : e.detail;
+                    if (
+                      !$(this).hasClass("add-editor") &&
+                      !$(this).children("input").hasClass("thVal") &&
+                      detail_chk == 1
+                    ) {
+                      active_editor = parseInt(
+                        $(this).parent().attr("id").split("-")[1]
+                      );
+                      active_editor_id = $(this);
+        
+                      editor.setSession(editor_session[active_editor - 1]);
+                      active_file_name = $(this).html();
+                      $(this).tab("show");
+                      editor.focus();
+                      update_editor_footer();
+                    }
+                  })
+                  .on("click", "span", function () {
+                    close_tab = $(this).parent();
+                    close_tab.children("a").click();
+                    $("#close_file_title").text("Close - " + active_file_name);
+                    if (editor.getValue() === "") {
+                      close_editor_tab();
+                    } else {
+                      $("#closeEditorTab").modal("show");
+                    }
+                  });
+        
+                $("#rename_file").click(function (e) {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  active_editor_id.dblclick();
+                });
+        
+                let theme =
+                  localStorage.getItem("theme") !== undefined
+                    ? localStorage.getItem("theme")
+                    : "light";
+        
+                if (theme === "dark") {
+                  $("body").addClass("dark");
+                  document.getElementById("toggle-theme").innerHTML =
+                    '<i class="fas fa-sun fa-lg"></i>';
+                  editor.setTheme("ace/theme/tomorrow_night_bright");
+                }
+        
+                $("#toggle-theme").click(function (e) {
+                  document.body.classList.toggle("dark");
+                  if ($("body").hasClass("dark")) {
+                    editor.setTheme("ace/theme/tomorrow_night_bright");
+                    document.getElementById("toggle-theme").innerHTML =
+                      '<i class="fas fa-sun fa-lg"></i>';
+                    localStorage.setItem("theme", "dark");
+                  } else {
+                    editor.setTheme("ace/theme/textmate");
+                    document.getElementById("toggle-theme").innerHTML =
+                      '<i class="fas fa-moon fa-lg"></i>';
+                    localStorage.setItem("theme", "light");
+                  }
+                  $("#toggle-theme").blur();
+                  $('[data-toggle="tooltip"]').tooltip("hide");
+                });
+        
+                $(".add-editor").click(function (e) {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  editor_cnt += 1;
+                  editor_index += 1;
+                  var id = editor_cnt;
+        
+                  active_editor = id;
+                  editor_session[active_editor - 1] = ace.createEditSession(
+                    "",
+                    "ace/mode/" + get_mode(lang)
+                  );
+                  editor.setSession(editor_session[active_editor - 1]);
+        
+                  $(this)
+                    .closest("li")
+                    .before(
+                      '<li id="editor-' +
+                        id +
+                        '"><a data-toggle="tab">Untitled' +
+                        id +
+                        '</a> <span> <i class="fa fa-times"></i></span></li>'
+                    );
+                  // $('.nav-tabs li:nth-child(' + id + ') a').click();
+        
+                  active_editor_id = $(".nav-tabs li").children("a").last();
+                  active_editor_id.tab("show");
+                  active_editor_id.dblclick();
+                  update_editor_footer();
+        
+                  editor.selection.on("changeCursor", function (e) {
+                    update_editor_footer();
+                  });
+        
+                  editor.selection.on("changeSelection", function (e) {
+                    update_editor_footer();
+                  });
+                });
+        
+                $(document).on("dblclick", ".nav-tabs > li > a", function (event) {
+                  if ($(event.target).attr("class") != "thVal") {
+                    event.stopPropagation();
+                    event.preventDefault();
+                    var currentEle = $(this);
+                    var value = $(this).html();
+                    if (value.search("<input") === -1) updateVal(currentEle, value);
+                  }
+                });
+        
+                editor.focus();
+                editor.navigateFileEnd();
+        
+                update_editor_footer();
+        
+                editor.selection.on("changeCursor", function (e) {
+                  update_editor_footer();
+                });
+        
+                editor.selection.on("changeSelection", function (e) {
+                  update_editor_footer();
+                });
+        
+                $(".status button").attr("disabled", "disabled");
+                $("#stop-btn").attr("disabled", "disabled");
+        
+                socket_options = {
+                  transports: ["websocket"],
+                  timeout: 3000,
+                  "connect timeout": 3000,
+                  reconnection: true,
+                  reconnectionDelay: 1000,
+                  reconnectionDelayMax: 5000,
+                  reconnectionAttempts: 5,
+                };
+        
+                // ace.config.loadModule("ace/ext/keybinding_menu", function(module) {
+                //     module.init(editor);
+                // });
+        
+                $(document)
+                  .keyup(function (e) {
+                    IsCtrl = false;
+                    IsShift = false;
+                  })
+                  .keydown(function (e) {
+                    // first capture Ctrl
+                    if (e.which == 17) {
+                      IsCtrl = true;
+                    }
+        
+                    // now capture Shift
+                    if (e.which == 16) {
+                      IsShift = true;
+                    }
+        
+                    switch (e.which) {
+                      // now capture S and if Ctrl is pressed
+                      // case 75:
+                      //     if (IsCtrl) { alert("Ctrl K pressed"); editor.showKeyboardShortcuts();}
+                      //     if (IsShift) { alert("Shift R pressed");  }
+                      //     e.preventDefault();
+                      //     break;
+        
+                      // capture F8
+                      case 119:
+                        run_python();
+                        e.preventDefault();
+                        break;
+                      //F9
+                      case 120:
+                        share_code_modal();
+                        e.preventDefault();
+                        break;
+                      //F10
+                      case 121:
+                        save_code_modal();
+                        e.preventDefault();
+                        break;
+        
+                      // capture ESC
+                      // case 27: stop_python(); e.preventDefault(); break;
+                    }
+                  });
+        
+                $("#output").on("click", function () {
+                  $("#term-input").focus();
+                });
+        
+                window.onbeforeunload = goodbye;
+              </script>
+        
+              <!-- Go to www.addthis.com/dashboard to customize your tools -->
+              <script
+                type="text/javascript"
+                src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e908e7d111adc12"
+              ></script>
+            </div>
+            <div
+              class="ezmob-footer ezoic-floating-bottom ezo_ad ezmob-footer-desktop"
+              id="ezmobfooter"
+            >
+              <center>
+                <span id="ezoic-pub-ad-placeholder-100"></span
+                ><span
+                  data-ez-ph-id="100"
+                  style="
+                    min-height: 90px;
+                    max-width: 100% !important;
+                    line-height: 0px;
+                    padding: 0;
+                    float: none !important;
+                    display: inline-block;
+                    min-width: 0px;
+                  "
+                ></span
+                ><span
+                  class="ezmob-footer-close-wrap"
+                  id="ezmob-footer-close"
+                  style="display: none"
+                  ><span
+                    class="ezmob-footer-close"
+                    onclick="__ez_close_anchor()"
+                    title="close"
+                  ></span
+                  ><span class="ezoicwhat"
+                    ><img
+                      src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%3E%3C%2Fsvg%3E"
+                      title="ezoic"
+                      class="ezlazyload ezmob-anchor-img"
+                      ezimgfmt="rs rscb1 src ng ngcb1"
+                      data-ezsrc="https://www.online-ide.com/ezoimgfmt/go.ezodn.com/utilcave_com/ezoic.png" /></span
+                ></span>
+              </center>
+            </div>
+            <script async src="https://g.ezodn.com/cmp/v2/v.js?v=4"></script>
+            <script>
+              (function () {
+                if (typeof document.body === "undefined" || document.body === null) {
+                  return;
+                }
+                var attachEvent = function (element, evt, func) {
+                  if (element.addEventListener) {
+                    element.addEventListener(evt, func, false);
+                  } else {
+                    element.attachEvent("on" + evt, func);
+                  }
+                };
+                attachEvent(document.body, "ezVigImpression", function (e) {
+                  if (typeof _ezaq !== "undefined" && typeof e === "object") {
+                    __ez.pel.AddAndFire(e.slot, [new __ezDotData(e.key, e.value)]);
+                  }
+                });
+              })();
+            </script>
+            <script>
+              window.__ez_vig_close_wrapper = function (closeFunc, urlAddition) {
+                closeFunc();
+                var vc = {
+                  enabled: false,
+                  useVignetteLoader: true,
+                  fireEventName: "ezVigImpression",
+                  impressionSource: "anchor",
+                  urlAddition: "utm_content=anc-true",
+                  disableFloor: true,
+                  eventHandlerTest: false,
+                };
+                if (typeof urlAddition == "string") {
+                  vc.urlAddition = urlAddition;
+                }
+                var v = newEzVignette(vc);
+                v.handleClick();
+              };
+            </script>
+            <script type="text/javascript" data-cfasync="false">
+              !(function () {
+                var e = function (e, t) {
+                  for (var r = 0; r < t.length; r++) {
+                    var n = t[r];
+                    if (
+                      0 == n.complete ||
+                      (void 0 !== n.readyState && n.readyState < 4)
+                    ) {
+                      var o = n.getAttribute("src") || n.currentSrc;
+                      void 0 !== n.readyState && 0 == n.readyState
+                        ? n.addEventListener("loadstart", function (e) {
+                            var t = e.currentTarget.getAttribute("src") || e.currentSrc;
+                            window.ezorqs(e, t);
+                          })
+                        : ((o = n.getAttribute("src") || n.currentSrc),
+                          window.ezorqs(n, o)),
+                        n.addEventListener("load", function (e) {
+                          var t =
+                            e.currentTarget.getAttribute("src") ||
+                            e.srcElement.currentSrc;
+                          window.ezorqe(e, t);
+                        }),
+                        n.addEventListener("loadeddata", function (e) {
+                          var t =
+                            e.currentTarget.getAttribute("src") ||
+                            e.srcElement.currentSrc;
+                          window.ezorqe(e, t);
+                        }),
+                        n.addEventListener("error", function (e) {
+                          var t =
+                            e.currentTarget.getAttribute("src") ||
+                            e.srcElement.currentSrc;
+                          window.ezorqe(e, t);
+                        });
+                    }
+                  }
+                };
+                function t(e) {
+                  for (var t = 0; t < document.styleSheets.length; t++)
+                    if (document.styleSheets[t].href == e) return !0;
+                  return !1;
+                }
+                (__ez_addAllListeners = function () {
+                  e(0, document.querySelectorAll("img")),
+                    e(0, document.querySelectorAll("video")),
+                    e(0, document.querySelectorAll("audio")),
+                    (function (e) {
+                      for (var r = 0; r < e.length; r++) {
+                        var n = e[r];
+                        if (
+                          ("preload" == n.getAttribute("rel") ||
+                            "stylesheet" == n.getAttribute("rel")) &&
+                          null != n.getAttribute("href") &&
+                          t(n.getAttribute("href"))
+                        ) {
+                          window.ezorqs(n, n.getAttribute("href"));
+                          var o = document.createElement("img");
+                          (o.onerror = function (e) {
+                            void 0 !== e.path && void 0 !== e.path[0].currentSrc
+                              ? window.ezorqe(n, e.path[0].currentSrc)
+                              : void 0 !== e.srcElement &&
+                                void 0 !== e.srcElement.href &&
+                                window.ezorqe(n, e.srcElement.href);
+                          }),
+                            (o.src = n.getAttribute("href"));
+                        }
+                      }
+                    })(document.querySelectorAll("link")),
+                    void 0 !== window.__ez.ssaf &&
+                      window.__ez.ssaf.indexOf(16) > -1 &&
+                      void 0 !== window.__ez.sshsdef &&
+                      !1 === window.__ez.sshsdef &&
+                      Element.prototype.addEventListener &&
+                      ("function" == typeof window.onload &&
+                        (window.addEventListener("load", window.onload),
+                        (window.onload = null)),
+                      "function" == typeof document.onload &&
+                        (document.addEventListener.addEventListener(
+                          "load",
+                          document.onload
+                        ),
+                        (document.onload = null)));
+                }),
+                  __ez.queue.addFunc(
+                    "__ez_addAllListeners",
+                    "__ez_addAllListeners",
+                    null,
+                    !1,
+                    ["/detroitchicago/tulsa.js"],
+                    !0,
+                    !0,
+                    !0,
+                    !0
+                  );
+              })();
+            </script>
+            <script>
+              window.ezVideoIframe = false;
+              function renderEzoicVideoContent() {
+                let videoObjects = [
+                  {
+                    PlayerId: "ez-3998",
+                    VideoContentId: "MHGIfA4qcH2",
+                    VideoPlaylistSelectionId: 0,
+                    VideoPlaylistId: 0,
+                    VideoTitle:
+                      "Exploring the Exciting Features of JavaScript ES6 | javascript compiler online",
+                    VideoDescription:
+                      "Exploring the Exciting Features of JavaScript ES6 | javascript compiler online",
+                    VideoChapters: { Chapters: null, StartTimes: null, EndTimes: null },
+                    VideoLinksSrc: "",
+                    VideoDurationMs: 144010,
+                    DeviceTypeFlag: 14,
+                    FloatFlag: 1,
+                    FloatOptionFlag: 1,
+                    IsAutoPlay: true,
+                    IsLoop: false,
+                    ShouldConsiderDocVisibility: false,
+                    ShouldPauseAds: false,
+                    AdUnit: "336810-shared-video-1",
+                    ImpressionId: 3194258858818222,
+                    VideoStartTime: 0,
+                    IsStartTimeEnabled: 0,
+                    IsKeyMoment: false,
+                    PublisherVideoContentShare: {
+                      DomainIdOwner: 271138,
+                      DomainIdShare: 336810,
+                      DomainNameOwner: "monibe.com",
+                      IsEzoicOwnedVideo: false,
+                      IsGenericInstream: false,
+                      IsOutstream: false,
+                    },
+                    VideoUploadSource: "import-from-youtube",
+                    IsVertical: false,
+                    IsPreferred: false,
+                    ShowControls: false,
+                    IsSharedEmbed: false,
+                    ShortenId: "",
+                    Preview: false,
+                    PlaylistHumixId: "",
+                    MagicPlaceholderType: 0,
+                    MagicHTML:
+                      '\u003cdiv id=ez-video-wrap-ez-3998 class=ez-video-wrap style="align-self: stretch;"\u003e\u003cdiv style=max-width:854px; class=ez-video-center\u003e\u003cdiv class=ez-video-content-wrap\u003e\u003cdiv id=floating-placeholder-ez-3998 class=floating-placeholder style="display: none;"\u003e\u003cdiv id=floating-placeholder-sizer-ez-3998 class=floating-placeholder-sizer\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv id=ez-video-container-ez-3998 class="ez-video-container ez-float-right ez-video-magic-redesign" style="flex-wrap: wrap;"\u003e\u003cdiv class=ez-video-ez-stuck-bar id=ez-video-ez-stuck-bar-ez-3998\u003e\u003cdiv class=ez-video-ez-stuck-title id=ez-video-stuck-title-ez-3998\u003eExploring the Exciting Features of ...\u003c/div\u003e\u003cdiv class="ez-video-ez-stuck-close vjs-icon-cancel" id=ez-video-ez-stuck-close-ez-3998\u003e\u003cspan class=vjs-icon-placeholder\u003e\u003c/span\u003e\u003c/div\u003e\u003c/div\u003e\u003cvideo id=ez-video-ez-3998 class="video-js vjs-16-9 ez-vid-placeholder" controls preload=metadata\u003e\u003cp class=vjs-no-js\u003ePlease enable JavaScript\u003c/p\u003e\u003c/video\u003e\u003cdiv class=ez-vid-preview id=ez-vid-preview-ez-3998\u003e\u003c/div\u003e\u003cdiv id=lds-ring-ez-3998 class=lds-ring\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003cdiv\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv id=ez-video-links-ez-3998 style=position:absolute;\u003e\u003c/div\u003e\u003c/div\u003e\u003c/div\u003e\u003ca rel=nofollow id=ez-video-link-ez-3998 class=ez-video-link href=//www.humix.com/video/MHGIfA4qcH2 target=_self\u003eExploring the Exciting Features of JavaScript ES6 | javascript compiler online\u003c/a\u003e\u003c/div\u003e\u003c/div\u003e\u003c/div\u003e',
+                    PreferredVideoType: 0,
+                    VideoRankingConfigId: 29,
+                    CollectionId: 557,
+                    ScoreGroupId: 1,
+                    VideoAutoMatchType: 0,
+                    HumixChannelId: 9779,
+                    HasNextVideo: false,
+                    ShareBaseUrl: "",
+                    CanonicalLink: "",
+                    IsRedesign: false,
+                    IsMagicPlayer: false,
+                    IsVerticalPlaylist: false,
+                    VideoPlaylist: null,
+                    VideoPlaceholderId: 3998,
+                    URL: "https://www.online-ide.com/",
+                    Width: 854,
+                    MaxWidth: "",
+                    Height: 480,
+                    PreviewURL:
+                      "https://video-meta.humix.com/poster/Cu1OnJAckz2q/MHGIfA4qcH2_aLHTWi.jpg?w=640",
+                    VideoDisplayType: 0,
+                    MatchOption: 0,
+                    PlaceholderSelectionId: 0,
+                    HashValue: "",
+                    IsFloating: true,
+                    AdsEnabled: 1,
+                    IsAutoSelect: true,
+                    Keyword: "",
+                    VideoSelection: 10,
+                    VideoMatchScore: 75,
+                    VideoPlaceholderHash: "",
+                    IsAIPlaceholder: true,
+                    AutoInsertImpressionID: "0a1b3271-5f1f-413a-6d67-bbec9ec00169",
+                    ExternalId: "",
+                  },
+                ];
+                window.ezIntType = "";
+                for (vIndex = 0; vIndex < videoObjects.length; vIndex++) {
+                  let videoObject = videoObjects[vIndex];
+                  videoObject.videoObjectsCount = videoObjects.length;
+                  videoObject.videoObjectsIndex = vIndex + 1;
+                  ezVideoPlayer.Init(videoObject);
+                }
+              }
+              if (typeof vectx !== "undefined") {
+                vectx["is_magic_player"] = true;
+              }
+              __ez.queue.addFile(
+                "/beardeddragon/wyrm.js",
+                "/beardeddragon/wyrm.js?cb=1",
+                true,
+                [],
+                false,
+                false,
+                true,
+                false,
+                window
+              );
+              __ez.queue.addFile(
+                "/beardeddragon/wyvern.js",
+                "/beardeddragon/wyvern.js?cb=105",
+                true,
+                [],
+                false,
+                false,
+                true,
+                false,
+                window
+              );
+              __ez.queue.addFile(
+                "/porpoiseant/jellyfish.js",
+                "/porpoiseant/jellyfish.js?a=a&cb=14&dcb=14&shcb=34",
+                true,
+                [],
+                false,
+                false,
+                true,
+                false,
+                window
+              );
+              __ez.queue.addFile(
+                "/beardeddragon/gilamonster.js",
+                "/beardeddragon/gilamonster.js?cb=289",
+                true,
+                [
+                  "/beardeddragon/wyrm.js",
+                  "/beardeddragon/wyvern.js",
+                  "/porpoiseant/jellyfish.js",
+                ],
+                false,
+                false,
+                true,
+                false,
+                window
+              );
+              __ez.queue.addFile(
+                "/beardeddragon/iguana.js",
+                "/beardeddragon/iguana.js?cb=322",
+                true,
+                ["/beardeddragon/wyrm.js", "/beardeddragon/gilamonster.js"],
+                false,
+                false,
+                true,
+                false,
+                window
+              );
+              __ez.queue.addFile(
+                "ima",
+                "//imasdk.googleapis.com/js/sdkloader/ima3.js",
+                true,
+                [],
+                false,
+                false,
+                true,
+                false,
+                window
+              );
+              __ez.queue.addFunc(
+                "ezoicVideo",
+                "renderEzoicVideoContent",
+                null,
+                true,
+                [
+                  "ezaqReady",
+                  "/beardeddragon/iguana.js",
+                  "ima",
+                  "/detroitchicago/portland.js",
+                ],
+                false,
+                false,
+                true,
+                false,
+                window
+              );
+            </script>
+            <script>
+              __ez.queue.addFile(
+                "/beardeddragon/tortoise.js",
+                "/beardeddragon/tortoise.js?gcb=0&cb=11",
+                false,
+                [],
+                true,
+                false,
+                true,
+                false
+              );
+            </script>
+            <script>
+              __ez.queue.addFile(
+                "/tardisrocinante/vitals.js",
+                "/tardisrocinante/vitals.js?gcb=0&cb=4",
+                false,
+                ["/parsonsmaize/mulvane.js"],
+                true,
+                false,
+                true,
+                false
+              );
+            </script>
+            <script>
+              var _audins_dom = "online_ide_com",
+                _audins_did = 336810;
+              __ez.queue.addDelayFunc(
+                "audins.js",
+                "__ez.script.add",
+                "//go.ezodn.com/detroitchicago/audins.js?cb=3"
+              );
+            </script>
+            <noscript
+              ><div style="display: none">
+                <img
+                  src="//pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.online_ide_com,DomainId.336810"
+                  border="0"
+                  height="1"
+                  width="1"
+                  alt="Quantcast"
+                /></div
+            ></noscript>
+            <script>
+              __ez.queue.addFile(
+                "/beardeddragon/drake.js",
+                "/beardeddragon/drake.js?gcb=0&cb=8",
+                false,
+                [],
+                true,
+                false,
+                true,
+                false
+              );
+            </script>
+            <script type="text/javascript" style="display: none">
+              var __ez_dims = (function () {
+                var setCookie = function (name, content, expiry) {
+                  return (document.cookie =
+                    name +
+                    "=" +
+                    content +
+                    (expiry
+                      ? ";expires=" +
+                        new Date(
+                          Math.floor(new Date().getTime() + expiry * 1000)
+                        ).toUTCString()
+                      : "") +
+                    ";path=/");
+                };
+                var ffid = 1;
+                var oh = window.screen.height;
+                var ow = window.screen.width;
+                var h = ffid === 1 ? oh : oh > ow ? oh : ow;
+                var w = ffid === 1 ? ow : oh > ow ? ow : oh;
+                var uh =
+                  window.innerHeight ||
+                  document.documentElement.clientHeight ||
+                  document.getElementsByTagName("body")[0].clientHeight;
+                var uw =
+                  window.innerWidth ||
+                  document.documentElement.clientWidth ||
+                  document.getElementsByTagName("body")[0].clientWidth;
+        
+                var setAllCookies = function () {
+                  setCookie(
+                    "ezds",
+                    encodeURIComponent("ffid=" + ffid + ",w=" + w + ",h=" + h),
+                    31536e3 * 7
+                  );
+                  setCookie(
+                    "ezohw",
+                    encodeURIComponent("w=" + uw + ",h=" + uh),
+                    31536e3 * 7
+                  );
+                };
+        
+                if (window.ezTcfConsent && window.ezTcfConsent.loaded) {
+                  if (window.ezTcfConsent.understand_audiences) {
+                    setAllCookies();
+                  }
+                } else if (typeof getEzConsentData === "function") {
+                  getEzConsentData().then(function (ezTcfConsent) {
+                    if (ezTcfConsent && ezTcfConsent.loaded) {
+                      if (ezTcfConsent.understand_audiences) {
+                        setAllCookies();
+                      }
+                    } else {
+                      console.error("cannot get ez consent data");
+                      setAllCookies();
+                    }
+                  });
+                } else {
+                  console.error("getEzConsentData is not a function");
+                  setAllCookies();
+                }
+              })();
+            </script>
+            <script type="text/javascript" style="display: none" async>
+              __ez.queue.addFile(
+                "/parsonsmaize/chanute.js",
+                "/parsonsmaize/chanute.js?a=a&cb=9&dcb=195-0&shcb=34",
+                true,
+                ["/parsonsmaize/mulvane.js"],
+                true,
+                false,
+                false,
+                false
+              );
+            </script>
+            <script type="text/javascript" style="display: none" async>
+              __ez.queue.addFile(
+                "/porpoiseant/jellyfish.js",
+                "/porpoiseant/jellyfish.js?a=a&cb=14&dcb=195-0&shcb=34",
+                false,
+                [],
+                true,
+                false,
+                false,
+                false
+              );
+            </script>
+            <script>
+              if (
+                typeof _ezaq !== "undefined" &&
+                typeof __ez == "object" &&
+                typeof __ez.bit == "object" &&
+                typeof __ezDotData == "function"
+              ) {
+                if ("cookieDeprecationLabel" in navigator) {
+                  navigator.cookieDeprecationLabel.getValue().then((label) => {
+                    __ez.bit.AddAndFire(_ezaq["page_view_id"], [
+                      new __ezDotData("chrome_cookie_deprecation_label", label),
+                    ]);
+                  });
+                }
+              }
+            </script>
+            <script data-cfasync="false">
+              function _emitEzConsentEvent() {
+                var customEvent = new CustomEvent("ezConsentEvent", {
+                  detail: { ezTcfConsent: window.ezTcfConsent },
+                  bubbles: true,
+                  cancelable: true,
+                });
+                document.dispatchEvent(customEvent);
+              }
+              (function (window, document) {
+                function _setAllEzConsentTrue() {
+                  window.ezTcfConsent.loaded = true;
+                  window.ezTcfConsent.store_info = true;
+                  window.ezTcfConsent.develop_and_improve_services = true;
+                  window.ezTcfConsent.measure_ad_performance = true;
+                  window.ezTcfConsent.measure_content_performance = true;
+                  window.ezTcfConsent.select_basic_ads = true;
+                  window.ezTcfConsent.create_ad_profile = true;
+                  window.ezTcfConsent.select_personalized_ads = true;
+                  window.ezTcfConsent.create_content_profile = true;
+                  window.ezTcfConsent.select_personalized_content = true;
+                  window.ezTcfConsent.understand_audiences = true;
+                  window.ezTcfConsent.use_limited_data_to_select_content = true;
+                  window.ezTcfConsent.select_personalized_content = true;
+                }
+                function _clearEzConsentCookie() {
+                  document.cookie =
+                    "ezCMPCookieConsent=tcf2;Domain=.online-ide.com;Path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+                }
+                _clearEzConsentCookie();
+                if (typeof window.__tcfapi !== "undefined") {
+                  window.ezgconsent = false;
+                  var amazonHasRun = false;
+                  function _ezAllowed(tcdata, purpose) {
+                    return (
+                      tcdata.purpose.consents[purpose] ||
+                      tcdata.purpose.legitimateInterests[purpose]
+                    );
+                  }
+                  function _reloadAds() {
+                    if (
+                      typeof window.ezorefgsl === "function" &&
+                      typeof window.ezslots === "object"
+                    ) {
+                      if (
+                        typeof __ezapsFetchBids == "function" &&
+                        amazonHasRun === false
+                      ) {
+                        ezapsFetchBids(__ezaps);
+                        if (typeof __ezapsVideo != "undefined") {
+                          ezapsFetchBids(__ezapsVideo, "video");
+                        }
+                        amazonHasRun = true;
+                      }
+                      var slots = [];
+                      for (var i = 0; i < window.ezslots.length; i++) {
+                        if (
+                          window[window.ezslots[i]] &&
+                          typeof window[window.ezslots[i]] === "object"
+                        ) {
+                          slots.push(window[window.ezslots[i]]);
+                        } else {
+                          setTimeout(_reloadAds, 100);
+                          return false;
+                        }
+                      }
+                      for (var i = 0; i < slots.length; i++) {
+                        window.ezorefgsl(slots[i]);
+                      }
+                    } else if (!window.ezadtimeoutset) {
+                      window.ezadtimeoutset = true;
+                      setTimeout(_reloadAds, 100);
+                    }
+                  }
+                  function _handleConsentDecision(tcdata) {
+                    window.ezTcfConsent.loaded = true;
+                    if (
+                      !tcdata.vendor.consents["347"] &&
+                      !tcdata.vendor.legitimateInterests["347"]
+                    ) {
+                      window._emitEzConsentEvent();
+                      return;
+                    }
+                    window.ezTcfConsent.store_info = _ezAllowed(tcdata, "1");
+                    window.ezTcfConsent.develop_and_improve_services = _ezAllowed(
+                      tcdata,
+                      "10"
+                    );
+                    window.ezTcfConsent.measure_content_performance = _ezAllowed(
+                      tcdata,
+                      "8"
+                    );
+                    window.ezTcfConsent.select_basic_ads = _ezAllowed(tcdata, "2");
+                    window.ezTcfConsent.create_ad_profile = _ezAllowed(tcdata, "3");
+                    window.ezTcfConsent.select_personalized_ads = _ezAllowed(
+                      tcdata,
+                      "4"
+                    );
+                    window.ezTcfConsent.create_content_profile = _ezAllowed(
+                      tcdata,
+                      "5"
+                    );
+                    window.ezTcfConsent.measure_ad_performance = _ezAllowed(
+                      tcdata,
+                      "7"
+                    );
+                    window.ezTcfConsent.use_limited_data_to_select_content = _ezAllowed(
+                      tcdata,
+                      "11"
+                    );
+                    window.ezTcfConsent.select_personalized_content = _ezAllowed(
+                      tcdata,
+                      "6"
+                    );
+                    window.ezTcfConsent.understand_audiences = _ezAllowed(tcdata, "9");
+                    window._emitEzConsentEvent();
+                  }
+                  function _handleGoogleConsentV2(tcdata) {
+                    if (!tcdata || !tcdata.purpose || !tcdata.purpose.consents) {
+                      return;
+                    }
+                    var googConsentV2 = {};
+                    if (tcdata.purpose.consents[1]) {
+                      googConsentV2.ad_storage = "granted";
+                      googConsentV2.analytics_storage = "granted";
+                    }
+                    if (tcdata.purpose.consents[3] && tcdata.purpose.consents[4]) {
+                      googConsentV2.ad_personalization = "granted";
+                    }
+                    if (tcdata.purpose.consents[1] && tcdata.purpose.consents[7]) {
+                      googConsentV2.ad_user_data = "granted";
+                    }
+                    if (googConsentV2.analytics_storage == "denied") {
+                      gtag("set", "url_passthrough", true);
+                    }
+                    gtag("consent", "update", googConsentV2);
+                  }
+                  __tcfapi("addEventListener", 2, function (tcdata, success) {
+                    if (!success || !tcdata) {
+                      window._emitEzConsentEvent();
+                      return;
+                    }
+                    if (!tcdata.gdprApplies) {
+                      _setAllEzConsentTrue();
+                      window._emitEzConsentEvent();
+                      return;
+                    }
+                    if (
+                      tcdata.eventStatus === "useractioncomplete" ||
+                      tcdata.eventStatus === "tcloaded"
+                    ) {
+                      if (typeof gtag != "undefined") {
+                        _handleGoogleConsentV2(tcdata);
+                      }
+                      _handleConsentDecision(tcdata);
+                      if (
+                        tcdata.purpose.consents["1"] === true &&
+                        tcdata.vendor.consents["755"] !== false
+                      ) {
+                        window.ezgconsent = true;
+                        (adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 0;
+                        _reloadAds();
+                      } else {
+                        _reloadAds();
+                      }
+                      if (window.__ezconsent) {
+                        __ezconsent.setEzoicConsentSettings(ezConsentCategories);
+                      }
+                      __tcfapi(
+                        "removeEventListener",
+                        2,
+                        function (success) {
+                          return null;
+                        },
+                        tcdata.listenerId
+                      );
+                      if (
+                        !(
+                          tcdata.purpose.consents["1"] === true &&
+                          _ezAllowed(tcdata, "2") &&
+                          _ezAllowed(tcdata, "3") &&
+                          _ezAllowed(tcdata, "4")
+                        )
+                      ) {
+                        if (
+                          typeof __ez == "object" &&
+                          typeof __ez.bit == "object" &&
+                          typeof window["_ezaq"] == "object" &&
+                          typeof window["_ezaq"]["page_view_id"] == "string"
+                        ) {
+                          __ez.bit.AddAndFire(window["_ezaq"]["page_view_id"], [
+                            new __ezDotData("non_personalized_ads", true),
+                          ]);
+                        }
+                      }
+                    }
+                  });
+                } else {
+                  _setAllEzConsentTrue();
+                  window._emitEzConsentEvent();
+                }
+              })(window, document);
+            </script>
+            <script
+              defer
+              src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
+              integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
+              data-cf-beacon='{"rayId":"86d922b79d764b6e","r":1,"version":"2024.3.0","token":"e34155c573c640f688feb0eb6709ee19"}'
+              crossorigin="anonymous"
+            ></script>
+          </body>
+         
+        
+      
+        </span>
+      <div class="overlay"></div>
+    </div>
+  </div>
+
+  <script>
+    var __ezHttpConsent = {
+      setByCat: function (src, tagType, attributes, category, force) {
+        var setScript = function () {
+          if (force || window.ezTcfConsent[category]) {
+            var scriptElement = document.createElement(tagType);
+            scriptElement.src = src;
+            attributes.forEach(function (attr) {
+              for (var key in attr) {
+                if (attr.hasOwnProperty(key)) {
+                  scriptElement.setAttribute(key, attr[key]);
+                }
+              }
+            });
+            var firstScript = document.getElementsByTagName(tagType)[0];
+            firstScript.parentNode.insertBefore(scriptElement, firstScript);
+          }
+        };
+        if (force || (window.ezTcfConsent && window.ezTcfConsent.loaded)) {
+          setScript();
+        } else if (typeof getEzConsentData === "function") {
+          getEzConsentData().then(function (ezTcfConsent) {
+            if (ezTcfConsent && ezTcfConsent.loaded) {
+              setScript();
+            } else {
+              console.error("cannot get ez consent data");
+              force = true;
+              setScript();
+            }
+          });
+        } else {
+          force = true;
+          setScript();
+          console.error("getEzConsentData is not a function");
+        }
+      },
+    };
+  </script>
+  <script>
+    var ezTcfConsent = window.ezTcfConsent
+      ? window.ezTcfConsent
+      : {
+          loaded: false,
+          store_info: false,
+          develop_and_improve_services: false,
+          measure_ad_performance: false,
+          measure_content_performance: false,
+          select_basic_ads: false,
+          create_ad_profile: false,
+          select_personalized_ads: false,
+          create_content_profile: false,
+          select_personalized_content: false,
+          understand_audiences: false,
+          use_limited_data_to_select_content: false,
+        };
+    function getEzConsentData() {
+      return new Promise(function (resolve) {
+        document.addEventListener("ezConsentEvent", function (event) {
+          var ezTcfConsent = event.detail.ezTcfConsent;
+          resolve(ezTcfConsent);
+        });
+      });
+    }
+  </script>
+  <script>
+    function _setEzCookies(ezConsentData) {
+      var cookies = [
+        {
+          name: "ezoab_336810",
+          value:
+            "mod239; Path=/; Domain=online-ide.com; Expires=Mon, 01 Apr 2024 16:05:43 UTC",
+          tcfCategory: "store_info",
+          isEzoic: "true",
+        },
+        {
+          name: "ezoadgid_336810",
+          value:
+            "-1; Path=/; Domain=online-ide.com; Expires=Mon, 01 Apr 2024 14:35:43 UTC",
+          tcfCategory: "understand_audiences",
+          isEzoic: "true",
+        },
+        {
+          name: "ezoref_336810",
+          value:
+            "; Path=/; Domain=online-ide.com; Expires=Mon, 01 Apr 2024 16:05:43 UTC",
+          tcfCategory: "understand_audiences",
+          isEzoic: "true",
+        },
+        {
+          name: "ezosuibasgeneris-1",
+          value:
+            "df15024a-4d05-488f-4edf-c79dd3dbc488; Path=/; Domain=online-ide.com; Expires=Tue, 01 Apr 2025 14:05:43 UTC; Secure; SameSite=None",
+          tcfCategory: "understand_audiences",
+          isEzoic: "true",
+        },
+        {
+          name: "active_template::336810",
+          value:
+            "pub_site.1711980343; Path=/; Domain=online-ide.com; Expires=Wed, 03 Apr 2024 14:05:43 UTC",
+          tcfCategory: "store_info",
+          isEzoic: "true",
+        },
+        {
+          name: "lp_336810",
+          value:
+            "https://www.online-ide.com/; Path=/; Domain=online-ide.com; Expires=Mon, 01 Apr 2024 14:35:43 UTC",
+          tcfCategory: "store_info",
+          isEzoic: "true",
+        },
+        {
+          name: "ezovuuidtime_336810",
+          value:
+            "1711980343; Path=/; Domain=online-ide.com; Expires=Wed, 03 Apr 2024 14:05:43 UTC",
+          tcfCategory: "understand_audiences",
+          isEzoic: "true",
+        },
+        {
+          name: "ezovuuid_336810",
+          value:
+            "0f7c49b8-9c72-47de-5c64-a10fc4c991ce; Path=/; Domain=online-ide.com; Expires=Mon, 01 Apr 2024 14:35:43 UTC",
+          tcfCategory: "understand_audiences",
+          isEzoic: "true",
+        },
+        {
+          name: "ezopvc_336810",
+          value:
+            "1; Path=/; Domain=online-ide.com; Expires=Mon, 01 Apr 2024 14:35:43 UTC",
+          tcfCategory: "understand_audiences",
+          isEzoic: "true",
+        },
+      ];
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        if (
+          ezConsentData &&
+          ezConsentData.loaded &&
+          ezConsentData[cookie.tcfCategory]
+        ) {
+          document.cookie = cookie.name + "=" + cookie.value;
+        }
+      }
+    }
+    if (window.ezTcfConsent && window.ezTcfConsent.loaded) {
+      _setEzCookies(window.ezTcfConsent);
+    } else if (typeof getEzConsentData === "function") {
+      getEzConsentData().then(function (ezTcfConsent) {
+        if (ezTcfConsent && ezTcfConsent.loaded) {
+          _setEzCookies(window.ezTcfConsent);
+        } else {
+          console.error("cannot get ez consent data");
+          _setEzCookies(window.ezTcfConsent);
+        }
+      });
+    } else {
+      console.error("getEzConsentData is not a function");
+      _setEzCookies(window.ezTcfConsent);
+    }
+  </script>
+  <script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer>
+    var __ez = __ez || {};
+    __ez.stms = Date.now();
+    __ez.evt = {};
+    __ez.script = {};
+    __ez.ck = __ez.ck || {};
+    __ez.template = {};
+    __ez.template.isOrig = false;
+    __ez.queue = (function () {
+      var e = 0,
+        i = 0,
+        t = [],
+        n = !1,
+        o = [],
+        r = [],
+        s = !0,
+        a = function (e, i, n, o, r, s, a) {
+          var l =
+              arguments.length > 7 && void 0 !== arguments[7]
+                ? arguments[7]
+                : window,
+            d = this;
+          (this.name = e),
+            (this.funcName = i),
+            (this.parameters = null === n ? null : p(n) ? n : [n]),
+            (this.isBlock = o),
+            (this.blockedBy = r),
+            (this.deleteWhenComplete = s),
+            (this.isError = !1),
+            (this.isComplete = !1),
+            (this.isInitialized = !1),
+            (this.proceedIfError = a),
+            (this.fWindow = l),
+            (this.isTimeDelay = !1),
+            (this.process = function () {
+              f("... func = " + e),
+                (d.isInitialized = !0),
+                (d.isComplete = !0),
+                f("... func.apply: " + e);
+              var i = d.funcName.split("."),
+                n = null,
+                o = this.fWindow || window;
+              i.length > 3 ||
+                (n =
+                  3 === i.length
+                    ? o[i[0]][i[1]][i[2]]
+                    : 2 === i.length
+                    ? o[i[0]][i[1]]
+                    : o[d.funcName]),
+                null != n && n.apply(null, this.parameters),
+                !0 === d.deleteWhenComplete && delete t[e],
+                !0 === d.isBlock && (f("----- F'D: " + d.name), u());
+            });
+        },
+        l = function (e, i, t, n, o, r, s) {
+          var a =
+              arguments.length > 7 && void 0 !== arguments[7]
+                ? arguments[7]
+                : window,
+            l = this;
+          (this.name = e),
+            (this.path = i),
+            (this.async = o),
+            (this.defer = r),
+            (this.isBlock = t),
+            (this.blockedBy = n),
+            (this.isInitialized = !1),
+            (this.isError = !1),
+            (this.isComplete = !1),
+            (this.proceedIfError = s),
+            (this.fWindow = a),
+            (this.isTimeDelay = !1),
+            (this.isPath = function (e) {
+              return "/" === e[0] && "/" !== e[1];
+            }),
+            (this.getSrc = function (e) {
+              return void 0 !== window.__ezScriptHost &&
+                this.isPath(e) &&
+                "banger.js" !== this.name
+                ? window.__ezScriptHost + e
+                : e;
+            }),
+            (this.process = function () {
+              (l.isInitialized = !0), f("... file = " + e);
+              var i = this.fWindow ? this.fWindow.document : document,
+                t = i.createElement("script");
+              (t.src = this.getSrc(this.path)),
+                !0 === o ? (t.async = !0) : !0 === r && (t.defer = !0),
+                (t.onerror = function () {
+                  var e = {
+                    url: window.location.href,
+                    name: l.name,
+                    path: l.path,
+                    user_agent: window.navigator.userAgent,
+                  };
+                  "undefined" != typeof _ezaq &&
+                    (e.pageview_id = _ezaq.page_view_id);
+                  var i = encodeURIComponent(JSON.stringify(e)),
+                    t = new XMLHttpRequest();
+                  t.open("GET", "//g.ezoic.net/ezqlog?d=" + i, !0),
+                    t.send(),
+                    f("----- ERR'D: " + l.name),
+                    (l.isError = !0),
+                    !0 === l.isBlock && u();
+                }),
+                (t.onreadystatechange = t.onload =
+                  function () {
+                    var e = t.readyState;
+                    f("----- F'D: " + l.name),
+                      (e && !/loaded|complete/.test(e)) ||
+                        ((l.isComplete = !0), !0 === l.isBlock && u());
+                  }),
+                i.getElementsByTagName("head")[0].appendChild(t);
+            });
+        },
+        d = function (e, i) {
+          (this.name = e),
+            (this.path = ""),
+            (this.async = !1),
+            (this.defer = !1),
+            (this.isBlock = !1),
+            (this.blockedBy = []),
+            (this.isInitialized = !0),
+            (this.isError = !1),
+            (this.isComplete = i),
+            (this.proceedIfError = !1),
+            (this.isTimeDelay = !1),
+            (this.process = function () {});
+        };
+      function c(e) {
+        !0 !== h(e) && 0 != s && e.process();
+      }
+      function h(e) {
+        if (!0 === e.isTimeDelay && !1 === n)
+          return f(e.name + " blocked = TIME DELAY!"), !0;
+        if (p(e.blockedBy))
+          for (var i = 0; i < e.blockedBy.length; i++) {
+            var o = e.blockedBy[i];
+            if (!1 === t.hasOwnProperty(o))
+              return f(e.name + " blocked = " + o), !0;
+            if (!0 === e.proceedIfError && !0 === t[o].isError) return !1;
+            if (!1 === t[o].isComplete)
+              return f(e.name + " blocked = " + o), !0;
+          }
+        return !1;
+      }
+      function f(e) {
+        var i = window.location.href,
+          t = new RegExp("[?&]ezq=([^&#]*)", "i").exec(i);
+        "1" === (t ? t[1] : null) && console.debug(e);
+      }
+      function u() {
+        ++e > 200 || (f("let's go"), m(o), m(r));
+      }
+      function m(e) {
+        for (var i in e)
+          if (!1 !== e.hasOwnProperty(i)) {
+            var t = e[i];
+            !0 === t.isComplete ||
+            h(t) ||
+            !0 === t.isInitialized ||
+            !0 === t.isError
+              ? !0 === t.isError
+                ? f(t.name + ": error")
+                : !0 === t.isComplete
+                ? f(t.name + ": complete already")
+                : !0 === t.isInitialized &&
+                  f(t.name + ": initialized already")
+              : t.process();
+          }
+      }
+      function p(e) {
+        return "[object Array]" == Object.prototype.toString.call(e);
+      }
+      return (
+        window.addEventListener(
+          "load",
+          function () {
+            setTimeout(function () {
+              (n = !0), f("TDELAY -----"), u();
+            }, 5e3);
+          },
+          !1
+        ),
+        {
+          addFile: function (e, i, n, s, a, d, h, f, u) {
+            var m = new l(e, i, n, s, a, d, h, u);
+            !0 === f ? (o[e] = m) : (r[e] = m), (t[e] = m), c(m);
+          },
+          addDelayFile: function (e, i) {
+            var n = new l(e, i, !1, [], !1, !1, !0);
+            (n.isTimeDelay = !0),
+              f(e + " ...  FILE! TDELAY"),
+              (r[e] = n),
+              (t[e] = n),
+              c(n);
+          },
+          addFunc: function (e, n, s, l, d, h, f, u, m, p) {
+            !0 === h && (e = e + "_" + i++);
+            var w = new a(e, n, s, l, d, f, u, p);
+            !0 === m ? (o[e] = w) : (r[e] = w), (t[e] = w), c(w);
+          },
+          addDelayFunc: function (e, i, n) {
+            var o = new a(e, i, n, !1, [], !0, !0);
+            (o.isTimeDelay = !0),
+              f(e + " ...  FUNCTION! TDELAY"),
+              (r[e] = o),
+              (t[e] = o),
+              c(o);
+          },
+          items: t,
+          processAll: u,
+          setallowLoad: function (e) {
+            s = e;
+          },
+          markLoaded: function (e) {
+            if (e && 0 !== e.length) {
+              if (e in t) {
+                var i = t[e];
+                !0 === i.isComplete
+                  ? f(i.name + " " + e + ": error loaded duplicate")
+                  : ((i.isComplete = !0), (i.isInitialized = !0));
+              } else t[e] = new d(e, !0);
+              f("markLoaded dummyfile: " + t[e].name);
+            }
+          },
+          logWhatsBlocked: function () {
+            for (var e in t) !1 !== t.hasOwnProperty(e) && h(t[e]);
+          },
+        }
+      );
+    })();
+    (__ez.evt.add = function (e, t, n) {
+      e.addEventListener
+        ? e.addEventListener(t, n, !1)
+        : e.attachEvent
+        ? e.attachEvent("on" + t, n)
+        : (e["on" + t] = n());
+    }),
+      (__ez.evt.remove = function (e, t, n) {
+        e.removeEventListener
+          ? e.removeEventListener(t, n, !1)
+          : e.detachEvent
+          ? e.detachEvent("on" + t, n)
+          : delete e["on" + t];
+      });
+    __ez.script.add = function (e) {
+      var t = document.createElement("script");
+      (t.src = e),
+        (t.async = !0),
+        (t.type = "text/javascript"),
+        document.getElementsByTagName("head")[0].appendChild(t);
+    };
+    __ez.dot = {};
+    __ez.queue.addFile(
+      "/detroitchicago/boise.js",
+      "/detroitchicago/boise.js?gcb=195-0&cb=5",
+      true,
+      [],
+      true,
+      false,
+      true,
+      false
+    );
+    __ez.queue.addFile(
+      "/parsonsmaize/abilene.js",
+      "/parsonsmaize/abilene.js?gcb=195-0&cb=33",
+      true,
+      [],
+      true,
+      false,
+      true,
+      false
+    );
+  </script>
+  <script data-ezscrex="false" data-cfasync="false">
+    __ez.ssaf = [];
+    __ez.sswp = 4;
+    __ez.ssv = 686410;
+    __ez.sshsdef = false;
+  </script>
+  <script data-ezscrex="false" data-cfasync="false">
+    (function () {
+      if ("function" === typeof window.CustomEvent) return !1;
+      window.CustomEvent = function (c, a) {
+        a = a || { bubbles: !1, cancelable: !1, detail: null };
+        var b = document.createEvent("CustomEvent");
+        b.initCustomEvent(c, a.bubbles, a.cancelable, a.detail);
+        return b;
+      };
+    })();
+  </script>
+  <script data-ezscrex="false" data-cfasync="false">
+    __ez.queue.addFile(
+      "/detroitchicago/tulsa.js",
+      "/detroitchicago/tulsa.js?gcb=195-0&cb=9",
+      false,
+      [],
+      true,
+      false,
+      true,
+      false
+    );
+  </script>
+  <script data-ezscrex="false" type="text/javascript" data-cfasync="false">
+    window._ezaq = Object.assign(
+      {},
+      typeof window._ezaq !== "undefined" ? window._ezaq : {},
+      {
+        ad_cache_level: 0,
+        domain_id: 336810,
+        ezcache_level: 2,
+        ezcache_skip_code: 0,
+        has_bad_image: 0,
+        has_bad_words: 0,
+        is_sitespeed: 1,
+        lt_cache_level: 0,
+        page_view_id: "f85627b9-8174-420c-54a8-1ca231e6cd5d",
+        response_size_orig: 32582,
+        response_time_orig: 3,
+        template_id: 134,
+        url: "https://www.online-ide.com/",
+        visit_uuid: "0f7c49b8-9c72-47de-5c64-a10fc4c991ce",
+        word_count: 353,
+        worst_bad_word_level: 0,
+      }
+    );
+    __ez.queue.markLoaded("ezaqBaseReady");
+  </script>
+  <script>
+    window.ezVideo = {
+      appendFloatAfterAd: false,
+      language: "en",
+      titleString: "",
+      titleOption: "",
+      autoEnableCaptions: false,
+    };
+  </script>
+  <link rel="preconnect" href="//s7.addthis.com" crossorigin />
+  <link rel="preconnect" href="//go.ezodn.com" crossorigin />
+  <link rel="preconnect" href="//cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="//fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="//script.crazyegg.com" crossorigin />
+  <link rel="preconnect" href="//www.googletagmanager.com" crossorigin />
+  <link rel="preconnect" href="//go.ezoic.net" crossorigin />
+  <link
+    rel="preload"
+    as="script"
+    href="//securepubads.g.doubleclick.net/tag/js/gpt.js"
+  />
+  <link
+    rel="preload"
+    as="script"
+    href="//go.ezodn.com/hb/dall.js?cb=195-0-82"
+  />
+  <script type="text/javascript">
+    (function () {
+      function storageAvailable(type) {
+        var storage;
+        try {
+          storage = window[type];
+          var x = "__storage_test__";
+          storage.setItem(x, x);
+          storage.removeItem(x);
+          return true;
+        } catch (e) {
+          return (
+            e instanceof DOMException &&
+            (e.code === 22 ||
+              e.code === 1014 ||
+              e.name === "QuotaExceededError" ||
+              e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+            storage &&
+            storage.length !== 0
+          );
+        }
+      }
+      function remove_ama_config() {
+        if (storageAvailable("localStorage")) {
+          localStorage.removeItem("google_ama_config");
+        }
+      }
+      remove_ama_config();
+    })();
+  </script>
+  <script type="text/javascript">
+    var ezoicTestActive = true;
+  </script>
+  <script data-ezscrex="false" type="text/javascript" data-cfasync="false">
+    window._ezaq = Object.assign(
+      {},
+      typeof window._ezaq !== "undefined" ? window._ezaq : {},
+      {
+        ab_test_id: "mod239",
+        ad_cache_level: 0,
+        ad_count_adjustment: 2,
+        ad_lazyload_version: 0,
+        ad_load_version: 1,
+        ad_location_ids: "",
+        adx_ad_count: 0,
+        ai_placeholder_cache_level: 2,
+        ai_placeholder_placement_cnt: 0,
+        bidder_method: 1,
+        bidder_version: 3,
+        city: "Pune",
+        country: "IN",
+        days_since_last_visit: -1,
+        display_ad_count: 3,
+        domain_id: 336810,
+        domain_test_group: 20230810,
+        ds_adsize_opt_id: -1,
+        engaged_time_visit: 0,
+        ezcache_level: 2,
+        ezcache_skip_code: 0,
+        form_factor_id: 1,
+        framework_id: 1,
+        has_bad_image: 0,
+        has_bad_words: 0,
+        iab_category: "",
+        is_embed: false,
+        is_from_recommended_pages: false,
+        is_return_visitor: false,
+        is_sitespeed: 1,
+        last_page_load: "",
+        last_pageview_id: "",
+        lt_cache_level: 0,
+        max_ads: 4,
+        metro_code: 0,
+        optimization_version: 1,
+        page_ad_positions: "",
+        page_view_count: 0,
+        page_view_id: "f85627b9-8174-420c-54a8-1ca231e6cd5d",
+        position_selection_id: 0,
+        postal_code: "411005",
+        pv_event_count: 0,
+        response_size_orig: 32582,
+        response_time_orig: 3,
+        serverid: "i-00dd87f78a287413b",
+        state: "MH",
+        sub_page_ad_positions: "",
+        t_epoch: 1711980343,
+        template_id: 134,
+        time_on_site_visit: 0,
+        url: "https://www.online-ide.com/",
+        visit_uuid: "0f7c49b8-9c72-47de-5c64-a10fc4c991ce",
+        word_count: 353,
+        worst_bad_word_level: 0,
+      }
+    );
+    __ez.queue.markLoaded("ezaqReady");
+  </script>
+  <script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer>
+    __ez.queue.addFile(
+      "/parsonsmaize/mulvane.js",
+      "/parsonsmaize/mulvane.js?gcb=195-0&cb=6",
+      true,
+      ["/parsonsmaize/abilene.js"],
+      true,
+      false,
+      true,
+      false
+    );
+    __ez.queue.addFile(
+      "/parsonsmaize/olathe.js",
+      "/parsonsmaize/olathe.js?gcb=195-0&cb=24",
+      false,
+      ["/parsonsmaize/abilene.js", "/parsonsmaize/mulvane.js"],
+      true,
+      false,
+      true,
+      false
+    );
+    __ez.queue.addFile(
+      "/porpoiseant/et.js",
+      "/porpoiseant/et.js?gcb=195-0&cb=2",
+      false,
+      [],
+      true,
+      false,
+      true,
+      false
+    );
+    !(function () {
+      var e = function (e, i, t) {
+        var o = [],
+          n = null;
+        return {
+          Add: function (t, d) {
+            var a =
+              arguments.length > 2 && void 0 !== arguments[2]
+                ? arguments[2]
+                : null;
+            if (__ez.dot.isDefined(t) && __ez.dot.isValid(d))
+              if (
+                n == t &&
+                o.length > 0 &&
+                o[o.length - 1].data.length + d.length <= 5
+              )
+                o[o.length - 1].data = o[o.length - 1].data.concat(
+                  __ez.dot.dataToStr(d)
+                );
+              else {
+                var _ = {
+                  type: e,
+                  domain_id: __ez.dot.getDID(),
+                  t_epoch: __ez.dot.getEpoch(0),
+                  data: __ez.dot.dataToStr(d),
+                };
+                (_[i] = t),
+                  a &&
+                    a.hasOwnProperty("impression_id") &&
+                    a.hasOwnProperty("ad_unit") &&
+                    ((_.impression_id = a.impression_id.toString()),
+                    (_.unit = a.ad_unit)),
+                  o.push(_),
+                  (n = t);
+              }
+          },
+          Fire: function () {
+            if (
+              void 0 === document.visibilityState ||
+              "prerender" !== document.visibilityState
+            ) {
+              if (__ez.dot.isDefined(o) && o.length > 0)
+                for (; o.length > 0; ) {
+                  var e = 5;
+                  e > o.length && (e = o.length);
+                  var i = o.splice(0, e),
+                    n =
+                      __ez.dot.getURL(t) +
+                      "?orig=" +
+                      (!0 === __ez.template.isOrig ? 1 : 0) +
+                      "&v=" +
+                      btoa(JSON.stringify(i));
+                  __ez.dot.Fire(n);
+                }
+              o = [];
+            }
+          },
+        };
+      };
+      (__ez.vep = e(
+        "video",
+        "video_impression_id",
+        "/detroitchicago/grapefruit.gif"
+      )),
+        (__ez.vaep = e(
+          "video-ad",
+          "video_ad_impression_id",
+          "/porpoiseant/lemon.gif"
+        )),
+        (__ez.osvaep = e(
+          "outstream-video-ad",
+          "video_ad_impression_id",
+          "/porpoiseant/tangerine.gif"
+        ));
+    })();
+  </script>
+  <script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer>
+    __ez.queue.addFile(
+      "/detroitchicago/wichita.js",
+      "/detroitchicago/wichita.js?gcb=195-0&cb=12",
+      false,
+      ["/parsonsmaize/abilene.js"],
+      true,
+      false,
+      true,
+      false
+    );
+    __ez.queue.addFile(
+      "/detroitchicago/raleigh.js",
+      "/detroitchicago/raleigh.js?gcb=195-0&cb=7",
+      false,
+      ["/parsonsmaize/abilene.js"],
+      true,
+      false,
+      true,
+      false
+    );
+    __ez.queue.addFile(
+      "/detroitchicago/vista.js",
+      "/detroitchicago/vista.js?gcb=195-0&cb=6",
+      false,
+      ["/parsonsmaize/abilene.js"],
+      true,
+      false,
+      true,
+      false
+    );
+  </script>
+  <script
+    type="text/javascript"
+    data-ezscrex="false"
+    data-cfasync="false"
+    async=""
+  >
+    function productEzoicAds() {
+      window.google_reactive_ads_global_state = {
+        adCount: {},
+        floatingAdsStacking: {
+          maxZIndexListeners: [],
+          maxZIndexRestrictions: {},
+          nextRestrictionId: 0,
+        },
+        messageValidationEnabled: false,
+        reactiveTypeDisabledByPublisher: {},
+        reactiveTypeEnabledInAsfe: {},
+        sideRailAvailableSpace: [],
+        sideRailOverlappableElements: [],
+        stateForType: {},
+        tagSpecificState: {},
+        wasPlaTagProcessed: true,
+        wasReactiveAdConfigReceived: { 1: true, 2: true, 8: true },
+        wasReactiveAdVisible: {},
+        wasReactiveTagRequestSent: true,
+        description:
+          "Can't disable auto ads programmatically on the page, so here we are!",
+      };
+      var d = {
+        ab: "",
+        km: {},
+        pv: "",
+        vu: "0f7c49b8-9c72-47de-5c64-a10fc4c991ce",
+        r: {
+          r: [
+            {
+              p: " ezoic_pub_ad_placeholder-101-under_page_title-160x600-101-nonexxxnonexxxxxxezmaxscaleval100 ",
+              s: 101,
+              h: 600,
+              w: 336,
+            },
+            {
+              p: " ezoic_pub_ad_placeholder-104-under_first_paragraph-728x90-104-nonexxxnonexxxxxxezmaxscaleval100 ",
+              s: 104,
+              h: 280,
+              w: 728,
+            },
+            {
+              p: " ezoic_pub_ad_placeholder-102-top_of_page-160x600-102-nonexxxnonexxxxxxezmaxscaleval100 ",
+              s: 102,
+              h: 600,
+              w: 336,
+            },
+            {
+              p: " ezoic_pub_ad_placeholder-100-bottom_floating-728x90-100-nonexxxnonexxxxxxezmaxscaleval100 ",
+              s: 100,
+              h: 90,
+              w: 970,
+            },
+          ],
+          a: {
+            100: true,
+            101: true,
+            102: true,
+            104: true,
+            105: true,
+            107: true,
+            6: true,
+          },
+          g: -1,
+          l: { 0: 6, 1: 3, 2: 2, 3: 1, 4: -1, 5: -1 },
+          m: { 0: 4, 1: 3, 2: 2, 3: 1, 4: -1, 5: -1 },
+          v: 1,
+          ve: false,
+          hr: false,
+          ag: 4,
+        },
+        tid: 134,
+        tn: "pub_site",
+        url: "https://www.online-ide.com/",
+        wc: 353,
+        dw: 1536,
+        dh: 703,
+        ff: 1,
+        dhh: "",
+      };
+      d.ab = _ezaq.ab_test_id;
+      d.pv = _ezaq.page_view_id;
+      d.vu = _ezaq.visit_uuid;
+      var dynamicAddScript = function (script) {
+        if (window.ezFinishedStatic === true) {
+          console.error("attempted to load dynamic script again");
+          return;
+        }
+        var errorMessages = [];
+        function errorHandler(event) {
+          var errorObj = event.error;
+          if (
+            errorObj &&
+            errorObj.stack &&
+            errorObj.stack.indexOf("dynamicAddScript") !== -1
+          ) {
+            var errorMessage = {
+              Message: event.message,
+              LineNo: event.lineno,
+              ColumnNo: event.colno,
+              Stack: errorObj.stack,
+            };
+            errorMessages.push(errorMessage);
+          }
+
+          if (typeof window.onerror === "function") {
+            window.onerror.apply(this, arguments);
+          }
+        }
+        window.addEventListener("error", errorHandler);
+
+        var ezDynamic = document.createElement("script");
+        ezDynamic.type = "text/javascript";
+        ezDynamic.innerHTML = script;
+        document.head.appendChild(ezDynamic);
+
+        window.removeEventListener("error", errorHandler);
+        if (
+          window.ezFinishedStatic !== true ||
+          typeof window.ezstaticerrors !== "undefined"
+        ) {
+          d.Script = script;
+          d.ErrorMessages = JSON.stringify(errorMessages);
+          d.ErrorStaticMessages = window.ezstaticerrors || "";
+          var dataTxt = JSON.stringify(d);
+          if (dataTxt.length > 0) {
+            var logXHR = new XMLHttpRequest();
+            logXHR.open("POST", "/ezais/log?cb=1", true);
+            logXHR.setRequestHeader("Content-Type", "application/json");
+            logXHR.send(dataTxt);
+          }
+        }
+      };
+      var dataText = JSON.stringify(d);
+      if (dataText.length > 0) {
+        var startTime = Date.now() - __ez.stms;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/ezais/dynamic?cb=1", true);
+        xhr.onload = function () {
+          if (xhr.status != 200) {
+            return;
+          }
+
+          if (document.readyState !== "loading") {
+            dynamicAddScript(xhr.response);
+            return;
+          }
+
+          var eventFunc = function () {
+            if (document.readyState === "loading") {
+              return;
+            }
+            document.removeEventListener(
+              "readystatechange",
+              eventFunc,
+              false
+            );
+            dynamicAddScript(xhr.response);
+          };
+
+          document.addEventListener("readystatechange", eventFunc, false);
+        };
+        xhr.setRequestHeader("Content-Type", "text/plain");
+        xhr.send(dataText);
+      }
+    }
+    __ez.queue.addFunc(
+      "productEzoicAds",
+      "productEzoicAds",
+      null,
+      true,
+      ["ezaqReady"],
+      false,
+      false,
+      false,
+      true
+    );
+  </script>
+  <base href="https://www.online-ide.com/" />
+  <title>Online IDE - Code Editor, Compiler, Interpreter</title>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    name="viewport"
+  />
+
+  <meta
+    name="description"
+    content="Build and Run your code instantly. Online-Ide is a quick and easy tool that helps you to build, compile, test your programs online."
+  />
+  <meta
+    name="keywords"
+    content="online c compiler, online c++ compiler, online java compiler, online java editor, online java ide, online python compiler, online python ide, online python interpreter, online python editor, online python code runner, run python script online, online python code editor, online php compiler, online php interpreter, online r compiler, online ruby interpreter, online ruby compiler, online bash shell, online go compiler, online golang compiler"
+  />
+  <meta name="author" content="online-ide.com" />
+  <meta name="copyright" content="ShareAlike" />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="https://www.online-ide.com/favicon.png"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.css"
+  />
+
+  <!-- Bootstrap 3.3.7 -->
+  <link
+    rel="stylesheet"
+    href="https://www.online-ide.com/assets/bower_components/bootstrap/dist/css/bootstrap.min.css?ff=1&amp;wps=true"
+  />
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+  />
+
+  <!-- Custom CSS -->
+  <link
+    rel="stylesheet"
+    href="https://www.online-ide.com/assets/dist/css/ide.css?ff=1&amp;v=a11&amp;wps=true"
+  />
+
+  <!-- Google Font -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"
+  />
+
+  <!-- jQuery 3 -->
+  <script src="https://www.online-ide.com/assets/bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <!-- Bootstrap 3.3.7 -->
+  <script src="https://www.online-ide.com/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script src="https://www.online-ide.com/assets/dist/js/ide.js?v=a7"></script>
+
+  <!-- Ace Editor -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.01/ace.js"></script> -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.8.1/ace.js"
+    type="text/javascript"
+    charset="utf-8"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.8.1/ext-language_tools.min.js"
+    type="text/javascript"
+    charset="utf-8"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.8.1/ext-settings_menu.min.js"
+    type="text/javascript"
+    charset="utf-8"
+  ></script>
+  <script
+    async=""
+    src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.8.1/ext-keybinding_menu.min.js"
+    type="text/javascript"
+    charset="utf-8"
+  ></script>
+
+  <!-- Split JS -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.2.0/split.min.js"
+  ></script>
+
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+
+  <script
+    async=""
+    src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.js"></script>
+
+  <!-- Hotjar Tracking Code for https://www.online-ide.com -->
+  <!-- <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1767600,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script> -->
+
+  <script
+    type="text/javascript"
+    src="//script.crazyegg.com/pages/scripts/0119/2367.js"
+    async="async"
+  ></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async=""
+    src="https://www.googletagmanager.com/gtag/js?id=UA-163453927-1"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-163453927-1");
+  </script>
+
+  <script type="text/javascript">
+    var ezoTemplate = "pub_site";
+    var ezouid = "1";
+    var ezoFormfactor = "1";
+  </script>
+  <script data-ezscrex="false" type="text/javascript">
+    var soc_app_id = "0";
+    var did = 336810;
+    var ezdomain = "online-ide.com";
+    var ezoicSearchable = 1;
+  </script>
+  <link
+    rel="preload stylesheet"
+    type="text/css"
+    href="/ezvideo/ezvideojscss.css?cb=105"
+    as="style"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/ezvideo/ezvideojspluginscss.css?cb=105"
+  />
+  <style>
+    .video-container {
+      overflow: hidden !important;
+    }
+    .player-container {
+      background: #1a1a1a !important;
+      overflow: auto !important;
+      width: 900px !important;
+      margin: 0 0 20px !important;
+    }
+    .ez-video-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    @media screen and (min-width: 100px) {
+      .ez-video-container.ez-stuck:not(.ez-outstream-container) {
+        position: fixed;
+        bottom: 120px;
+        z-index: 999;
+        right: 20px;
+        width: 60%;
+        height: auto;
+        transform: translateY(100%);
+        animation: fade-in-up 0.25s ease forwards;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      .ez-video-container.ez-stuck:not(.ez-outstream-container) {
+        position: fixed;
+        bottom: 120px;
+        z-index: 999;
+        right: 20px;
+        width: 40%;
+        height: auto;
+        transform: translateY(100%);
+        animation: fade-in-up 0.25s ease forwards;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      .ez-video-container.ez-stuck:not(.ez-outstream-container) {
+        position: fixed;
+        bottom: 120px;
+        z-index: 999;
+        right: 20px;
+        margin-bottom: 20px;
+        width: 20%;
+        height: auto;
+        transform: translateY(100%);
+        animation: fade-in-up 0.75s ease forwards;
+      }
+    }
+    .ez-video-container.ez-stuck.vertical {
+      width: 225px;
+      height: 400px;
+      max-height: 400px;
+    }
+    .ez-video-container.ez-stuck.ez-float-left {
+      right: auto;
+      left: 20px;
+    }
+    .ez-video-container.ez-stuck.ez-float-center {
+      right: auto;
+      left: 50%;
+      margin-left: -130px;
+    }
+    .ez-video-container.ez-stuck.ez-float-center.vertical {
+      margin-left: -80px;
+    }
+    .ez-video-ad-container {
+      top: 0;
+      position: absolute;
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+    .ez-video-ad-container div,
+    .ez-video-wrap div {
+      background: 0 0;
+    }
+    .ez-vad-controls {
+      bottom: 0;
+      height: 1.4em;
+      position: absolute;
+      overflow: hidden;
+      display: none;
+      opacity: 1;
+      z-index: 99;
+      direction: ltr;
+      background-color: #07141eb2 !important;
+      background: -moz-linear-gradient(
+        bottom,
+        rgba(7, 20, 30, 0.7) 0%,
+        rgba(7, 20, 30, 0) 100%
+      );
+      background: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0%, rgba(7, 20, 30, 0.7)),
+        color-stop(100%, rgba(7, 20, 30, 0))
+      );
+      background: -webkit-linear-gradient(
+        bottom,
+        rgba(7, 20, 30, 0.7) 0%,
+        rgba(7, 20, 30, 0) 100%
+      );
+      background: -o-linear-gradient(
+        bottom,
+        rgba(7, 20, 30, 0.7) 0%,
+        rgba(7, 20, 30, 0) 100%
+      );
+      background: -ms-linear-gradient(
+        bottom,
+        rgba(7, 20, 30, 0.7) 0%,
+        rgba(7, 20, 30, 0) 100%
+      );
+      background: linear-gradient(
+        to top,
+        rgba(7, 20, 30, 0.7) 0%,
+        rgba(7, 20, 30, 0) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0007141E',endColorstr='#07141E',GradientType=0 );
+    }
+    .ez-vad-controls.ez-vad-controls-showing {
+      height: 3.7em;
+    }
+    .ez-vad-countdown {
+      height: 1em;
+      color: #fff !important;
+      text-shadow: 0 0 0.2em #000 !important;
+      cursor: default;
+    }
+    .ez-vad-seek-bar {
+      top: 1.2em;
+      height: 0.3em;
+      position: absolute;
+      background: #fff6 !important;
+    }
+    .ez-vad-progress {
+      width: 0;
+      height: 0.3em;
+      background-color: #ecc546 !important;
+    }
+    .ez-vad-play-pause,
+    .ez-vad-mute,
+    .ez-vad-slider,
+    .ez-vad-fullscreen {
+      width: 2.33em;
+      height: 1.33em;
+      top: 0.733em;
+      left: 0;
+      position: absolute;
+      color: #ccc !important;
+      font-size: 1.5em;
+      line-height: 2;
+      text-align: center;
+      font-family: VideoJS;
+      cursor: pointer;
+    }
+    .ez-vad-mute {
+      left: auto;
+      right: 5.667em;
+    }
+    .ez-vad-slider {
+      left: auto;
+      right: 2.33em;
+      width: 3.33em;
+      height: 0.667em;
+      top: 1.33em;
+      background-color: #555 !important;
+    }
+    .ez-vad-slider-level {
+      width: 100%;
+      height: 0.667em;
+      background-color: #ecc546 !important;
+    }
+    .ez-vad-fullscreen {
+      left: auto;
+      right: 0;
+    }
+    .ez-vad-playing:before {
+      content: "\00f103";
+    }
+    .ez-vad-paused:before {
+      content: "\00f101";
+    }
+    .ez-vad-playing:hover:before,
+    .ez-vad-paused:hover:before {
+      text-shadow: 0 0 1em #fff !important;
+    }
+    .ez-vad-non-muted:before {
+      content: "\00f107";
+    }
+    .ez-vad-muted:before {
+      content: "\00f104";
+    }
+    .ez-vad-non-muted:hover:before,
+    .ez-vad-muted:hover:before {
+      text-shadow: 0 0 1em #fff !important;
+    }
+    .ez-vad-non-fullscreened:before {
+      content: "\00f108";
+    }
+    .ez-vad-fullscreened:before {
+      content: "\00f109";
+    }
+    .ez-vad-non-fullscreened:hover:before,
+    .ez-vad-fullscreened:hover:before {
+      text-shadow: 0 0 1em #fff !important;
+    }
+    .ez-video-wrap video {
+      visibility: visible !important;
+    }
+    .ez-wrap-float-only {
+      height: 0 !important;
+      width: 0 !important;
+    }
+    .ez-playlist-float-only {
+      display: none !important;
+    }
+    .video-js .vjs-share__middle {
+      padding: 0 0 !important;
+      width: 80%;
+    }
+    .video-js {
+      float: left !important;
+      font-size: 10px;
+      color: #fff;
+      position: relative !important;
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+    @keyframes fade-in-up {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .floating-placeholder {
+      background-color: #000;
+      display: block;
+    }
+    .floating-placeholder-sizer {
+      width: 100%;
+      padding-bottom: 56.25%;
+    }
+    .ez-video-wrap {
+      text-align: center;
+      clear: both;
+      position: relative;
+    }
+    .vjs-playlist {
+      height: 114px;
+    }
+    .ez-video-link {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+      font-size: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block !important;
+      text-align: left;
+      max-width: 90vw;
+    }
+    span.vjs-icon-placeholder {
+      line-height: 1.9em !important;
+      position: static;
+    }
+    .ez-companion {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    .ez-video-magic-row {
+      display: block;
+      height: 114px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    .ez-video-magic-banner-row {
+      display: block;
+      background-color: #0000001a;
+      height: 114px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      margin-top: 10px;
+    }
+    .ez-video-magic-row.takeover {
+      display: block;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      background-color: unset;
+      margin-top: 0;
+    }
+    .ez-video-magic-list {
+      height: 100%;
+      white-space: nowrap;
+      position: relative;
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none;
+      text-align: left;
+      list-style-type: none;
+    }
+    .ez-video-magic-list.ez-playlist-vertical {
+      display: flex;
+      flex-direction: column;
+    }
+    .ez-video-magic-list .ez-video-magic-item::before {
+      display: none;
+    }
+    .ez-video-magic-banner-list {
+      height: 100%;
+      white-space: nowrap;
+      position: relative;
+      margin: 0 !important;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+      list-style-type: none;
+    }
+    .ez-video-magic-item {
+      display: inline-block;
+      height: 100%;
+      margin: 0 !important;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .ez-video-magic-item.takeover {
+      display: block;
+      height: 100%;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .ez-video-magic-item.vertical {
+      width: calc(114px * 16 / 9);
+      background-color: #262626;
+    }
+    .ez-video-magic-item:not(.vertical) .ez-stuck {
+      width: 20%;
+      height: auto;
+    }
+    .ez-video-magic-item.vertical .ez-stuck {
+      width: 144px !important;
+      height: 256px !important;
+    }
+    .ez-video-magic-item .floating-placeholder {
+      width: calc(114px * 16 / 9);
+    }
+    .ez-video-magic-item .ez-video-container {
+      width: calc(114px * 16 / 9);
+    }
+    .ez-video-magic-item .ez-video-container.takeover {
+      width: 100%;
+    }
+    .ez-video-magic-item .ez-video-container.vertical:not(.ez-stuck) {
+      width: calc(114px * 9 / 16);
+      margin: 0 auto;
+      display: block;
+    }
+    .ez-video-magic-item .vjs-up-next-text {
+      display: none !important;
+    }
+    .ez-video-magic-item .vjs-playlist-duration,
+    .ez-video-magic-item .vjs-playlist-now-playing-text,
+    .ez-video-magic-item .vjs-playlist-name {
+      color: #fff !important;
+    }
+    .ez-video-magic-item .vjs-playlist {
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+    .ez-playlist-vertical .vjs-playlist {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .ez-video-magic-item .vjs-playlist::-webkit-scrollbar {
+      height: 7px;
+      width: 7px;
+      background-color: #767676;
+    }
+    .ez-video-magic-item .vjs-playlist::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+    }
+    .ez-video-magic-item .vjs-playlist:hover::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+    }
+    .ez-playlist-vertical .vjs-playlist {
+      height: 100%;
+    }
+    .ez-playlist-vertical .ez-video-magic-row {
+      height: 100%;
+      margin-top: 0;
+    }
+    .ez-playlist-vertical .ez-video-magic-list {
+      background: 0 0;
+    }
+    .ez-playlist-vertical .ez-video-magic-item {
+      height: 70px;
+      margin: 0 !important;
+    }
+    .ez-video-magic-playlist {
+      flex-grow: 1;
+      margin-left: 5px !important;
+    }
+    .ez-playlist-vertical .ez-video-magic-item .floating-placeholder,
+    .ez-playlist-vertical .ez-video-magic-item .ez-video-container,
+    .ez-playlist-vertical .ez-video-magic-item .ez-video-container.takeover {
+      width: calc(80px * 16 / 9);
+    }
+    .ez-playlist-vertical .ez-video-magic-autoplayer {
+      height: 80px;
+    }
+    .ez-playlist-vertical .ez-video-magic {
+      margin-left: 3px;
+    }
+    .ez-playlist-vertical .vjs-playlist::-webkit-scrollbar {
+      display: none;
+    }
+    .ez-playlist-vertical .vjs-playlist:hover::-webkit-scrollbar {
+      display: none;
+    }
+    .ez-playlist-vertical .ez-video-magic-row {
+      background-color: #0000 !important;
+    }
+    .ez-rounded-border #vignette-overlay,
+    .ez-rounded-border video,
+    .ez-rounded-border .vjs-poster img,
+    .ez-rounded-border .vjs-playlist-item,
+    .ez-rounded-border .ez-video-magic-row,
+    .ez-rounded-border .ez-video-magic-playlist {
+      border-radius: 12px;
+    }
+    .ez-rounded-border #watch-on-link {
+      border-bottom-left-radius: 5px;
+    }
+    .ez-video-center {
+      margin: 0 auto;
+      text-align: left;
+    }
+    .ez-video-wrap {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui,
+        Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue,
+        sans-serif !important;
+    }
+    .ez-video-content-wrap.ez-playlist-vertical {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    .ez-video-magic img {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+    .ez-video-magic-item.vertical img {
+      width: calc(114px * 9 / 16);
+      margin: 0 auto;
+      display: block;
+    }
+    .ez-video-magic-overlay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background-color: #0009;
+    }
+    .humix-universal-js-insert {
+      display: block;
+    }
+    .ez-video-container.takeover .ez-video-ez-stuck-bar {
+      display: none !important;
+    }
+    .ez-video-container.takeover .ez-video-ez-stuck-bar.ez-stuck-bar-visible {
+      display: flex !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      opacity: 1 !important;
+      align-items: baseline !important;
+      position: absolute !important;
+      z-index: 10000 !important;
+      transition: background-color 0.1s !important;
+    }
+    .video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before,
+    .vjs-icon-cancel:before {
+      color: #fff !important;
+      content: "\f119" !important;
+      font-size: 24px !important;
+      cursor: pointer !important;
+    }
+    .ez-video-container.takeover .ez-video-ez-stuck-close {
+      opacity: 0.9 !important;
+      right: 0;
+      text-shadow: 0 0 4px #000 !important;
+      transition: 0.3s !important;
+      cursor: pointer !important;
+      display: flex !important;
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      background: #0009;
+      align-items: center;
+    }
+    .ez-video-magic-no-ads-disclaimer.enabled {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fff !important;
+      color: #000 !important;
+      padding: 2px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      z-index: 5;
+      box-shadow: 0 0 8px #fffc !important;
+      font-family: system-ui !important;
+      border-radius: 6px;
+    }
+    .ez-video-magic-no-ads-disclaimer.disabled {
+      display: none !important;
+    }
+    .ez-video-magic-no-ads-disclaimer.enabled
+      + .video-js
+      div.vjs-poster
+      picture.vjs-poster
+      img {
+      filter: brightness(0.5);
+    }
+  </style>
+  <style>
+    div {
+      font-family: roboto, sans-serif;
+    }
+    .ez-vid-placeholder {
+      position: relative;
+    }
+    .ez-vid-placeholder img.poster {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 10;
+    }
+    .ez-vid-placeholder .video-js {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 110;
+    }
+    .ez-vid-preview {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 10;
+      display: block;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .vjs-has-started + .video-play-btn {
+      display: none;
+    }
+    .video-play-btn {
+      z-index: 1000;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      box-sizing: border-box;
+      display: block;
+      pointer-events: none;
+    }
+    .vjs-share-control {
+      display: none !important;
+    }
+    .vjs-big-play-button {
+      display: none !important;
+    }
+    .vjs-theme-forest .vjs-control-bar {
+      background: #2b333fb2 !important;
+      margin-bottom: 0 !important;
+      padding-top: 0.55em !important;
+      z-index: 999 !important;
+    }
+    .video-js .vjs-control-bar {
+      height: 4em !important;
+      z-index: 999 !important;
+    }
+    .vjs-theme-forest {
+      --vjs-theme-forest--primary: #03d8f3 !important;
+      --vjs-theme-forest--secondary: #fff !important;
+    }
+    .vjs-remaining-time-display {
+      font-family: Arial !important;
+    }
+    .vjs-subs-caps-button * {
+      font-family: Arial !important;
+      text-align: left !important;
+      font-size: 12px !important;
+    }
+    .vjs-subs-caps-button .vjs-menu .vjs-menu-content .vjs-menu-item {
+      padding-left: 8px !important;
+      background-color: var(--humix-black);
+    }
+    .vjs-subs-caps-button .vjs-menu .vjs-menu-content .vjs-menu-item:hover {
+      background-color: var(--humix-tertiary);
+      color: var(--humix-black);
+    }
+    .vjs-subs-caps-button .vjs-menu .vjs-menu-content .vjs-selected {
+      background-color: var(--humix-secondary);
+      color: var(--humix-black);
+    }
+    .vjs-subs-caps-button sup {
+      color: inherit !important;
+      font-weight: 400 !important;
+      text-shadow: none !important;
+    }
+    .vjs-max-quality-selector-button * {
+      font-family: Arial !important;
+      text-align: left !important;
+    }
+    .vjs-max-quality-selector-button .vjs-menu .vjs-menu-item {
+      padding-left: 8px !important;
+    }
+    .vjs-max-quality-selector sup {
+      color: inherit !important;
+      font-weight: 400 !important;
+      text-shadow: none !important;
+    }
+    .ez-video-ad-container {
+      top: 0;
+      position: absolute;
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+    .ez-video-ad-container div,
+    .ez-video-wrap div {
+      background: 0 0;
+    }
+    .ez-vad-controls {
+      bottom: 0;
+      height: 1.4em;
+      position: absolute;
+      overflow: hidden;
+      display: none;
+      opacity: 1;
+      z-index: 99;
+      background-color: #07141eb2;
+      background: -moz-linear-gradient(
+        bottom,
+        rgba(7, 20, 30, 0.7) 0%,
+        rgba(7, 20, 30, 0) 100%
+      );
+      background: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0%, rgba(7, 20, 30, 0.7)),
+        color-stop(100%, rgba(7, 20, 30, 0))
+      );
+      background: -webkit-linear-gradient(
+        bottom,
+        rgba(7, 20, 30, 0.7) 0%,
+        rgba(7, 20, 30, 0) 100%
+      );
+      background: -o-linear-gradient(
+        bottom,
+        rgba(7, 20, 30, 0.7) 0%,
+        rgba(7, 20, 30, 0) 100%
+      );
+      background: -ms-linear-gradient(
+        bottom,
+        rgba(7, 20, 30, 0.7) 0%,
+        rgba(7, 20, 30, 0) 100%
+      );
+      background: linear-gradient(
+        to top,
+        rgba(7, 20, 30, 0.7) 0%,
+        rgba(7, 20, 30, 0) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0007141E',endColorstr='#07141E',GradientType=0 );
+    }
+    .ez-vad-controls.ez-vad-controls-showing {
+      height: 3.7em;
+    }
+    .ez-vad-countdown {
+      height: 1em;
+      color: #fff;
+      text-shadow: 0 0 0.2em #000;
+      cursor: default;
+    }
+    .ez-vad-seek-bar {
+      top: 1.2em;
+      height: 0.3em;
+      position: absolute;
+      background: #fff6 !important;
+    }
+    .ez-vad-progress {
+      width: 0;
+      height: 0.3em;
+      background-color: #ecc546 !important;
+    }
+    .ez-vad-play-pause,
+    .ez-vad-mute,
+    .ez-vad-slider,
+    .ez-vad-fullscreen {
+      width: 2.33em;
+      height: 1.33em;
+      top: 0.733em;
+      left: 0;
+      position: absolute;
+      color: #ccc;
+      font-size: 1.5em;
+      line-height: 2;
+      text-align: center;
+      font-family: VideoJS;
+      cursor: pointer;
+    }
+    .ez-vad-mute {
+      left: auto;
+      right: 5.667em;
+    }
+    .ez-vad-slider {
+      left: auto;
+      right: 2.33em;
+      width: 3.33em;
+      height: 0.667em;
+      top: 1.33em;
+      background-color: #555 !important;
+    }
+    .ez-vad-slider-level {
+      width: 100%;
+      height: 0.667em;
+      background-color: #ecc546 !important;
+    }
+    .ez-vad-fullscreen {
+      left: auto;
+      right: 0;
+    }
+    .ez-vad-playing:before {
+      content: "\00f103";
+    }
+    .ez-vad-paused:before {
+      content: "\00f101";
+    }
+    .ez-vad-playing:hover:before,
+    .ez-vad-paused:hover:before {
+      text-shadow: 0 0 1em #fff;
+    }
+    .ez-vad-non-muted:before {
+      content: "\00f107";
+    }
+    .ez-vad-muted:before {
+      content: "\00f104";
+    }
+    .ez-vad-non-muted:hover:before,
+    .ez-vad-muted:hover:before {
+      text-shadow: 0 0 1em #fff;
+    }
+    .ez-vad-non-fullscreened:before {
+      content: "\00f108";
+    }
+    .ez-vad-fullscreened:before {
+      content: "\00f109";
+    }
+    .ez-vad-non-fullscreened:hover:before,
+    .ez-vad-fullscreened:hover:before {
+      text-shadow: 0 0 1em #fff;
+    }
+    .vjs-mute-control {
+      width: 30px !important;
+      height: 100%;
+      font-family: VideoJS !important;
+    }
+    .embed-playlist-timer-container {
+      text-align: center;
+      background: #2b333fb2 !important;
+      color: #03d8f3;
+      position: fixed;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      transition: 1s;
+    }
+    .timer-inner-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 90%;
+    }
+    .timer-up-next-text {
+      font-size: 0.85rem;
+      color: lightgrey;
+    }
+    .ring-timer {
+      position: relative;
+      height: 50px;
+      width: 50px;
+    }
+    .ring-timer__circle {
+      fill: none;
+      stroke: none;
+    }
+    .ring-timer__path-elapsed {
+      stroke-width: 7px;
+      stroke: grey;
+    }
+    .ring-timer__label {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+    .ring-timer__path-remaining {
+      stroke-width: 7px;
+      stroke-linecap: round;
+      transform: rotate(90deg);
+      transform-origin: center;
+      transition: 1s linear all;
+      stroke: currentColor;
+      color: #03d8f3;
+    }
+    .ring-timer__svg {
+      transform: scaleX(-1);
+    }
+    .ring-timer-title {
+      max-height: 2.5em;
+      font-style: normal;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      line-height: 20px;
+      width: 200px;
+      color: #fff;
+      font-size: 1rem;
+    }
+    .ring-timer-play-button {
+      background-color: #54565ab2 !important;
+      color: #03d8f3 !important;
+      border: none !important;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .ring-timer-cancel {
+      font-size: 0.85rem;
+      color: #fff;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    .embed-playlist::-webkit-scrollbar {
+      width: 10px;
+    }
+    .embed-playlist::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: #ffffff1a;
+    }
+    .embed-playlist::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: #11171a;
+    }
+    #embed-playlist-button {
+      background-color: #2b333fb2 !important;
+      color: #03d8f3 !important;
+      border: none !important;
+    }
+    .next-video-container {
+      display: block;
+      z-index: 999;
+      width: 50%;
+      height: 50%;
+      margin: 0 auto;
+      text-align: center;
+      position: absolute;
+      margin-left: 25%;
+      margin-right: 25%;
+      top: 25%;
+      background-color: #000;
+    }
+    .next-video .after img {
+      max-height: 40px;
+    }
+    .next-video .h6 {
+      font-size: 15px;
+      line-height: 15px;
+      font-weight: 500;
+    }
+    .next-video:hover {
+      cursor: pointer;
+    }
+    .next-video:hover .col {
+      background-color: #0000001a;
+    }
+    .next-video .time {
+      position: absolute;
+      top: 75%;
+      right: 5px;
+      background-color: #000c;
+      padding: 0 4px;
+      font-weight: 500;
+      color: #fff;
+      font-size: 12px;
+    }
+    .next-video .after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      color: #fff;
+    }
+    .next-video:hover .after {
+      display: block;
+      background: #0009;
+    }
+    .next-video .after img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .next-video {
+      position: absolute;
+      top: 75%;
+      background-color: #000c;
+      font-weight: 500;
+      color: #fff;
+      font-size: 12px;
+      width: 100%;
+    }
+    .next-video .after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      color: #fff;
+    }
+    .next-video .after img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .rounded {
+      border-radius: 0.25rem !important;
+    }
+    .card {
+      border-radius: 0;
+    }
+    .card .card-thumbnail-img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+    }
+    .next-video-thumbnail {
+      background-color: #000;
+    }
+    .next-playlist-thumbnail {
+      background-color: #000;
+    }
+    .next-video-button-row {
+      background: #000;
+      z-index: 9999;
+      position: fixed;
+      top: 65%;
+      width: 50%;
+    }
+    .next-playlist-button-row {
+      background: #000;
+      z-index: 9999;
+      position: fixed;
+      top: 65%;
+      width: 50%;
+    }
+    .next-video-button {
+      width: 85%;
+      margin: 0 auto;
+      color: #fff;
+      background: #000;
+      font-size: 0.95rem;
+      border: #4f4f4f 1px solid;
+      font-weight: 500;
+      border-radius: 15px;
+    }
+    .next-video-button:hover {
+      border: #fff 1px solid;
+      border-radius: 15px;
+    }
+    .next-playlist-container {
+      display: inline-block;
+      z-index: 999;
+      width: 50%;
+      height: 50%;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 80px;
+      background-color: #000;
+    }
+    .playlist-items-container {
+      overflow-y: auto;
+      height: 100%;
+      padding: 0 0 4px 2px;
+    }
+    .playlist-items-container::-webkit-scrollbar {
+      width: 16px;
+    }
+    .playlist-items-container::-webkit-scrollbar-thumb {
+      height: auto;
+      border-radius: 8px;
+      border: 4px solid #0000;
+      background-clip: content-box;
+      background-color: #606060;
+    }
+    .playlist-items {
+      display: flex;
+      padding: 4px 0;
+      flex-direction: row;
+    }
+    .playlist-items-card {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-clip: border-box;
+      border: 1px solid #00000020;
+      border-radius: 0.25rem;
+    }
+    .playlist-item {
+      cursor: pointer;
+      padding: 5px;
+    }
+    .playlist-item:hover {
+      background: #2b333fb2;
+    }
+    .playlist-item .after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      color: #fff;
+    }
+    .playlist-item .after img {
+      max-height: 40px;
+      position: absolute;
+      top: 20%;
+      left: 27%;
+    }
+    .playlist-item:hover .after {
+      display: block;
+      background: #0009;
+    }
+    .playlist-item .time {
+      position: absolute;
+      top: 60%;
+      right: 5px;
+      background-color: #000c;
+      padding: 0 4px;
+      font-weight: 500;
+      color: #fff;
+      font-size: 12px;
+    }
+    .next-playlist-item-title {
+      font-size: 0.9rem;
+    }
+    .keymoment-container {
+      display: flex;
+      z-index: 999;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      text-align: right;
+      position: absolute;
+      margin-left: 44%;
+      margin-right: 44%;
+      top: 35%;
+      border-radius: 60px;
+      background: #2b333fe5;
+      align-items: center;
+      justify-content: center;
+      animation: fadeOut 0.5s;
+      box-shadow: #00000040 0 54px 55px, #0000001f 0 -12px 30px,
+        #0000001f 0 4px 6px, #0000002b 0 12px 13px, #00000017 0 -3px 5px;
+    }
+    .rewind {
+      margin-left: 0;
+      margin-right: 0;
+      left: 2% !important;
+    }
+    .forward {
+      margin-left: 0;
+      margin-right: 0;
+      right: 2% !important;
+    }
+    #play-button-container {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      margin-right: 75%;
+    }
+    .keymoment-play-btn {
+      display: inline-block;
+      position: absolute;
+      width: 40px;
+      height: 50px;
+      background: #fff;
+      transition: clip-path 0.1s ease;
+      margin-left: 5px;
+    }
+    .play-button-before {
+      clip-path: polygon(0 0, 50% 25%, 50% 75%, 0% 100%);
+    }
+    .play-button-after {
+      clip-path: polygon(50% 25%, 100% 50%, 100% 50%, 50% 75%);
+    }
+    .play-button-container-active .play-button-before {
+      clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
+    }
+    .play-button-container-active .play-button-after {
+      clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%);
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    #keymoment-forward-box {
+      width: 100%;
+      position: absolute;
+      top: 30px;
+    }
+    #keymoment-rewind-box {
+      width: 100%;
+      position: absolute;
+      bottom: 30px;
+    }
+    #keymoment-forward-box .keymoment-arrow {
+      left: 25%;
+    }
+    #keymoment-rewind-box .keymoment-arrow {
+      left: 25%;
+    }
+    .keymoment-arrow {
+      position: absolute;
+      bottom: 0;
+      margin-left: 0;
+      width: 40px;
+      height: 40px;
+      background-size: contain;
+      top: 2px;
+      animation: arrow-moving 0.3s infinite;
+    }
+    .arrow-one {
+      margin-left: 25px;
+    }
+    .double-arrow-icon {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+    }
+    .rotate {
+      transform: rotate(180deg);
+    }
+    @keyframes arrow-moving {
+      0% {
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+      }
+      25% {
+        opacity: 0;
+        transform: translateX(10px) scale(0.9);
+      }
+      26% {
+        opacity: 0;
+        transform: translateX(-10px) scale(0.9);
+      }
+      55% {
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+      }
+    }
+    .arrow-moving {
+      animation-name: arrow-moving;
+      animation-duration: 1.4s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    .arrow.arrow-two.arrow-moving {
+      animation-name: arrow-moving;
+      animation-duration: 1.4s;
+      animation-delay: 0.2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    @media (min-width: 1023px) {
+      .next-video-button-row {
+        top: 60%;
+      }
+      .next-playlist-button-row {
+        top: 60%;
+      }
+    }
+    @media (max-width: 650px) {
+      .next-video-button-row {
+        top: 70%;
+        width: 60%;
+      }
+      .next-playlist-button-row {
+        top: 70%;
+        width: 50%;
+      }
+      .next-video-container {
+        height: 50%;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+    }
+    @media (max-width: 576px) {
+      .next-playlist-item-title {
+        font-size: 0.6rem;
+      }
+      .next-playlist-thumbnail {
+        height: 50px;
+      }
+      .next-video-card {
+        max-width: 334px;
+      }
+      .next-video-container {
+        height: 65%;
+        width: 70%;
+        top: 10%;
+        margin-left: 15%;
+        margin-right: 15%;
+      }
+      .next-playlist-container {
+        margin-top: 0 !important;
+      }
+      .next-video .h6 {
+        font-size: 0.6rem;
+      }
+      .next-video .h6 {
+        font-size: 0.6rem;
+      }
+      .next-video-button-row {
+        width: 70%;
+      }
+      .next-playlist-button-row {
+        width: 50%;
+      }
+      .next-video-button {
+        font-size: 0.7rem;
+      }
+      .next-video-button:hover {
+        font-size: 0.75rem;
+      }
+      .next-video img {
+        height: 80px;
+      }
+      .next-video .time {
+        top: 50%;
+      }
+      .next-site-name {
+        font-size: 0.6rem;
+      }
+      .keymoment-container {
+        width: 60px;
+        height: 60px;
+        margin-left: 41%;
+        margin-right: 41%;
+        top: 30%;
+      }
+      #play-button-container {
+        margin-right: 75%;
+        margin-top: 13px;
+      }
+      .keymoment-play-btn {
+        width: 30px;
+        height: 35px;
+      }
+      .keymoment-arrow {
+        width: 25px;
+        height: 25px;
+      }
+      .rewind {
+        margin-left: 0;
+        margin-right: 0;
+        left: 2% !important;
+      }
+      .forward {
+        margin-left: 0;
+        margin-right: 0;
+        right: 2% !important;
+      }
+      #keymoment-forward-box {
+        top: 15px;
+      }
+      #keymoment-rewind-box {
+        bottom: 15px;
+      }
+      .arrow-one {
+        margin-left: 15px;
+      }
+      .timer-inner-container {
+        gap: 5px;
+        height: 80%;
+      }
+      .timer-up-next-text {
+        font-size: 0.75rem;
+      }
+      .ring-timer-title {
+        font-size: 0.8rem;
+      }
+      .ring-timer {
+        height: 40px;
+        width: 40px;
+      }
+      .ring-timer__label {
+        width: 40px;
+        height: 40px;
+      }
+      .ring-timer-play-button {
+        width: 30px;
+        height: 30px;
+      }
+      .ring-timer-cancel {
+        font-size: 0.7rem;
+        margin-top: 3px;
+      }
+    }
+    @media (max-width: 400px) {
+      .next-playlist-item-title {
+        font-size: 0.5rem;
+        width: 50px;
+      }
+      .next-playlist-title {
+        width: 90px;
+      }
+      .next-playlist-thumbnail {
+        height: 50px;
+      }
+      .next-video-container {
+        height: 70%;
+        width: 90%;
+        top: 3%;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      .next-playlist-container {
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+      }
+      .next-video .h6 {
+        font-size: 0.6rem;
+      }
+      .up-next-text {
+        font-size: 0.6rem;
+      }
+      .next-video-button-row {
+        width: 90%;
+        top: 60%;
+      }
+      .next-playlist-button-row {
+        width: 50%;
+        top: 60%;
+      }
+      .next-video-button {
+        font-size: 0.6rem;
+      }
+      .next-video-button:hover {
+        font-size: 0.65rem;
+      }
+      .next-video img {
+        height: 65px;
+      }
+      .next-video .time {
+        top: 50%;
+      }
+      .next-site-name {
+        font-size: 0.6rem;
+      }
+      #play-button-container {
+        margin-right: 75%;
+        margin-top: 13px;
+      }
+      .keymoment-play-btn {
+        width: 30px;
+        height: 35px;
+      }
+    }
+    @media (max-width: 320px) {
+      .timer-inner-container {
+        height: 70%;
+      }
+    }
+    @media (min-width: 576px) {
+      .next-video-card {
+        width: 100%;
+      }
+      .next-site-name {
+        font-size: 1rem;
+      }
+      .next-video .h6 {
+        font-size: 1rem;
+      }
+    }
+    .ez-video-ez-stuck-bar {
+      display: none !important;
+    }
+    .ez-video-ez-stuck-bar.ez-stuck-bar-visible {
+      display: flex !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      opacity: 1 !important;
+      align-items: baseline !important;
+      position: absolute !important;
+      z-index: 10000 !important;
+      transition: background-color 0.1s !important;
+    }
+    .ez-video-ez-stuck-close {
+      opacity: 0.9 !important;
+      right: 0;
+      text-shadow: 0 0 4px #000 !important;
+      transition: 0.3s !important;
+      cursor: pointer !important;
+      display: flex !important;
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      background: #0009;
+      align-items: center;
+    }
+    .vjs-vtt-links-link a {
+      display: flex !important;
+      position: relative !important;
+      justify-content: center !important;
+      align-items: center !important;
+      max-width: -moz-fit-content !important;
+      min-height: 40% !important;
+      font-size: 15px !important;
+      background-color: #0006 !important;
+      opacity: 0.7 !important;
+      transition: 0.1s !important;
+      border-radius: 4px !important;
+      padding-right: 5px !important;
+      padding-left: 5px !important;
+    }
+    [id^="ez-video-links-"] {
+      width: -moz-fit-content !important;
+      min-height: 10vh !important;
+      margin: 4px !important;
+      top: 0;
+      right: 0;
+    }
+    .vjs-vtt-links-link svg {
+      margin-left: 6px !important;
+      margin-top: 6px !important;
+      z-index: 3 !important;
+      display: inline-block !important;
+      stroke: #0000 !important;
+      fill: #f5f5f5 !important;
+      color: #f5f5f5 !important;
+    }
+    .vjs-vtt-links-link a:hover,
+    .vjs-vtt-links-link a:hover svg {
+      opacity: 1 !important;
+    }
+    .vjs-has-started.vjs-user-inactive.vjs-playing
+      + [id^="ez-video-links-"]
+      .vjs-vtt-links-link
+      svg,
+    .vjs-has-started.vjs-user-inactive.vjs-playing
+      + [id^="ez-video-links-"]
+      .vjs-vtt-links-link
+      a {
+      opacity: 0 !important;
+      transition: opacity 1s !important;
+    }
+    .vjs-vtt-links-link a,
+    .vjs-vtt-links-link a:active,
+    .vjs-vtt-links-link a:visited,
+    .vjs-vtt-links-link a:hover,
+    .vjs-vtt-links-link a:focus {
+      color: #000;
+    }
+    .vjs-vtt-links-link a:hover,
+    .vjs-vtt-links-link a:focus {
+      text-decoration: underline;
+    }
+    .video-js.vjs-http-source-selector {
+      width: 100% !important;
+    }
+  </style>
+  <style>
+    /* @charset "UTF-8"; */
+    :root {
+      --humix-primary: #03d8f3;
+      --humix-secondary: #fcee0d;
+      --humix-tertiary: #fdf8af;
+      --humix-grey: #fafdf8;
+      --humix-black: #000000;
+      --humix-load: #8d8505;
+    }
+    .video-js .vjs-big-play-button .vjs-icon-placeholder:before,
+    .video-js .vjs-modal-dialog,
+    .vjs-button > .vjs-icon-placeholder:before,
+    .vjs-modal-dialog .vjs-modal-dialog-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .video-js .vjs-big-play-button .vjs-icon-placeholder:before,
+    .vjs-button > .vjs-icon-placeholder:before {
+      text-align: center;
+    }
+    .vjs-icon-share {
+      font-family: VideoJS !important;
+      font-weight: 400;
+      font-style: normal;
+    }
+    .vjs-control.vjs-button button {
+      min-height: unset !important;
+      height: 30px !important;
+    }
+    .vjs-control span {
+      font-size: 10px !important;
+    }
+    .video-js .vjs-volume-panel.vjs-volume-panel-horizontal,
+    .video-js .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-slider-active,
+    .video-js .vjs-volume-panel.vjs-volume-panel-horizontal:active {
+      width: 8em !important;
+    }
+    .vjs-volume-control.vjs-control.vjs-volume-horizontal {
+      opacity: 1 !important;
+    }
+    .video-js
+      .vjs-volume-panel
+      .vjs-volume-control.vjs-slider-active.vjs-volume-horizontal,
+    .video-js
+      .vjs-volume-panel
+      .vjs-volume-control:active.vjs-volume-horizontal,
+    .video-js
+      .vjs-volume-panel.vjs-hover
+      .vjs-mute-control
+      ~ .vjs-volume-control.vjs-volume-horizontal,
+    .video-js
+      .vjs-volume-panel.vjs-hover
+      .vjs-volume-control.vjs-volume-horizontal,
+    .video-js
+      .vjs-volume-panel:active
+      .vjs-volume-control.vjs-volume-horizontal,
+    .video-js
+      .vjs-volume-panel:focus
+      .vjs-volume-control.vjs-volume-horizontal {
+      width: 6em;
+      height: 3em;
+      margin-right: 0;
+    }
+    .video-js .vjs-volume-bar {
+      margin: 1em 0.45em !important;
+    }
+    .vjs-volume-bar.vjs-slider-horizontal .vjs-volume-level {
+      height: 1em !important;
+      border-radius: 8px !important;
+    }
+    .vjs-volume-bar.vjs-slider-horizontal {
+      height: 1em !important;
+      width: 6em !important;
+      border-radius: 8px !important;
+    }
+    .vjs-menu-button-popup .vjs-menu {
+      height: 20px !important;
+      z-index: 10;
+    }
+    .vjs-progress-control.vjs-control {
+      position: absolute !important;
+      width: 100% !important;
+      top: -0.75em !important;
+      height: 1.5em !important;
+      z-index: 3;
+      left: 0 !important;
+    }
+    .video-js .vjs-progress-control .vjs-progress-holder {
+      margin: 0 !important;
+      min-width: 100%;
+      color: #0000;
+    }
+    .video-js .vjs-volume-panel {
+      margin-right: auto !important;
+    }
+    .vjs-volume-bar.vjs-slider-horizontal {
+      color: #0000;
+    }
+    .vjs-control-bar .vjs-control .vjs-icon-placeholder {
+      border-radius: 10%;
+      width: 23px !important;
+      height: 23px !important;
+      margin: auto !important;
+      transition: 0.4s;
+    }
+    .vjs-control-bar .vjs-control:hover .vjs-icon-placeholder {
+      border: none !important;
+      transition: opacity 0.3s !important;
+    }
+    .vjs-control-bar .vjs-control .vjs-icon-placeholder:before {
+      color: var(--humix-primary) !important;
+    }
+    .vjs-control-bar .vjs-control:hover .vjs-icon-placeholder:before {
+      color: var(--humix-secondary) !important;
+    }
+    .vjs-control:hover.vjs-volume-panel-horizontal .vjs-icon-placeholder {
+      border: none;
+      color: var(--humix-primary) !important;
+    }
+    .vjs-control svg {
+      fill: var(--humix-primary) !important;
+      margin: auto;
+      margin-top: 1.5px !important;
+      padding: 1.5px !important;
+      display: flex !important;
+    }
+    .vjs-control:hover svg {
+      fill: var(--humix-secondary) !important;
+    }
+    .ez-video-ez-stuck-close {
+      opacity: 0.8 !important;
+      transition: 0.3s !important;
+      cursor: pointer !important;
+      display: flex !important;
+      position: absolute !important;
+      right: 2px;
+      text-shadow: 0 0 4px #000 !important;
+    }
+    .ez-stuck .ez-video-ez-stuck-bar {
+      display: flex !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      height: 28px !important;
+      opacity: 1 !important;
+      align-items: center !important;
+      position: absolute !important;
+      z-index: 10000 !important;
+      top: -28px !important;
+      transition: background-color 0.1s !important;
+    }
+    .ez-video-ez-stuck-title {
+      font-size: 18px !important;
+      color: #fff !important;
+      height: inherit !important;
+      flex: auto !important;
+      font-family: sans-serif !important;
+      line-height: 28px !important;
+      padding-left: 2px !important;
+      max-width: 80% !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      white-space: nowrap !important;
+    }
+    .ez-stuck .control-bar-watchonlink-button {
+      display: none !important;
+    }
+    .vjs-control-bar
+      .vjs-max-quality-selector-button.vjs-control
+      .vjs-icon-placeholder {
+      display: inline-block !important;
+      border-radius: 5px !important;
+      width: auto !important;
+      height: 23px !important;
+      padding: 3px !important;
+    }
+    .vjs-control-bar
+      .vjs-max-quality-selector-button.vjs-control:hover
+      .vjs-icon-placeholder {
+      color: var(--humix-secondary);
+    }
+    .vjs-max-quality-selector-button {
+      width: auto !important;
+      margin-top: 0 !important;
+      color: var(--humix-primary);
+    }
+    .vjs-control .vjs-icon-placeholder {
+      display: flex !important;
+      height: 20px !important;
+    }
+    .vjs-max-quality-selector-button .vjs-menu .vjs-menu-item {
+      background-color: var(--humix-black);
+      color: var(--humix-primary);
+    }
+    .vjs-max-quality-selector-button .vjs-menu .vjs-menu-item:hover {
+      background-color: var(--humix-tertiary);
+      color: var(--humix-black);
+    }
+    .vjs-menu li.vjs-selected {
+      background-color: var(--humix-secondary) !important;
+      color: var(--humix-black) !important;
+    }
+    .video-js .vjs-volume-level,
+    .video-js .vjs-play-progress,
+    .video-js .vjs-play-progress-slice {
+      background: var(--humix-secondary) !important;
+    }
+    .video-js.vjs-http-source-selector {
+      width: 100% !important;
+    }
+    .video-js .vjs-control-bar,
+    .video-js .vjs-menu-button .vjs-menu-content {
+      background-color: var(--humix-primary) !important;
+      z-index: 999;
+    }
+    .video-js .vjs-big-play-button {
+      background-color: #2b333fb2 !important;
+    }
+    .video-js .vjs-control-bar button {
+      min-width: 0 !important;
+      padding: 0 !important;
+      font-size: 10px;
+    }
+    .video-js .vjs-load-progress {
+      background: var(--humix-load);
+    }
+    .vjs-has-started .vjs-control-bar {
+      background-color: #0000 !important;
+    }
+    .vjs-control-bar {
+      color: var(--humix-primary) !important;
+    }
+    .vjs-volume-level,
+    .vjs-play-progress,
+    .vjs-play-progress-slice {
+      background-color: var(--humix-secondary) !important;
+    }
+    #vignette-overlay {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0) 16%,
+        rgba(0, 0, 0, 0) 84%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
+      pointer-events: none;
+      z-index: 2;
+      visibility: visible;
+    }
+    .vignette-top-card {
+      position: absolute;
+      display: flex;
+      -webkit-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      justify-content: flex-end;
+      left: 12px;
+      right: 12px;
+      top: 0;
+      text-shadow: 0 0 2px #00000080;
+      z-index: 998;
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0.1s, opacity 0.1s;
+    }
+    .vignette-user-inactive {
+      opacity: 0 !important;
+      transition: visibility 2s 2s, opacity 2s 2s !important;
+    }
+    .vignette-top-channel {
+      position: absolute;
+      display: flex;
+      background: 0 0;
+      border-radius: 25px;
+      display: block;
+      height: 50px;
+      margin-left: -5px;
+      overflow: hidden;
+      top: 7px;
+      left: 0;
+      width: 50px;
+    }
+    .top-channel-logo {
+      width: 40px;
+      height: 40px;
+      -webkit-background-size: contain;
+      background-size: contain;
+      background-repeat: no-repeat;
+      -webkit-flex-shrink: 0;
+      flex-shrink: 0;
+      margin: 5px;
+      -webkit-background-origin: content-box;
+      background-origin: content-box;
+      float: left;
+      border-radius: 50%;
+      border: none !important;
+    }
+    .vignette-top-title {
+      overflow: hidden;
+      flex: 1;
+      display: flex;
+    }
+    .vignette-top-title-text {
+      vertical-align: top;
+      max-width: 100%;
+      padding-top: 12px;
+      font-size: 18px;
+      flex: 1;
+      padding-left: 4px;
+      overflow: hidden;
+      white-space: nowrap;
+      word-wrap: normal;
+      text-overflow: ellipsis !important;
+    }
+    .vignette-top-title-link {
+      display: block;
+      text-decoration: none;
+      color: #fff !important;
+      text-overflow: ellipsis !important;
+      overflow: hidden;
+      background: 0 0 !important;
+      border: none !important;
+      text-align: left !important;
+    }
+    .vignette-top-title-link:hover {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.1s cubic-bezier(0.4, 0, 1, 1);
+    }
+    .top-enable-channel-logo .vignette-top-title {
+      min-height: 52px;
+    }
+    .top-enable-channel-logo .vignette-top-title-text {
+      padding-top: 18px;
+      padding-left: 50px;
+      text-align: left;
+    }
+    .vignette-top-button {
+      min-width: 48px;
+      max-width: 80px;
+      margin-left: 10px;
+      margin-right: 10px;
+      text-shadow: inherit;
+      vertical-align: top;
+      opacity: 0.9;
+      display: inline-block;
+      transition: opacity 0.1s cubic-bezier(0.4, 0, 1, 1);
+      overflow: hidden;
+      outline: 0;
+      border: none;
+      background-color: #0000;
+      color: inherit;
+      text-align: inherit;
+      font-size: 100%;
+      font-family: inherit;
+      line-height: inherit;
+      padding: 0 !important;
+    }
+    .vignette-top-button:hover {
+      cursor: pointer;
+      background: 0 0 !important;
+    }
+    .top-share-icon {
+      margin: auto;
+      width: 36px;
+      height: 36px;
+    }
+    .top-share-title {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-weight: 500;
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+    }
+    .vjs-modal-dialog {
+      z-index: 9999;
+    }
+    .video-play-btn {
+      z-index: 3 !important;
+      outline: 0;
+      border: 0;
+      background: 0 0;
+      padding: 0;
+    }
+    .watch-on-link {
+      background: #171717cc;
+      border-bottom-right-radius: 2px;
+      border-top-right-radius: 2px;
+      bottom: 5px;
+      height: 47px;
+      position: absolute;
+      z-index: 998;
+    }
+    .watch-on-link-content {
+      margin-top: 16px;
+    }
+    .watch-on-link-text {
+      color: #fff;
+      float: left;
+      font: 500 16px/16px youtube noto, Roboto, Arial, Helvetica, sans-serif;
+      margin-left: 12px;
+      margin-top: 2px;
+    }
+    .watch-on-link-logo {
+      float: right;
+      height: 16px;
+      margin-left: 9px;
+      margin-right: 12px;
+      width: 72px;
+    }
+    .watch-on-link-logo img {
+      margin: 0 !important;
+    }
+    .svg-shadow {
+      stroke: #000;
+      stroke-opacity: 0.15;
+      stroke-width: 2px;
+      fill: none;
+    }
+    .svg-fill {
+      fill: #fff;
+    }
+    .vignette-bottom-card {
+      position: absolute;
+      transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
+      text-shadow: 0 0 2px #00000080;
+    }
+    .video-js .vjs-control-bar {
+      background-color: #0000 !important;
+      left: 12px;
+      width: calc(100% - 24px);
+      align-items: center;
+    }
+    .video-js.vjs-videojs-share_open .vjs-modal-dialog .vjs-close-button {
+      float: right !important;
+      top: 5px;
+      right: 0;
+    }
+    .control-bar-watchonlink-button {
+      width: 62px !important;
+      height: auto !important;
+      margin: 0 2px !important;
+    }
+    .control-bar-watchonlink-button img {
+      height: auto;
+      max-width: 100%;
+    }
+    .video-js .vjs-volume-panel {
+      margin-right: 0 !important;
+    }
+    .video-js .vjs-time-control {
+      margin-right: auto !important;
+    }
+    .video-js .vjs-volume-panel.vjs-volume-panel-horizontal {
+      width: 3em !important;
+    }
+    .video-js .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-hover {
+      width: 9em !important;
+    }
+    .vjs-volume-control.vjs-control.vjs-volume-horizontal {
+      width: 1px;
+    }
+    .control-bar-watchonlink-button .tooltiptext {
+      visibility: hidden;
+      background-color: #171717cc;
+      width: 100%;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 2px;
+      position: absolute;
+      z-index: 999;
+      bottom: 100%;
+      right: 10%;
+      margin-left: -60px;
+      font-size: 11px !important;
+    }
+    .control-bar-watchonlink-button:hover .tooltiptext {
+      visibility: visible;
+    }
+    .control-bar-captions-toggle .tooltiptext {
+      visibility: hidden;
+      background-color: #171717cc;
+      width: auto;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px;
+      position: absolute;
+      z-index: 999;
+      bottom: 100%;
+      right: -15%;
+      font-size: 11px !important;
+    }
+    .control-bar-captions-toggle:hover .tooltiptext {
+      visibility: visible;
+    }
+    .control-bar-captions-toggle > .vjs-icon-placeholder:before {
+      font-family: VideoJS !important;
+      content: "\f10c";
+    }
+    .vjs-subs-caps-button
+      .vjs-menu-button
+      .vjs-menu-button-popup
+      .vjs-control
+      .vjs-button {
+      display: none !important;
+    }
+    .vjs-playlist-sidebar {
+      z-index: 9999 !important;
+    }
+    .vjs-playlist {
+      padding: 0 4 !important;
+      padding-right: 0 !important;
+    }
+    .force-vertical-playlist .vjs-playlist-item {
+      height: 24.5%;
+    }
+    .vjs-playlist .vjs-playlist-name {
+      display: none !important;
+    }
+    .vjs-playlist .vjs-up-next .vjs-up-next-text {
+      display: none !important;
+    }
+    .vjs-playlist .vjs-selected .vjs-playlist-now-playing-text {
+      transform: translate(-50%, -50%);
+      top: 35%;
+      left: 50%;
+      text-align: center;
+      margin: 0;
+      padding-left: 0;
+      display: block !important;
+      font-size: 1.2em;
+    }
+    .playlist-play-btn {
+      visibility: visible !important;
+    }
+    .video-js .playlist-play-btn {
+      width: 50px !important;
+      height: 50px !important;
+      visibility: hidden;
+      line-height: 1.7em !important;
+      top: 33% !important;
+    }
+    .vjs-selected .playlist-play-btn {
+      display: none !important;
+    }
+    article a {
+      border-bottom: none !important;
+    }
+    .vjs-playlist-duration {
+      display: none !important;
+    }
+    .ez-video-magic-item .playlist-play-btn {
+      width: 57px !important;
+      height: 57px !important;
+      visibility: hidden;
+      left: 50% !important;
+      top: 50% !important;
+    }
+    .ez-video-magic-item .vjs-playlist-now-playing-text {
+      top: 50% !important;
+    }
+    .video-js .vjs-control-bar button {
+      cursor: pointer !important;
+    }
+    .vignette-magic-player {
+      font-size: 18px !important;
+    }
+    .ez-video-magic-redesign .video-js .vjs-control-bar {
+      max-height: 35px !important;
+    }
+    .vignette-top-share .top-share-title {
+      text-transform: none;
+    }
+    #ez-video-ez-4998-setting-menu-child-menu-playbackratemenubutton
+      .vjs-menu-item {
+      padding: 0 !important;
+    }
+    .video-js .vjs-big-play-button:focus,
+    .video-js:hover .vjs-big-play-button {
+      background: var(--humix-primary) !important;
+      transition: all 0s !important;
+      transition-property: all !important;
+      transition-duration: 0s !important;
+      transition-timing-function: ease !important;
+      transition-delay: 0s !important;
+    }
+    .vjs-big-play-button {
+      margin: 0 !important;
+      position: absolute !important;
+      -ms-transform: translate(-50%, -50%) !important;
+      transform: translate(-50%, -50%) !important;
+      font-size: 3em !important;
+      line-height: 2em !important;
+      min-height: auto !important;
+      min-width: auto !important;
+      height: 2em !important;
+      width: 2em !important;
+      border-radius: 50% !important;
+      left: 50% !important;
+      top: 50% !important;
+      display: block !important;
+    }
+    .vjs-has-started + .vjs-big-play-button {
+      display: none !important;
+    }
+    .video-js .vjs-share__short-link-wrapper {
+      margin-bottom: 10px !important;
+    }
+    .video-js .vjs-share__title {
+      margin-bottom: 0 !important;
+    }
+    .video-js .vjs-share__subtitle {
+      margin: 0 auto !important;
+    }
+    @media (max-width: 340px) {
+      .video-js.vjs-max-quality-selector .vjs-max-quality-selector-button {
+        display: none;
+      }
+    }
+    @media (max-width: 425px) {
+      #next-video-modal {
+        z-index: 999 !important;
+      }
+      .vjs-volume-bar.vjs-slider-horizontal {
+        width: 4em !important;
+      }
+      .video-js
+        .vjs-volume-panel
+        .vjs-volume-control.vjs-slider-active.vjs-volume-horizontal,
+      .video-js
+        .vjs-volume-panel
+        .vjs-volume-control:active.vjs-volume-horizontal,
+      .video-js
+        .vjs-volume-panel.vjs-hover
+        .vjs-mute-control
+        ~ .vjs-volume-control.vjs-volume-horizontal,
+      .video-js
+        .vjs-volume-panel.vjs-hover
+        .vjs-volume-control.vjs-volume-horizontal,
+      .video-js
+        .vjs-volume-panel:active
+        .vjs-volume-control.vjs-volume-horizontal,
+      .video-js
+        .vjs-volume-panel:focus
+        .vjs-volume-control.vjs-volume-horizontal {
+        width: 4em;
+      }
+      .video-js .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-hover {
+        width: 7em !important;
+      }
+      .vignette-top-title-text {
+        font-size: 14px;
+      }
+      .top-channel-logo {
+        width: 30px;
+        height: 30px;
+      }
+      .control-bar-watchonlink-button {
+        width: 45px !important;
+      }
+      .vignette-top-button {
+        min-width: 36px;
+        max-width: 70px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .top-share-icon {
+        width: 30px;
+        height: 30px;
+      }
+      .top-share-title {
+        font-size: 12px;
+      }
+      .video-play-btn {
+        width: 70px;
+        height: 70px;
+      }
+      .watch-on-link {
+        bottom: 10px;
+        height: 35px;
+      }
+      .watch-on-link-content {
+        margin-top: 9px;
+      }
+      .watch-on-link-text {
+        font: 500 14px/14px youtube noto, Roboto, Arial, Helvetica, sans-serif;
+      }
+      .watch-on-link-logo {
+        width: 62px;
+      }
+      .top-enable-channel-logo .vignette-top-title-text {
+        padding-top: 15px;
+        padding-left: 40px;
+      }
+    }
+    @media (max-width: 500px) {
+      .force-vertical-playlist .vjs-playlist-item {
+        height: 33%;
+      }
+      .playlist-play-btn {
+        left: 0 !important;
+      }
+    }
+  </style>
+  <script src="//vjs.zencdn.net/vttjs/0.14.1/vtt.min.js" async></script>
+  <script>
+    (function () {
+      let ezInstream = {
+        prebidBidders: [
+          {
+            bidder: "openx",
+            params: { delDomain: "ezoic-d.openx.net", unit: "560605963" },
+            ssid: "10015",
+          },
+          { bidder: "unruly", params: { siteId: "249235" }, ssid: "10097" },
+        ],
+        apsSlot: {
+          slotID: "instream_desktop_ap_Video",
+          divID: "",
+          slotName: "",
+          mediaType: "video",
+          sizes: [[640, 480]],
+        },
+        breaks: [
+          {
+            key: "ez-3998$MHGIfA4qcH2$0$online_ide_com-preroll-1",
+            timeOffset: "start",
+            timeOffsetSeconds: 0,
+            breakType: "linear",
+            breakID: "online_ide_com-preroll-1",
+            impressionCnt: 1,
+            impressionId: 3194258858818222,
+            bidFloorType: 0,
+            bidRetries: 6,
+            paramGen: "DefaultWide",
+            params: {
+              min: 4500,
+              max: 240000,
+              skip: true,
+              vad: "linear",
+              ad_type: "video",
+              ad_sizes: "400x300|640x480|640x360|300x168",
+              useCacheKey: "",
+            },
+            positionGen: "Even",
+            bidFloorGen: "defaultVideoAdBidFloor",
+            positionID: 3998,
+            multiplier: 2,
+            prebidParams: {
+              api: [2],
+              context: "instream",
+              h: 480,
+              linearity: 1,
+              maxduration: 240,
+              mimes: ["video/mp4", "application/javascript"],
+              minduration: 4,
+              plcmt: 2,
+              playbackmethod: [6],
+              playerSize: [640, 480],
+              pos: 3,
+              protocols: [2, 3, 7, 5, 6, 8],
+              skip: 1,
+              skippable: true,
+              startdelay: 0,
+              w: 640,
+              useCacheKey: false,
+              minbitrate: 300,
+              maxbitrate: 1500,
+            },
+            vastURL:
+              "https://pubads.g.doubleclick.net/gampad/ads?description_url=https%3A%2F%2Fwww.online-ide.com%2F\u0026env=vp\u0026gdfp_req=1\u0026output=xml_vast4\u0026sz=400x300%7C640x480%7C640x360%7C300x168\u0026unviewed_position_start=1\u0026url=https%3A%2F%2Fwww.online-ide.com%2F\u0026ad_type=video\u0026hl=en\u0026max_ad_duration=240000\u0026min_ad_duration=4500\u0026npa=0\u0026plcmt=2\u0026tfcd=0\u0026vpmute=1\u0026vpos=preroll\u0026iu=/1254144,22108676293/336810-shared-video-1\u0026vid_d=144\u0026vid_t=Exploring+the+Exciting+Features+of+JavaScript+ES6+%7C+javascript+compiler+online\u0026vpa=auto\u0026cust_params=ap%3D1%26bra%3Dmod239%26d%3D336810%26eb_br%3Da495ce7dbb4cefcd3e0a722048894f41%26ebss%3D10061%252C10015%252C10063%252C11307%252C11291%252C11315%26ft%3D0%26ic%3D1%26iid1%3D3194258858818222%26plat%3D1%26t%3D134%26tap%3D336810-shared-video-1-3194258858818222",
+            queryType: "url",
+            videoAdBidFloor: 1,
+            videoAdBidFloorUnmodified: 0.536,
+            videoAdBidFloorCPMMeanAbsDev: 0.542,
+            videoAdBidHash: "a495ce7dbb4cefcd3e0a722048894f41",
+            videoFallbackType: "drop2x",
+            videoFallbackFloors: [0.5, 0.4, 0.32, 0.22, 0.14, 0.06],
+            videoFallbackHashes: [
+              "3ba982fc4238dd4197b1d51b345478dc",
+              "ee685f77592ce296910ee91457d66ba3",
+              "d31e71883d00099e275b6c5878eed023",
+              "1e913e99b80640fd5b86a539e5b97c94",
+              "ad0061a38dd7c6f7bcb692aee88dfda4",
+              "33dd523f8e4dda158f0aa99686dda7f2",
+            ],
+          },
+          {
+            key: "ez-3998$MHGIfA4qcH2$0$online_ide_com-midroll-1",
+            timeOffset: "00:01:12.000",
+            timeOffsetSeconds: 72,
+            breakType: "nonlinear",
+            breakID: "online_ide_com-midroll-1",
+            impressionCnt: 2,
+            impressionId: 6575616238830913,
+            bidFloorType: 0,
+            bidRetries: 6,
+            paramGen: "ParamPositionOptimizationExperiment-V1",
+            params: {
+              min: 4500,
+              max: 195000,
+              skip: true,
+              vad: "nonlinear",
+              ad_type: "video",
+              ad_sizes: "400x300|640x480|640x360|300x168",
+              useCacheKey: "",
+            },
+            positionGen: "Even",
+            bidFloorGen: "defaultVideoAdBidFloor",
+            positionID: 3998,
+            multiplier: 2,
+            prebidParams: {
+              api: [2],
+              context: "instream",
+              h: 480,
+              linearity: 1,
+              maxduration: 195,
+              mimes: ["video/mp4", "application/javascript"],
+              minduration: 4,
+              plcmt: 2,
+              playbackmethod: [6],
+              playerSize: [640, 480],
+              pos: 3,
+              protocols: [2, 3, 7, 5, 6, 8],
+              skip: 1,
+              skippable: true,
+              startdelay: 0,
+              w: 640,
+              useCacheKey: false,
+              minbitrate: 300,
+              maxbitrate: 1500,
+            },
+            vastURL:
+              "https://pubads.g.doubleclick.net/gampad/ads?description_url=https%3A%2F%2Fwww.online-ide.com%2F\u0026env=vp\u0026gdfp_req=1\u0026output=xml_vast4\u0026sz=400x300%7C640x480%7C640x360%7C300x168\u0026unviewed_position_start=1\u0026url=https%3A%2F%2Fwww.online-ide.com%2F\u0026ad_type=video\u0026hl=en\u0026max_ad_duration=195000\u0026min_ad_duration=4500\u0026mridx=2\u0026npa=0\u0026plcmt=2\u0026tfcd=0\u0026vpmute=1\u0026vpos=midroll\u0026iu=/1254144,22108676293/336810-shared-video-1\u0026vid_d=144\u0026vid_t=Exploring+the+Exciting+Features+of+JavaScript+ES6+%7C+javascript+compiler+online\u0026vpa=auto\u0026cust_params=ap%3D1%26bra%3Dmod239%26d%3D336810%26eb_br%3Db355e9227b551c119a30a68852723b62%26ebss%3D10061%252C10015%252C10063%252C11307%252C11291%252C11315%26ft%3D0%26ic%3D2%26iid1%3D6575616238830913%26plat%3D1%26t%3D134%26tap%3D336810-shared-video-1-6575616238830913",
+            queryType: "url",
+            videoAdBidFloor: 0.9,
+            videoAdBidFloorUnmodified: 0.43,
+            videoAdBidFloorCPMMeanAbsDev: 0.492,
+            videoAdBidHash: "b355e9227b551c119a30a68852723b62",
+            videoFallbackType: "drop2x",
+            videoFallbackFloors: [0.5, 0.4, 0.32, 0.22, 0.14, 0.06],
+            videoFallbackHashes: [
+              "3ba982fc4238dd4197b1d51b345478dc",
+              "ee685f77592ce296910ee91457d66ba3",
+              "d31e71883d00099e275b6c5878eed023",
+              "1e913e99b80640fd5b86a539e5b97c94",
+              "ad0061a38dd7c6f7bcb692aee88dfda4",
+              "33dd523f8e4dda158f0aa99686dda7f2",
+            ],
+          },
+        ],
+        genericInstream: false,
+        UnfilledCnt: 0,
+        AllowPreviousBidToSetBidFloor: false,
+        bidCacheThreshold: -1,
+      };
+      if (
+        typeof __ezInstream !== "undefined" &&
+        typeof __ezInstream.breaks !== "undefined"
+      ) {
+        __ezInstream.breaks = __ezInstream.breaks.concat(ezInstream.breaks);
+      } else {
+        window.__ezInstream = ezInstream;
+      }
+    })();
+  </script>
+  <script data-cfasync="false">
+    __ez.queue.addFile(
+      "/tardisrocinante/lazy_load.js",
+      "/tardisrocinante/lazy_load.js?gcb=0&cb=6",
+      false,
+      [],
+      true,
+      false,
+      true,
+      false
+    );
+  </script>
+  <link rel="canonical" href="https://www.online-ide.com/" />
+  <script data-ezscrex="false" data-pagespeed-no-defer data-cfasync="false">
+    function create_ezolpl() {
+      var d = new Date();
+      d.setTime(d.getTime() + 365 * 24 * 60 * 60 * 1000);
+      var expires = "expires=" + d.toUTCString();
+      __ez.ck.setByCat(
+        "ezux_lpl_336810",
+        new Date().getTime() +
+          "|" +
+          _ezaq.page_view_id +
+          "|" +
+          _ezaq.is_return_visitor +
+          "; " +
+          expires,
+        "understand_audiences",
+        false
+      );
+    }
+    function attach_ezolpl() {
+      if (document.readyState === "complete") {
+        create_ezolpl();
+        return;
+      }
+      window.addEventListener("load", create_ezolpl);
+    }
+
+    __ez.queue.addFunc(
+      "attach_ezolpl",
+      "attach_ezolpl",
+      null,
+      false,
+      ["/detroitchicago/boise.js"],
+      true,
+      false,
+      false,
+      false
+    );
+  </script>
+
+<script src='https://unpkg.com/@popperjs/core@2'></script>
+
+<script src='{% static "js/adminhome.js" %}'></script>
+
+{% endblock %}
