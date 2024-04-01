@@ -10,6 +10,6 @@ def home(request):
 def contact(request):
     return render(request,'MYAPP/dashboard.html')
 def contact2(request):
-    return render(request,'MYAPP/dashboard.html')
+    return render(request,'MYAPP/resources.html')
 
 
