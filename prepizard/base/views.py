@@ -315,6 +315,27 @@ def que(request):
 from django.template.loader import get_template
 from xhtml2pdf import pisa
 import io
+
+def create_resource(resource_name, resource_description, resource_material):
+    try:
+        resource = Resource.objects.create(
+            resource_name=resource_name,
+            resource_description=resource_description,
+            resource_material=resource_material
+        )
+        return resource  # Return the created resource instance if successful
+    except Exception as e:
+        # Handle exceptions, such as IntegrityError if resource_name violates unique constraint
+        print(f"Error creating resource: {e}")
+        return None
+
+
+
+create_resource('DataSci','Data science is an interdisciplinary field that utilizes scientific methods, algorithms, processes, and systems to extract insights and knowledge from structured and unstructured data. It combines expertise from various domains such as mathematics, statistics, computer science, and domain-specific knowledge to analyze complex data sets and solve real-world problems. Data scientists leverage techniques such as data mining, machine learning, and predictive analytics to uncover patterns, trends, and correlations in data, enabling organizations to make data-driven decisions and gain a competitive edge in todays data-driven world.','Data science is an interdisciplinary field that utilizes scientific methods, algorithms, processes, and systems to extract insights and knowledge from structured and unstructured data. It combines expertise from various domains such as mathematics, statistics, computer science, and domain-specific knowledge to analyze complex data sets and solve real-world problems. Data scientists leverage techniques such as data mining, machine learning, and predictive analytics to uncover patterns, trends, and correlations in data, enabling organizations to make data-driven decisions and gain a competitive edge in todays data-driven world.')
+# create_resource('Programming', 'resource_description', 'resource_material')
+# create_resource('Databases', 'resource_description', 'resource_material')
+# create_resource('SystemDesign', 'resource_description', 'resource_material')
+
 def generate_context(topic):
     if topic == 'DataScience':
 
@@ -360,8 +381,8 @@ def cheatsheet(request,topic):
     #     'btnLink': 'http://127.0.0.1:8000/generate-pdf/',
     #     'btnText': 'Click Here'
     # }
-    
-    context = generate_context(topic)
+    context = get_resource_context(topic)
+    #context = generate_context(topic)
     return render(request, 'base/cheatsheet.html', context)
 
 
@@ -369,8 +390,8 @@ def cheatsheet(request,topic):
 def generate_pdf(request,topic):
     # Render the HTML template
     template = get_template('base/cheatsheet.html')
-    string = topic
-    context = generate_context(string)
+
+    context = get_resource_context(topic)
     html = template.render(context)
 
     # Create a PDF file
@@ -385,9 +406,21 @@ def generate_pdf(request,topic):
     return HttpResponse('Error rendering PDF', status=500)
 
 
+# def resources(request):
+#     topics = ["DataScience", "Programming", "Databases", "SystemDesign"]  # Define your topic string array here
+#     context = {'topics': topics}  # Create a dictionary with 'topics' key and the array as its value
+#     return render(request, 'base/resources2.html', context)  # Pass the context dictionary when rendering the template
+
+from .models import Resource  # Import the Resource model
+
 def resources(request):
-    topics = ["DataScience", "Programming", "Databases", "SystemDesign"]  # Define your topic string array here
-    context = {'topics': topics}  # Create a dictionary with 'topics' key and the array as its value
+    # Retrieve all resource names from the Resource model
+    resources = Resource.objects.values_list('resource_name', flat=True)
+    
+    # Convert the queryset to a list
+    topics = list(resources)
+    
+    context = {'topics': topics}  # Create a dictionary with 'topics' key and the list of resource names as its value
     return render(request, 'base/resources2.html', context)  # Pass the context dictionary when rendering the template
 
 
@@ -698,8 +731,8 @@ def practice(request):
 def about(request):
     return render(request, 'base/about.html')
 
-def resources(request):
-    return render(request, 'base/resources.html')
+# def resources(request):
+#     return render(request, 'base/resources.html')
 
 
 def adminabout(request):
@@ -732,6 +765,22 @@ def que(request):
     return render(request, 'base/que.html')
 
 
+from .models import Resource
 
+def get_resource_context(input_string):
+    try:
+        resource = Resource.objects.filter(resource_name=input_string).first()
+        context = {
+            'pageTitle': resource.resource_name,
+            'paragraph1': resource.resource_description,
+            'paragraph2': resource.resource_description,  # You can modify this if needed
+            'btnLink': f'http://127.0.0.1:8000/generate-pdf/{input_string}',
+            'btnText': 'Click Here'
+        }
+        return context
+    except Resource.DoesNotExist:
+        return None  # Return None if no resource found for the input string
+
+from .models import Resource
 
 
