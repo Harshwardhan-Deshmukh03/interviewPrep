@@ -247,3 +247,16 @@ def python(request):
 
 def practice(request):
     return render(request,'base/practice.html')
+
+
+def about(request):
+    return render(request, 'base/about.html')
+
+def resources(request):
+    return render(request, 'base/resources.html')
+
+
+def adminabout(request):
+    return render(request, 'base/adminabout.html')
+
+
