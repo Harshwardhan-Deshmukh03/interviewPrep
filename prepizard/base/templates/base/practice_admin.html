@@ -194,7 +194,7 @@
                 </div>
               </li>
               <li class="menu-item sub-menu">
-                <a href="{% url 'adminpractice' %}">
+                <a href="#">
                   <span class="menu-icon">
                    <i class="fa-solid fa-user-magnifying-glass" style="color: #e6e6e6;"></i>
                   </span>
@@ -204,7 +204,7 @@
               </li>
               
               <li class="menu-item sub-menu">
-                <a href="{% url 'adminpractice' %}">
+                <a href="#">
                   <span class="menu-icon">
                     <i class="ri-global-fill"></i>
                   </span>
@@ -286,7 +286,49 @@
     <div class="layout">
       <span class="content">
         
-         
+        <!-- <div class="left-content">
+            <div class="activities"> -->
+              <h1>Learn and Practice Coding Online</h1>
+                 <h2>
+                    Solve online computer science questions to enhance coding skills with diverse challenges and real-world scenarios for continuous learning !
+                 </h2>
+                 <div class="weekly-schedule">
+                  <h1>Courses</h1>
+                  <a href="{% url 'add_course' %}" class="btn">Add Course</a>
+                  <div class="calendar">
+
+                    {% for course in courses %}
+                    <div class="day-and-activity activity-one">
+                      <div class="day">
+                        
+                      </div>
+                      <div class="activity">
+                        <h2>{{ course.course_name }}</h2>
+                        <h1>{{course.course_description}}</h1>
+                        
+                      </div>
+                      <a href="{% url 'add_question' course.id  %}" class=""> Add Question</a>
+                    </div>
+    
+
+     
+    <!-- Other course details -->
+{% endfor %}
+                    
+                  </div>
+                </div> 
+              
+               
+                <!-- <button class="btn">Add Course</button> -->
+            </div>
+  
+            <div class="left-bottom">
+              
+<!--   
+              
+            </div>
+          </div> -->
+  
         
       
         </span>
