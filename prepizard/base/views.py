@@ -17,7 +17,11 @@ from .models import *
 
 @login_required(login_url='login')
 def home(request):
-    return render(request,'base/home.html')
+    user = request.user
+    context = {
+        'user': user
+    }
+    return render(request,'base/home.html',context )
 
 
 # def login(request):
@@ -71,6 +75,9 @@ def registerPage(request):
         college = request.POST.get('college')
         password = request.POST.get('password')
 
+        if User.objects.filter(username=email).exists():
+            messages.error(request, "User with this email already exists.")
+            return render(request, 'base/register.html', context)
         # Create the user manually
         user = User.objects.create_user(username=email, email=email, password=password)
         user.save()
@@ -269,7 +276,15 @@ def mcq(request):
     return render(request,'base/mcq.html')
 
 def profile(request):
-    return render(request,'base/profile.html')
+    student = Student.objects.get(user=request.user)
+    higher_score_count = Student.objects.filter(score__gt=student.score).count()
+    rank = higher_score_count + 1
+    context = {
+        'student': student,
+        'rank':rank
+    }
+    # print(student.phone)
+    return render(request,'base/profile.html',context )
 
 def python(request):
     return render(request,'base/python.html')
@@ -311,3 +326,5 @@ def adminresource(request):
     }
     return render(request,'base/resource_admin.html',context )
 
+def que(request):
+    return render(request, 'base/que.html')

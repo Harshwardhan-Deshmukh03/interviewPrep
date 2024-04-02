@@ -39,8 +39,8 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('about/', views.resources, name='resources'),
     path('adminabout/', views.adminabout, name='adminabout'),
-    
-
-    
+    path('resources/', views.resources, name='resources'),
+    path('que/', views.que, name='que'),
+ 
 ]
 

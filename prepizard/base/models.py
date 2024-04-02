@@ -10,6 +10,7 @@ class Student(models.Model):
     phone = models.CharField(max_length=200, null=True)
     email = models.CharField(max_length=200, null=True)
     college = models.CharField(max_length=200, null=True)
+    score = models.IntegerField(default=0)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
 
     def __str__(self) -> str:
