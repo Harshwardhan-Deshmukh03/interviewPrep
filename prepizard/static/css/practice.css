@@ -1423,12 +1423,61 @@
   .container {
     display: flex;
   }
-  
+
+  .overlay {
+    display: flex;
+  }
+
   .left-content {
-    width: 80%;
+    width: 100%;
   }
-  
-  .right-content {
-    width: 20%;
-  }
-  
+ 
+  .unique-container {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.unique-container .container {
+    display: flex;
+}
+
+.unique-container .container .box {
+    flex: 1;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.unique-container .container .box h2 {
+    color: #333; /* Dark text color */
+}
+
+.unique-container .container .box p {
+    color: #666; /* Medium text color */
+}
+
+.unique-container .container .box .button {
+    background-color: #007bff; /* Blue button */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.unique-container .container .box .button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Adjust flex properties for 80-20 ratio */
+.unique-container .container .box:first-child {
+    flex: 8;
+}
+
+.unique-container .container .box:last-child {
+    flex: 2;
+}
