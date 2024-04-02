@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
+    'channels'
     # 'django-filters',
 ]
 
@@ -75,6 +76,13 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'prepizard.wsgi.application'
+ASGI_APPLICATION ='prepizard.asgi.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer'
+    }
+}
 
 
 # Database

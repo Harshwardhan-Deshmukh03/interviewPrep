@@ -44,6 +44,8 @@ urlpatterns = [
  
     
     path('que/', views.que, name='que'),
+    path('forums/', views.forums, name='forums'),
+    path('room/<slug:slug>', views.room, name='room'),
 
     #Aarya's code :
     path('resources/', views.resources, name='resources'),

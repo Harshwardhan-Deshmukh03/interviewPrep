@@ -331,6 +331,18 @@ def que(request):
 
 
 
+def forums(request):
+    rooms=Room.objects.all()
+    return render(request,'base/forums.html',{'rooms':rooms})
+
+
+def room(request,slug):
+    room=Room.objects.get(slug=slug)
+
+    return render(request,'base/room.html',{'room':room})
+
+
+
 #Aarya's code :
 
 

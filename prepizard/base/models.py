@@ -58,3 +58,9 @@ class Attempt(models.Model):
         return f"{self.student.first_name}'s attempt on {self.question}"
     
 
+class Room(models.Model):
+    name=models.CharField(max_length=255)
+    slug=models.SlugField(unique=True)
+
+    def __str__(self):
+        return self.name
