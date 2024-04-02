@@ -1,0 +1,342 @@
+{% comment %} {% extends "base/main.html" %} {% endcomment %}
+{% load static %}
+
+<link rel="stylesheet" href='{% static "css/adminhome.css" %}'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css'>
+<link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
+<link rel='stylesheet' href='https://fonts.googleaphttps://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.cssis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-P0D0rqiGpblz5bd+VZ/euHJh2Q7gJXkecqpgQ7pvu3qJbV7axu8fMMDZ7xbOEF+fmBtHKfYXscBdb7m3xq3zJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+{% block content %}
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css'>
+<link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
+<link rel='stylesheet' href='https://fonts.googleaphttps://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.cssis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-P0D0rqiGpblz5bd+VZ/euHJh2Q7gJXkecqpgQ7pvu3qJbV7axu8fMMDZ7xbOEF+fmBtHKfYXscBdb7m3xq3zJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<div class="layout has-sidebar fixed-sidebar fixed-header">
+    <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
+      <a id="btn-collapse" class="sidebar-collapser"><i class="ri-arrow-left-s-line"></i></a>
+      <div class="image-wrapper">
+        <img src="assets/images/sidebar-bg.jpg" alt="sidebar background" />
+      </div>
+      <div class="sidebar-layout">
+        <div class="sidebar-header">
+          <div class="pro-sidebar-logo">
+            <div>P</div>
+            <h5>PrepIzard</h5>
+          </div>
+        </div>
+        <div class="sidebar-content">
+            <nav class="menu open-current-submenu">
+              <ul>
+                <li class="menu-header"><span> GENERAL </span></li>
+               
+                
+                <li class="menu-item sub-menu">
+                  <a href="{% url 'adminabout' %}">                  <span class="menu-icon">
+                     <i class="fa-solid fa-user-group" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">About Us</span>
+                    <span class="menu-suffix">
+                      <!-- <span class="badge primary">Hot</span> -->
+                    </span>
+                  </a>
+                  <div class="sub-menu-list">
+                    <ul>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Grid</span>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Layout</span>
+                        </a>
+                      </li>
+                      <li class="menu-item sub-menu">
+                        <a href="#">
+                          <span class="menu-title">Forms</span>
+                        </a>
+                        <div class="sub-menu-list">
+                          <ul>
+                            <li class="menu-item">
+                              <a href="#">
+                                <span class="menu-title">Input</span>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="#">
+                                <span class="menu-title">Select</span>
+                              </a>
+                            </li>
+                            <li class="menu-item sub-menu">
+                              <a href="#">
+                                <span class="menu-title">More</span>
+                              </a>
+                              <div class="sub-menu-list">
+                                <ul>
+                                  <li class="menu-item">
+                                    <a href="#">
+                                      <span class="menu-title">CheckBox</span>
+                                    </a>
+                                  </li>
+                                  <li class="menu-item">
+                                    <a href="#">
+                                      <span class="menu-title">Radio</span>
+                                    </a>
+                                  </li>
+                                  <li class="menu-item sub-menu">
+                                    <a href="#">
+                                      <span class="menu-title">Want more ?</span>
+                                      <span class="menu-suffix">&#x1F914;</span>
+                                    </a>
+                                    <div class="sub-menu-list">
+                                      <ul>
+                                        <li class="menu-item">
+                                          <a href="#">
+                                            <span class="menu-prefix">&#127881;</span>
+                                            <span class="menu-title">You made it </span>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item sub-menu">
+                  <a href="{% url 'adminpractice' %}">
+                    <span class="menu-icon">
+                     <i class="fa-solid fa-user-magnifying-glass" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">Practice</span>
+                  </a>
+                  
+                </li>
+                
+                <li class="menu-item sub-menu">
+                  <a href="{% url 'adminpractice' %}">
+                    <span class="menu-icon">
+                      <i class="ri-global-fill"></i>
+                    </span>
+                    <span class="menu-title">Practice</span>
+                  </a>
+                  <div class="sub-menu-list">
+                    <ul>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Google maps</span>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Open street map</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item sub-menu">
+                  <a href="#">
+                    <span class="menu-icon">
+                      <i class="ri-book-2-fill"></i>
+                    </span>
+                    <span class="menu-title">Resources</span>
+                  </a>
+                  <div class="sub-menu-list">
+                    <ul>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Pie chart</span>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Line chart</span>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Bar chart</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item sub-menu">
+                  <a href="{% url 'mix' %}" target="_blank">
+                    <span class="menu-icon">
+                     <i class="ri-paint-brush-fill"></i>
+                    </span>
+                    <span class="menu-title">onlineIDE</span>
+                  </a>
+                  <div class="sub-menu-list">
+                    <ul>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Dark</span>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Light</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item sub-menu">
+                  <a href="{% url 'logout' %}">
+                    <span class="menu-icon">
+                     <i class="fa-solid fa-user" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">LOGOUT</span>
+                    
+                  </a>
+                  <div class="sub-menu-list">
+                    <ul>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Grid</span>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#">
+                          <span class="menu-title">Layout</span>
+                        </a>
+                      </li>
+                      <li class="menu-item sub-menu">
+                        <a href="#">
+                          <span class="menu-title">Forms</span>
+                        </a>
+                        <div class="sub-menu-list">
+                          <ul>
+                            <li class="menu-item">
+                              <a href="#">
+                                <span class="menu-title">Input</span>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="#">
+                                <span class="menu-title">Select</span>
+                              </a>
+                            </li>
+                            <li class="menu-item sub-menu">
+                              <a href="#">
+                                <span class="menu-title">More</span>
+                              </a>
+                              <div class="sub-menu-list">
+                                <ul>
+                                  <li class="menu-item">
+                                    <a href="#">
+                                      <span class="menu-title">CheckBox</span>
+                                    </a>
+                                  </li>
+                                  <li class="menu-item">
+                                    <a href="#">
+                                      <span class="menu-title">Radio</span>
+                                    </a>
+                                  </li>
+                                  <li class="menu-item sub-menu">
+                                    <a href="#">
+                                      <span class="menu-title">Want more ?</span>
+                                      <span class="menu-suffix">&#x1F914;</span>
+                                    </a>
+                                    <div class="sub-menu-list">
+                                      <ul>
+                                        <li class="menu-item">
+                                          <a href="#">
+                                            <span class="menu-prefix">&#127881;</span>
+                                            <span class="menu-title">You made it </span>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-header" style="padding-top: 20px"><span> EXTRA </span></li>
+                
+              </ul>
+            </nav>
+          </div>
+      </div>
+    </aside>
+    <div id="overlay" class="overlay"></div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <div class="layout">
+      <span class="content">
+        
+        
+                 <div class="weekly-schedule">
+                  <h1>Courses</h1>
+                  
+
+                  <form method="POST">
+                    {% csrf_token %}
+                    
+                   
+                    <div class="form-group">
+                      <label for="question_text">Question Text</label>
+                      <textarea class="form-control" id="question_text" name="question_text" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="option1">Option 1</label>
+                      <input type="text" class="form-control" id="option1" name="option1" placeholder="Option 1">
+                    </div>
+                    <div class="form-group">
+                      <label for="option2">Option 2</label>
+                      <input type="text" class="form-control" id="option2" name="option2" placeholder="Option 2">
+                    </div>
+                    <div class="form-group">
+                      <label for="option3">Option 3</label>
+                      <input type="text" class="form-control" id="option3" name="option3" placeholder="Option 3">
+                    </div>
+                    <div class="form-group">
+                      <label for="option4">Option 4</label>
+                      <input type="text" class="form-control" id="option4" name="option4" placeholder="Option 4">
+                    </div>
+                    <div class="form-group">
+                      <label for="correct_option">Correct Option</label>
+                      <input type="number" class="form-control" id="correct_option" name="correct_option" placeholder="Correct Option" min="1" max="4">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                  
+
+                </div> 
+              
+              
+           
+        
+      
+        </span>
+      <div class="overlay"></div>
+    </div>
+  </div>
+
+<script src='https://unpkg.com/@popperjs/core@2'></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<script src='{% static "js/adminhome.js" %}'></script>
+
+{% endblock %}
