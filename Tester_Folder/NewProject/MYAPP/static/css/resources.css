@@ -60,10 +60,12 @@
   }
   /*END OF Navbar section*/
   
-  .intro-text p{
+  .intro-text p {
     font-size: 17px;
     padding: 5px;
-  }
+    text-align: center; /* Center align the text */
+}
+
   
   /*site analysis section*/
   .player {
@@ -175,7 +177,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 1px;
     text-align: center;
-    background-color: #fccec2 ;
+    background-color: #079b0b ;
     color: #000;
     border-radius: 7px;
   }
@@ -319,3 +321,28 @@
   .content {
     /* Optionally, add additional styles to the content if needed */
   }
+
+  .activity-one {
+    background-color: rgb(124, 136, 224, 0.5);
+    background-image: linear-gradient(
+      240deg,
+      rgb(124, 136, 224) 0%,
+      #c3f4fc 100%
+    );
+  }
+  
+  .activity-two {
+    background-color: #aee2a4a1;
+    background-image: linear-gradient(240deg, #e5a243ab 0%, #f7f7aa 90%);
+  }
+  
+  .activity-three {
+    background-color: #ecfcc376;
+    background-image: linear-gradient(240deg, #97e7d1 0%, #ecfcc3 100%);
+  }
+  
+  .activity-four {
+    background-color: #e6a7c3b5;
+    background-image: linear-gradient(240deg, #fc8ebe 0%, #fce5c3 100%);
+  }
+  
