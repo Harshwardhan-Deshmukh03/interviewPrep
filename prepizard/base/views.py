@@ -7,7 +7,7 @@ from .decorators import *
 from django.contrib.auth import authenticate,login,logout
 from django.template.loader import get_template
 from xhtml2pdf import pisa
-import iofrom django.contrib.auth.models import User 
+from django.contrib.auth.models import User 
 from .models import *
 import io
 
