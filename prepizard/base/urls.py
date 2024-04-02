@@ -42,5 +42,16 @@ urlpatterns = [
     path('resources/', views.resources, name='resources'),
     path('que/', views.que, name='que'),
  
+    
+    path('que/', views.que, name='que'),
+
+    #Aarya's code :
+    path('resources/', views.resources, name='resources'),
+    path('cheatsheet/<str:topic>/', views.cheatsheet, name='cheatsheet'),
+    path('generate-pdf/<str:topic>/', views.generate_pdf, name='generate_pdf'),
+
+    
+
+    
 ]
 
