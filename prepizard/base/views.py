@@ -152,7 +152,7 @@ def practice(request):
 
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request, 'base/about.html')
 
 def resources(request):
-    return render(request, 'resources.html')
+    return render(request, 'base/resources.html')
