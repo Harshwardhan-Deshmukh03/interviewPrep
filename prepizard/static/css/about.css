@@ -1481,12 +1481,3 @@
 .unique-container .container .box:last-child {
     flex: 2;
 }
-
-
-    .status-circle {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        display: inline-block;
-        margin-right: 10px;
-    }
