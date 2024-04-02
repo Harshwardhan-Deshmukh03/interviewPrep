@@ -10,12 +10,8 @@ from xhtml2pdf import pisa
 import io
 
 
-
 # Create your views here.
 
-
-
-# 
 
 @login_required(login_url='login')
 def home(request):
@@ -194,6 +190,7 @@ def generate_context(topic):
         'btnLink': 'http://127.0.0.1:8000/generate-pdf/SystemDesign',
         'btnText': 'Click Here'
        }
+
     return context
 
 def cheatsheet(request,topic):
@@ -229,7 +226,11 @@ def generate_pdf(request,topic):
     return HttpResponse('Error rendering PDF', status=500)
 
 
-
-
 def resources(request):
-    return render(request, 'base/resources.html')
+    topics = ["DataScience", "Programming", "Databases", "SystemDesign"]  # Define your topic string array here
+    context = {'topics': topics}  # Create a dictionary with 'topics' key and the array as its value
+    return render(request, 'base/resources2.html', context)  # Pass the context dictionary when rendering the template
+
+
+# def resources(request):
+#     return render(request, 'base/resources2.html')

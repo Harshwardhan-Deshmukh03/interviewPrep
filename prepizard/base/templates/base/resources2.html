@@ -107,49 +107,17 @@
                  <div class="weekly-schedule">
                   <h1>Courses</h1>
                   <div class="calendar">
-                    <div class="day-and-activity activity-one">
-                      <div class="day">
-                        
-                      </div>
-                      <div class="activity">
-                        <h2>Data Science</h2>
-                        
-                      </div>
-                      <a href="http://127.0.0.1:8000/cheatsheet/DataScience"><button class="btn">View</button></a>
-                    </div>
-    
-                    <div class="day-and-activity activity-two">
-                      <div class="day">
-                        
-                      </div>
-                      <div class="activity">
-                        <h2>Programming</h2>
-                        
-                      </div>
-                      <a href="http://127.0.0.1:8000/cheatsheet/Programming"><button class="btn">View</button></a>
-                    </div>
-    
-                    <div class="day-and-activity activity-three">
-                      <div class="day">
-                        
-                      </div>
-                      <div class="activity">
-                        <h2>Databases</h2>
-                        
-                      </div>
-                      <a href="http://127.0.0.1:8000/cheatsheet/Databases"><button class="btn">View</button></a>
-                    </div>
-    
-                    <div class="day-and-activity activity-four">
-                      <div class="day">
-                        
-                      </div>
-                      <div class="activity">
-                        <h2>System Design</h2>
-                        
-                      </div>
-                      <a href="http://127.0.0.1:8000/cheatsheet/SystemDesign"><button class="btn">View</button></a>
-                    </div>
+                    {% for topic in topics %}
+                     <div class="day-and-activity activity-{{ loop.index }}">
+                       <div class="day">
+                       </div>
+                       <div class="activity">
+                          <h2>{{ topic }}</h2>
+                       </div>
+                       <a href="http://127.0.0.1:8000/cheatsheet/{{ topic }}"><button class="btn">View</button></a>
+                     </div>
+                   {% endfor %}
+
                   </div>
                 </div> 
               
