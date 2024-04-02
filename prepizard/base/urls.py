@@ -28,8 +28,10 @@ urlpatterns = [
     path('mcq/' , views.mcq ,name = "mcq"),
     path('profile/' , views.profile ,name = "profile"),
     path('adminpractice/' , views.adminpractice ,name = "adminpractice"),
+    path('adminresource/' , views.adminresource ,name = "adminresource"),
 
      path('add_course/', views.add_course, name='add_course'),
+     path('add_resource/', views.add_resource, name='add_resource'),
     path('add_question/<str:pk>', views.add_question, name='add_question'),
 
     path('python/' , views.python ,name = "python"),

@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 def unauthenticated_user(view_func):
     def wrapper_func(request, *args,**kwargs):
         if request.user.is_authenticated:
-            return redirect("home")
+            return redirect("userhome")
         else:
             return view_func(request, *args,**kwargs)
     

@@ -37,6 +37,17 @@ class Question(models.Model):
     def __str__(self):
         return self.question_text
 
+
+
+class Resource(models.Model):
+    resource_name = models.CharField(max_length=100)
+    resource_description = models.TextField()
+    resource_material=models.CharField(max_length=15000)
+
+    def __str__(self):
+        return self.resource_name
+
+
 class Attempt(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)

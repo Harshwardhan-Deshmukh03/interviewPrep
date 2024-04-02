@@ -23,12 +23,41 @@ def home(request):
 # def login(request):
 #     context={}
 #     return render(request,'base/login.html',context)
-
-
+from django.contrib.auth.models import User,Group
+from django.contrib import messages
+from .models import Student
 
 def register(request):
-    context={}
-    return render(request,'base/register.html',context)
+    context = {}
+    if request.method == 'POST':
+        # Extract form data
+        name = request.POST.get('nameSurname')
+        email = request.POST.get('email')
+        phone = request.POST.get('mobile')
+        college = request.POST.get('college')
+        password = request.POST.get('password')
+
+        # Create a new user
+        user = User.objects.create_user(username=email, email=email, password=password)
+        group=Group.objects.get(name='User')
+        user.groups.add(group)
+
+        # Create and associate the student with the user
+        student = Student.objects.create(
+            user=user,
+            name=name,
+            email=email,
+            phone=phone,
+            college=college
+        )
+
+        # Optionally, add a success message
+        messages.success(request, "Registration successful!")
+
+        # Redirect the user to a different page (e.g., login page)
+        return redirect('login')  # Replace 'login' with the name of your login URL pattern
+
+    return render(request, 'base/register.html', context)
 
 
 
@@ -259,4 +288,26 @@ def resources(request):
 def adminabout(request):
     return render(request, 'base/adminabout.html')
 
+def add_resource(request):
+    if request.method == 'POST':
+        resource_name = request.POST.get('resource_name')
+        resource_description = request.POST.get('resource_description')
+        resource_material = request.POST.get('resource_material')
+        
+        resource = Resource.objects.create(
+            resource_name=resource_name,
+            resource_description=resource_description,
+            resource_material=resource_material
+        )
+        
+        messages.success(request, "Resource added successfully!")
+    return render(request, 'base/add_resource.html')
+
+
+def adminresource(request):
+    resources = Resource.objects.all()
+    context = {
+        'resources': resources
+    }
+    return render(request,'base/resource_admin.html',context )
 
