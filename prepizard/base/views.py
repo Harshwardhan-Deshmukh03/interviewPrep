@@ -156,3 +156,7 @@ def about(request):
 
 def resources(request):
     return render(request, 'base/resources.html')
+
+
+def que(request):
+    return render(request, 'base/que.html')
