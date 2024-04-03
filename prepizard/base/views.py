@@ -7,6 +7,7 @@ from .decorators import *
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User 
 from .models import *
+from django.utils.text import slugify
 
 
 # Create your views here.
@@ -142,6 +143,9 @@ def add_course(request):
         course_description = request.POST.get('course_description')
         
         course = Course.objects.create(course_name=course_name, course_description=course_description)
+        room_name = course_name
+        slug = slugify(course_name)
+        room = Room.objects.create(name=room_name, slug=slug)
         
         messages.success(request, "Course added successfully!")
         # Replace 'dashboard' with the name of your dashboard URL
@@ -338,8 +342,8 @@ def forums(request):
 
 def room(request,slug):
     room=Room.objects.get(slug=slug)
-
-    return render(request,'base/room.html',{'room':room})
+    messages = Message.objects.filter(room=room).order_by('-date_added')[:50][::-1]
+    return render(request,'base/room.html',{'room':room,'messages':messages})
 
 
 

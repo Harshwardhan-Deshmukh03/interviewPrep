@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
+    # 'room.apps.RoomConfig',
     'channels'
     # 'django-filters',
 ]
