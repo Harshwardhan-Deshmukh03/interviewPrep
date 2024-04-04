@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
+    # 'room.apps.RoomConfig',
+    'channels'
     # 'django-filters',
 ]
 
@@ -55,6 +57,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'prepizard.urls'
+
+
 
 TEMPLATES = [
     {
@@ -73,6 +77,13 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'prepizard.wsgi.application'
+ASGI_APPLICATION ='prepizard.asgi.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer'
+    }
+}
 
 
 # Database
@@ -132,9 +143,10 @@ STATICFILES_DIRS=[
 
 
 
-MEDIA_URL= '/images/'
 
-MEDIA_ROOT=os.path.join(BASE_DIR,"static/images")
+MEDIA_ROOT=os.path.join(BASE_DIR,"media")
+
+MEDIA_URL='/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

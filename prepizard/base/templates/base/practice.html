@@ -1,0 +1,224 @@
+{% comment %} {% extends "base/main.html" %} {% endcomment %}
+{% load static %}
+
+<link rel="stylesheet" href='{% static "css/adminhome.css" %}'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css'>
+<link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
+<link rel='stylesheet' href='https://fonts.googleaphttps://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.cssis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-P0D0rqiGpblz5bd+VZ/euHJh2Q7gJXkecqpgQ7pvu3qJbV7axu8fMMDZ7xbOEF+fmBtHKfYXscBdb7m3xq3zJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+{% block content %}
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css'>
+<link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
+<link rel='stylesheet' href='https://fonts.googleaphttps://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.cssis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-P0D0rqiGpblz5bd+VZ/euHJh2Q7gJXkecqpgQ7pvu3qJbV7axu8fMMDZ7xbOEF+fmBtHKfYXscBdb7m3xq3zJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<div class="layout has-sidebar fixed-sidebar fixed-header">
+    <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
+      <a id="btn-collapse" class="sidebar-collapser"><i class="ri-arrow-left-s-line"></i></a>
+      <div class="image-wrapper">
+        <img src="assets/images/sidebar-bg.jpg" alt="sidebar background" />
+      </div>
+      <div class="sidebar-layout">
+        <div class="sidebar-header">
+          <div class="pro-sidebar-logo">
+            <div>P</div>
+            <h5>PrepIzard</h5>
+          </div>
+        </div>
+        <div class="sidebar-content">
+          <nav class="menu open-current-submenu">
+            <ul>
+              <li class="menu-item sub-menu" id="userMenu">
+                <a href="#">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-user" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">User</span>
+                </a>
+                <div class="sub-menu-list" style="display: none;">
+                    <ul>
+                        <li class="menu-item">
+                            <a href="{% url 'profile' %}">Profile</a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="{% url 'logout' %}">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+              <li class="menu-item sub-menu" id="userMenu">
+                <a href="{% url 'userhome' %}">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-home" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">Home</span>
+                </a>
+                <div class="sub-menu-list" style="display: none;">
+                    <ul>
+                        <li class="menu-item">
+                            <a href="{% url 'profile' %}">Profile</a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="{% url 'logout' %}">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+              
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'about' %}">
+                  <span class="menu-icon">
+                   <i class="fa-solid fa-user-group" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">About Us</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
+              </li>
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'forums' %}">
+                  <span class="menu-icon">
+                   <i class="fa-solid fa-people-arrows" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Discussion Forums</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
+              </li>
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'practice' %}">
+                  <span class="menu-icon">
+                   <i class="fa-solid ri-global-fill" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Practice</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
+              </li>
+              
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'usersheet' %}">
+                  <span class="menu-icon">
+                   <i class="fa-solid ri-book-fill" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Resources</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
+              </li>
+              
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'mix' %}" target="_blank">
+                  <span class="menu-icon">
+                   <i class="fa-solid ri-paint-brush-fill" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Online IDE</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
+              </li>
+              
+             
+            </ul>
+          </nav>
+        </div>
+        
+      </div>
+    </aside>
+    <div id="overlay" class="overlay"></div>
+    <div class="layout">
+      <span class="content">
+        
+        <!-- <div class="left-content">
+            <div class="activities"> -->
+              <h1>Learn and Practice Coding Online</h1>
+                 <h2>
+                    Solve online computer science questions to enhance coding skills with diverse challenges and real-world scenarios for continuous learning !
+                 </h2>
+                 <div class="weekly-schedule">
+                  <h1>Courses</h1>
+                  <div class="calendar">
+
+                    {% for course in courses %}
+                    <br>
+                    <br><br>
+                    <br><br>
+                    <div class="day-and-activity activity-one">
+                      <div class="day">
+                        
+                      </div>
+                      <div class="activity">
+                        <h2>{{ course.course_name }}</h2>
+                        <h1>{{course.course_description}}</h1>
+                        <!-- <h1>{{course.id}}</h1> -->
+                        
+                      </div>
+                      <a href="{% url 'course_question' course.id  %}" class="btn"> Solve Question</a>
+
+                      <br>
+                      
+                    </div>
+    
+
+     
+    <!-- Other course details -->
+{% endfor %}
+                    
+                  </div>
+                </div> 
+              
+               
+                <!-- <button class="btn">Add Course</button> -->
+            </div>
+  
+            <div class="left-bottom">
+              
+<!--   
+              
+            </div>
+          </div> -->
+  
+        
+      
+        </span>
+      <div class="overlay"></div>
+    </div>
+  </div>
+
+<script src='https://unpkg.com/@popperjs/core@2'></script>
+
+<script src='{% static "js/adminhome.js" %}'></script>
+
+{% endblock %}

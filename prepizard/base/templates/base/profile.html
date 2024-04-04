@@ -1,0 +1,468 @@
+{% comment %} 
+<!--Website: wwww.codingdung.com-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepIzard</title>
+    <link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container light-style flex-grow-1 container-p-y">
+        <h4 class="font-weight-bold py-3 mb-4">
+            Account settings
+        </h4>
+        <div class="card overflow-hidden">
+            <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-3 pt-0">
+                    <div class="list-group list-group-flush account-settings-links">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list"
+                            href="#account-general">General</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-change-password">Change password</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-info">Info</a>
+                    
+                    
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="account-general">
+                            <div class="card-body media align-items-center">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt
+                                    class="d-block ui-w-80">
+                                <div class="media-body ml-4">
+                                    <label class="btn btn-outline-primary">
+                                        Upload new photo
+                                        <input type="file" class="account-settings-fileinput">
+                                    </label> &nbsp;
+                                    <button type="button" class="btn btn-default md-btn-flat">Reset</button>
+                                    <div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="form-label">Username</label>
+                                    <input type="text" class="form-control mb-1" value="nmaxwell">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" value="Nelle Maxwell">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">E-mail</label>
+                                    <input type="text" class="form-control mb-1" value="nmaxwell@mail.com">
+                                    <div class="alert alert-warning mt-3">
+                                        Your email is not confirmed. Please check your inbox.<br>
+                                        <a href="javascript:void(0)">Resend confirmation</a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Company</label>
+                                    <input type="text" class="form-control" value="Company Ltd.">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-change-password">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Current password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">New password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Repeat new password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-info">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Bio</label>
+                                    <textarea class="form-control"
+                                        rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc arcu, dignissim sit amet sollicitudin iaculis, vehicula id urna. Sed luctus urna nunc. Donec fermentum, magna sit amet rutrum pretium, turpis dolor molestie diam, ut lacinia diam risus eleifend sapien. Curabitur ac nibh nulla. Maecenas nec augue placerat, viverra tellus non, pulvinar risus.</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Birthday</label>
+                                    <input type="text" class="form-control" value="May 3, 1995">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Country</label>
+                                    <select class="custom-select">
+                                        <option>USA</option>
+                                        <option selected>Canada</option>
+                                        <option>UK</option>
+                                        <option>Germany</option>
+                                        <option>France</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body pb-2">
+                                <h6 class="mb-4">Contacts</h6>
+                                <div class="form-group">
+                                    <label class="form-label">Phone</label>
+                                    <input type="text" class="form-control" value="+0 (123) 456 7891">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Website</label>
+                                    <input type="text" class="form-control" value>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-social-links">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Twitter</label>
+                                    <input type="text" class="form-control" value="https://twitter.com/user">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Facebook</label>
+                                    <input type="text" class="form-control" value="https://www.facebook.com/user">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Google+</label>
+                                    <input type="text" class="form-control" value>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">LinkedIn</label>
+                                    <input type="text" class="form-control" value>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Instagram</label>
+                                    <input type="text" class="form-control" value="https://www.instagram.com/user">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-connections">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-twitter">Connect to
+                                    <strong>Twitter</strong></button>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <h5 class="mb-2">
+                                    <a href="javascript:void(0)" class="float-right text-muted text-tiny"><i
+                                            class="ion ion-md-close"></i> Remove</a>
+                                    <i class="ion ion-logo-google text-google"></i>
+                                    You are connected to Google:
+                                </h5>
+                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                    data-cfemail="f9979498818e9c9595b994989095d79a9694">[email&#160;protected]</a>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-facebook">Connect to
+                                    <strong>Facebook</strong></button>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-instagram">Connect to
+                                    <strong>Instagram</strong></button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-right mt-3">
+            <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
+            <button type="button" class="btn btn-default">Cancel</button>
+        </div>
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+
+    </script>
+</body>
+
+</html> {% endcomment %}
+
+
+
+
+{% comment %} {% extends "base/main.html" %} {% endcomment %}
+{% load static %}
+
+<link rel="stylesheet" href='{% static "css/profile.css" %}'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css'>
+<link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
+<link rel='stylesheet' href='https://fonts.googleaphttps://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.cssis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-P0D0rqiGpblz5bd+VZ/euHJh2Q7gJXkecqpgQ7pvu3qJbV7axu8fMMDZ7xbOEF+fmBtHKfYXscBdb7m3xq3zJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+{% block content %}
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css'>
+<link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
+<link rel='stylesheet' href='https://fonts.googleaphttps://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.cssis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-P0D0rqiGpblz5bd+VZ/euHJh2Q7gJXkecqpgQ7pvu3qJbV7axu8fMMDZ7xbOEF+fmBtHKfYXscBdb7m3xq3zJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<div class="layout has-sidebar fixed-sidebar fixed-header">
+    <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
+      <a id="btn-collapse" class="sidebar-collapser"><i class="ri-arrow-left-s-line"></i></a>
+      <div class="image-wrapper">
+        <img src="assets/images/sidebar-bg.jpg" alt="sidebar background" />
+      </div>
+      <div class="sidebar-layout">
+        <div class="sidebar-header">
+          <div class="pro-sidebar-logo">
+            <div>P</div>
+            <h5>PrepIzard</h5>
+          </div>
+        </div>
+        <div class="sidebar-content">
+            <nav class="menu open-current-submenu">
+              <ul>
+                <li class="menu-item sub-menu" id="userMenu">
+                  <a href="#">
+                      <span class="menu-icon">
+                          <i class="fa-solid fa-user" style="color: #e6e6e6;"></i>
+                      </span>
+                      <span class="menu-title">User</span>
+                  </a>
+                  <div class="sub-menu-list" style="display: none;">
+                      <ul>
+                          <li class="menu-item">
+                              <a href="{% url 'profile' %}">Profile</a>
+                          </li>
+                          <li class="menu-item">
+                            <a href="{% url 'logout' %}">Logout</a>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+                <li class="menu-item sub-menu" id="userMenu">
+                  <a href="{% url 'userhome' %}">
+                      <span class="menu-icon">
+                          <i class="fa-solid fa-home" style="color: #e6e6e6;"></i>
+                      </span>
+                      <span class="menu-title">Home</span>
+                  </a>
+                  <div class="sub-menu-list" style="display: none;">
+                      <ul>
+                          <li class="menu-item">
+                              <a href="{% url 'profile' %}">Profile</a>
+                          </li>
+                          <li class="menu-item">
+                            <a href="{% url 'logout' %}">Logout</a>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+                
+                
+                <li class="menu-item sub-menu">
+                  <a href="{% url 'about' %}">
+                    <span class="menu-icon">
+                     <i class="fa-solid fa-user-group" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">About Us</span>
+                    <span class="menu-suffix">
+                      <!-- <span class="badge primary">Hot</span> -->
+                    </span>
+                  </a>
+                  <div class="sub-menu-list">
+                    
+                  </div>
+                </li>
+                
+                <li class="menu-item sub-menu">
+                  <a href="{% url 'forums' %}">
+                    <span class="menu-icon">
+                     <i class="fa-solid fa-people-arrows" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">Discussion Forums</span>
+                    <span class="menu-suffix">
+                      <!-- <span class="badge primary">Hot</span> -->
+                    </span>
+                  </a>
+                  <div class="sub-menu-list">
+                    
+                  </div>
+                </li>
+                
+                <li class="menu-item sub-menu">
+                  <a href="{% url 'practice' %}">
+                    <span class="menu-icon">
+                     <i class="fa-solid ri-global-fill" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">Practice</span>
+                    <span class="menu-suffix">
+                      <!-- <span class="badge primary">Hot</span> -->
+                    </span>
+                  </a>
+                  <div class="sub-menu-list">
+                    
+                  </div>
+                </li>
+                
+                
+                <li class="menu-item sub-menu">
+                  <a href="{% url 'usersheet' %}">
+                    <span class="menu-icon">
+                     <i class="fa-solid ri-book-fill" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">Resources</span>
+                    <span class="menu-suffix">
+                      <!-- <span class="badge primary">Hot</span> -->
+                    </span>
+                  </a>
+                  <div class="sub-menu-list">
+                    
+                  </div>
+                </li>
+                
+                
+                <li class="menu-item sub-menu">
+                  <a href="{% url 'mix' %}" target="_blank">
+                    <span class="menu-icon">
+                     <i class="fa-solid ri-paint-brush-fill" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">Online IDE</span>
+                    <span class="menu-suffix">
+                      <!-- <span class="badge primary">Hot</span> -->
+                    </span>
+                  </a>
+                  <div class="sub-menu-list">
+                    
+                  </div>
+                </li>
+                
+               
+              </ul>
+            </nav>
+          </div>
+          
+      </div>
+    </aside>
+    <div id="overlay" class="overlay"></div>
+    <div class="layout">
+      <span class="content">
+        
+          <div class="left-content">
+            <div class="container">
+                <div class="main-body">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex flex-column align-items-center text-center">
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+                                        <div class="mt-3">
+                                            <h4>John Doe</h4>
+                                            <!-- <p class="text-secondary mb-1">Full Stack Developer</p>
+                                            <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p> -->
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row mb-3">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Full Name</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <input type="text" class="form-control" value="{{student.name }}" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Email</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <input type="text" class="form-control" value="{{student.email }}" readonly>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row mb-3">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Mobile</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <input type="text" class="form-control" value="{{student.phone }}" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Score</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <input type="text" class="form-control" value="{{student.score}}" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-3"> 
+                                            <h6 class="mb-0">Rank</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <input type="text" class="form-control" value="{{rank}}" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">College</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <input type="text" class="form-control" value="{{student.college}}" readonly>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+  
+         
+        
+      
+        </span>
+      <div class="overlay"></div>
+    </div>
+  </div>
+
+<script src='https://unpkg.com/@popperjs/core@2'></script>
+
+<script src='{% static "js/home.js" %}'></script>
+
+<script>
+    document.getElementById('userMenu').addEventListener('click', function() {
+        var subMenu = this.querySelector('.sub-menu-list');
+        if (subMenu.style.display === 'none' || subMenu.style.display === '') {
+            subMenu.style.display = 'block';
+        } else {
+            subMenu.style.display = 'none';
+        }
+    });
+  </script>
+
+{% endblock %}

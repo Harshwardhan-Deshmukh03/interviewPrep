@@ -1,0 +1,318 @@
+{% comment %} {% extends "base/main.html" %} {% endcomment %}
+{% load static %}
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css'>
+<link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
+<link rel='stylesheet' href='https://fonts.googleaphttps://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.cssis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-P0D0rqiGpblz5bd+VZ/euHJh2Q7gJXkecqpgQ7pvu3qJbV7axu8fMMDZ7xbOEF+fmBtHKfYXscBdb7m3xq3zJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href='{% static "css/practice.css" %}'>
+
+
+{% block content %}
+{% comment %} <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css'>
+<link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
+<link rel='stylesheet' href='https://fonts.googleaphttps://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.cssis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-P0D0rqiGpblz5bd+VZ/euHJh2Q7gJXkecqpgQ7pvu3qJbV7axu8fMMDZ7xbOEF+fmBtHKfYXscBdb7m3xq3zJw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> {% endcomment %}
+
+
+
+<div class="layout has-sidebar fixed-sidebar fixed-header">
+    <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
+      <a id="btn-collapse" class="sidebar-collapser"><i class="ri-arrow-left-s-line"></i></a>
+      <div class="image-wrapper">
+        <img src="assets/images/sidebar-bg.jpg" alt="sidebar background" />
+      </div>
+      <div class="sidebar-layout">
+        <div class="sidebar-header">
+          <div class="pro-sidebar-logo">
+            <div>P</div>
+            <h5>PrepIzard</h5>
+          </div>
+        </div>
+        <div class="sidebar-content">
+          <nav class="menu open-current-submenu">
+            <ul>
+              <li class="menu-item sub-menu" id="userMenu">
+                <a href="#">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-user" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">User</span>
+                </a>
+                <div class="sub-menu-list" style="display: none;">
+                    <ul>
+                        <li class="menu-item">
+                            <a href="{% url 'profile' %}">Profile</a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="{% url 'logout' %}">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+              <li class="menu-item sub-menu" id="userMenu">
+                <a href="{% url 'userhome' %}">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-home" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">Home</span>
+                </a>
+                <div class="sub-menu-list" style="display: none;">
+                    <ul>
+                        <li class="menu-item">
+                            <a href="{% url 'profile' %}">Profile</a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="{% url 'logout' %}">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+              
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'about' %}">
+                  <span class="menu-icon">
+                   <i class="fa-solid fa-user-group" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">About Us</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
+              </li>
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'forums' %}">
+                  <span class="menu-icon">
+                   <i class="fa-solid fa-people-arrows" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Discussion Forums</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
+              </li>
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'practice' %}">
+                  <span class="menu-icon">
+                   <i class="fa-solid ri-global-fill" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Practice</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
+              </li>
+              
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'usersheet' %}">
+                  <span class="menu-icon">
+                   <i class="fa-solid ri-book-fill" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Resources</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
+              </li>
+              
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'mix' %}" target="_blank">
+                  <span class="menu-icon">
+                   <i class="fa-solid ri-paint-brush-fill" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Online IDE</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
+              </li>
+              
+             
+            </ul>
+          </nav>
+        </div>
+        
+      </div>
+    </aside>
+    <div id="overlay" class="overlay"></div>
+    <div class="layout">
+      <span class="content">
+        
+         
+            
+<div class="unique-container">
+    <div class="container">
+
+      {% comment %} {% extends "base/main.html" %} {% endcomment %}
+
+
+
+    <div id="overlay" class="overlay"></div>
+    <div class="layout">
+      <span class="content">
+        
+          <div class="left-content">
+            <div class="activities">
+              <h1>Your Cheat Sheets</h1>
+                 <h2>
+                  All you need, in one place!
+                 </h2>
+                 <div class="weekly-schedule">
+                  <h1>Courses</h1>
+                  <div class="calendar">
+                    <div class="day-and-activity activity-one">
+                      <div class="day">
+                        
+                      </div>
+                      <div class="activity">
+                        <h2>Data Science</h2>
+                        
+                      </div>
+                      <a href="http://127.0.0.1:8000/cheatsheet/DataScience"><button class="btn">View</button></a>
+                    </div>
+    
+                    <div class="day-and-activity activity-two">
+                      <div class="day">
+                        
+                      </div>
+                      <div class="activity">
+                        <h2>Programming</h2>
+                        
+                      </div>
+                      <a href="http://127.0.0.1:8000/cheatsheet/Programming"><button class="btn">View</button></a>
+                    </div>
+    
+                    <div class="day-and-activity activity-three">
+                      <div class="day">
+                        
+                      </div>
+                      <div class="activity">
+                        <h2>Databases</h2>
+                        
+                      </div>
+                      <a href="http://127.0.0.1:8000/cheatsheet/Databases"><button class="btn">View</button></a>
+                    </div>
+    
+                    <div class="day-and-activity activity-four">
+                      <div class="day">
+                        
+                      </div>
+                      <div class="activity">
+                        <h2>System Design</h2>
+                        
+                      </div>
+                      <a href="http://127.0.0.1:8000/cheatsheet/SystemDesign"><button class="btn">View</button></a>
+                    </div>
+                  </div>
+                </div> 
+              
+              
+              
+            </div>
+  
+          
+  
+              
+            </div>
+          </div>
+  
+         
+              
+            
+  
+            <!-- <div class="active-calories">
+              <h1 style="align-self: flex-start">Progress</h1>
+              <div class="active-calories-container">
+                <div class="box" style="--i: 85%">
+                  <div class="circle">
+                    <h2>85<small>%</small></h2>
+                  </div>
+                </div>
+                <div class="calories-content">
+                  <p><span>Solved:</span> 1111</p>
+                  <p><span>Attempted:</span> 350</p>
+                  <p><span>Correct:</span> 140</p>
+                </div>
+              </div>
+            </div>
+
+
+            
+  
+            <div class="mobile-personal-bests">
+              <h1>Dashboard</h1>
+              <div class="personal-bests-container">
+                <div class="best-item box-one">
+                  <p>Rank 1</p>
+                  <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/05dfc444-9ed3-44cc-96af-a9cf195f5820" alt="" />
+                </div>
+                <div class="best-item box-two">
+                  <p>Rank 2</p>
+                  <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/9ca170e9-1252-4fa6-8677-36493540c1f2" alt="" />
+                </div>
+                <div class="best-item box-three">
+                  <p>Rank 3</p>
+                  <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/262d1611-ed4c-4297-981c-480cf7f95714" alt="" />
+                </div>
+              </div>
+            </div>
+  
+            
+          </div>
+        
+        
+      
+        </span>
+      <div class="overlay"></div>
+    </div>
+  </div> -->
+
+
+    
+        
+        
+    
+
+    <div class="overlay"></div>
+  
+</div>
+
+<script src='https://unpkg.com/@popperjs/core@2'></script>
+
+<script src="{% static "js/landing.js" %}"></script>
+
+<script>
+  document.getElementById('userMenu').addEventListener('click', function() {
+      var subMenu = this.querySelector('.sub-menu-list');
+      if (subMenu.style.display === 'none' || subMenu.style.display === '') {
+          subMenu.style.display = 'block';
+      } else {
+          subMenu.style.display = 'none';
+      }
+  });
+</script>
+
+
+{% endblock %}

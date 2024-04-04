@@ -49,7 +49,7 @@ def execute_and_get_status( language,source,input):
     source = source
     input_file = input
     callback = "https://client.com/callback/"
-    TIME_LIMIT = 4
+    TIME_LIMIT = 15
     data = {
         'source': source,
         'lang': language,
