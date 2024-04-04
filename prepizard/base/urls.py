@@ -48,7 +48,9 @@ urlpatterns = [
     path('room/<slug:slug>', views.room, name='room'),
 
     #Aarya's code :
-    path('resources/', views.resources, name='resources'),
+    path('add_sheet/', views.add_sheet, name='addsheet'),
+    path('adminsheet/', views.adminsheet, name='adminsheet'),
+    path('usersheet/', views.usersheet, name='usersheet'),
     path('cheatsheet/<str:topic>/', views.cheatsheet, name='cheatsheet'),
     path('generate-pdf/<str:topic>/', views.generate_pdf, name='generate_pdf'),
 

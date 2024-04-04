@@ -76,3 +76,13 @@ class Message(models.Model):
         return self.user
     class Meta:
         ordering=('date_added',)
+
+
+
+class CheatSheet(models.Model):
+    topic_name = models.CharField(max_length=200)
+    description = models.TextField()
+    pdf_file = models.FileField(upload_to='cheat_sheets/')
+
+    def __str__(self):
+        return self.topic_name

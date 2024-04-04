@@ -346,6 +346,67 @@ def room(request,slug):
     return render(request,'base/room.html',{'room':room,'messages':messages})
 
 
+# FORUMULA SHEETS
+
+
+
+
+
+def add_sheet(request):
+    if request.method == 'POST':
+        topic_name = request.POST.get('topic_name')
+        description = request.POST.get('description')
+        pdf_file = request.FILES.get('pdf_file')  # Assuming file input name is 'pdf_file'
+        print(topic_name,description)
+        if topic_name and pdf_file:
+            cheatsheet = CheatSheet.objects.create(
+                topic_name=topic_name,
+                description=description,
+                pdf_file=pdf_file
+            )
+            messages.success(request, "Cheat sheet added successfully!")
+        else:
+            messages.error(request, "Please fill in all required fields.")
+
+    return render(request, 'base/addsheet.html')
+
+
+
+
+
+
+
+
+def adminsheet(request):
+    cheatsheets = CheatSheet.objects.all()
+    for sheet in cheatsheets:
+        print(sheet.pdf_file)
+    context = {
+        'cheatsheets': cheatsheets
+    }
+    return render(request, 'base/adminsheet.html', context)
+
+
+
+
+def usersheet(request):
+    cheatsheets = CheatSheet.objects.all()
+    for sheet in cheatsheets:
+        print(sheet.pdf_file)
+    context = {
+        'cheatsheets': cheatsheets
+    }
+    return render(request, 'base/usersheet.html', context)
+
+
+
+
+
+
+
+
+
+
 
 #Aarya's code :
 
