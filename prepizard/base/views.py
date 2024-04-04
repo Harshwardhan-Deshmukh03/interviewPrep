@@ -212,6 +212,47 @@ def adminpractice(request):
 
 
 
+
+
+def practice(request):
+    courses = Course.objects.all()
+    context = {
+        'courses': courses
+    }
+    return render(request,'base/practice.html',context)
+
+
+
+
+
+
+def coursequestion(request, pk):
+    course = Course.objects.get(pk=pk)
+    questions = Question.objects.filter(course=course)
+    
+    # Get attempts for the current user
+    user = request.user.student
+    print(user)
+    attempts = Attempt.objects.filter(student=user, question__in=questions)
+    
+    # Create a dictionary to store question IDs and attempts
+    question_attempt_map = []
+    for attempt in attempts:
+        print(attempt.question.id)
+        question_attempt_map.append(attempt.question.id)
+    
+    context = {
+        'course': course,
+        'questions': questions,
+        'question_attempt_map': question_attempt_map,
+    }
+    return render(request, 'base/course_question.html', context)
+
+
+
+
+
+
 def mixide(request):
     return render(request, 'base/mixide.html')
 
@@ -293,9 +334,6 @@ def profile(request):
 def python(request):
     return render(request,'base/python.html')
 
-def practice(request):
-    return render(request,'base/practice.html')
-
 
 def about(request):
     return render(request, 'base/about.html')
@@ -330,8 +368,59 @@ def adminresource(request):
     }
     return render(request,'base/resource_admin.html',context )
 
-def que(request):
-    return render(request, 'base/que.html')
+
+
+def show_question(request, pk):
+    question = Question.objects.get(pk=pk)
+    
+    if request.method == 'POST':
+        selected_option = request.POST.get('selected_option')
+        
+        # Determine if the question has been attempted by the current user
+        user = request.user.student
+        print(user)
+        attempted = Attempt.objects.filter(student=user, question=question).exists()
+        
+        if attempted:
+            # User has already attempted the question, do not process the answer again
+            messages.error(request, "You've already attempted this question.")
+            return redirect('que', pk=pk)
+        else:
+            # Create a new attempt object to store the user's answer
+            attempt = Attempt(student=user, question=question)
+            attempt.attempted = True
+            
+            # Check if the selected option is correct
+            if int(selected_option) == question.correct_option:
+                attempt.correct_attempt = True
+                # Increase the user's score if the answer is correct
+                user.score += 1
+                user.save()
+            else:
+                attempt.correct_attempt = False
+            
+            attempt.save()
+            
+            # Redirect to the same question page after processing the answer
+            return redirect('que', pk=pk)
+    
+    # If it's a GET request, render the question page as usual
+    attempted_attempt = Attempt.objects.filter(student=request.user.student, question=question).first()
+    attempted = attempted_attempt is not None
+    correct_attempt = attempted_attempt.correct_attempt if attempted_attempt else False
+    
+    context = {
+        'question': question,
+        'attempted': attempted,
+        'correct_attempt': correct_attempt,  # Pass the 'correct_attempt' variable to the template
+    }
+    print(context)
+    return render(request, 'base/que.html', context)
+
+
+
+
+
 
 
 

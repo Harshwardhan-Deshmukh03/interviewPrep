@@ -55,7 +55,7 @@ class Attempt(models.Model):
     attempted = models.BooleanField(default=False)
     correct_attempt = models.BooleanField()
     def __str__(self):
-        return f"{self.student.first_name}'s attempt on {self.question}"
+        return f"{self.student.name}'s attempt on {self.question}"
     
 
 class Room(models.Model):

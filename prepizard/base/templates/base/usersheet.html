@@ -42,127 +42,128 @@
           </div>
         </div>
         <div class="sidebar-content">
-            <nav class="menu open-current-submenu">
-              <ul>
-                <li class="menu-item sub-menu" id="userMenu">
-                  <a href="#">
-                      <span class="menu-icon">
-                          <i class="fa-solid fa-user" style="color: #e6e6e6;"></i>
-                      </span>
-                      <span class="menu-title">User</span>
-                  </a>
-                  <div class="sub-menu-list" style="display: none;">
-                      <ul>
-                          <li class="menu-item">
-                              <a href="{% url 'profile' %}">Profile</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="{% url 'logout' %}">Logout</a>
-                          </li>
-                      </ul>
-                  </div>
+          <nav class="menu open-current-submenu">
+            <ul>
+              <li class="menu-item sub-menu" id="userMenu">
+                <a href="#">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-user" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">User</span>
+                </a>
+                <div class="sub-menu-list" style="display: none;">
+                    <ul>
+                        <li class="menu-item">
+                            <a href="{% url 'profile' %}">Profile</a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="{% url 'logout' %}">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+              <li class="menu-item sub-menu" id="userMenu">
+                <a href="{% url 'userhome' %}">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-home" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">Home</span>
+                </a>
+                <div class="sub-menu-list" style="display: none;">
+                    <ul>
+                        <li class="menu-item">
+                            <a href="{% url 'profile' %}">Profile</a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="{% url 'logout' %}">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+              
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'about' %}">
+                  <span class="menu-icon">
+                   <i class="fa-solid fa-user-group" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">About Us</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
               </li>
-                <li class="menu-item sub-menu" id="userMenu">
-                  <a href="{% url 'userhome' %}">
-                      <span class="menu-icon">
-                          <i class="fa-solid fa-home" style="color: #e6e6e6;"></i>
-                      </span>
-                      <span class="menu-title">Home</span>
-                  </a>
-                  <div class="sub-menu-list" style="display: none;">
-                      <ul>
-                          <li class="menu-item">
-                              <a href="{% url 'profile' %}">Profile</a>
-                          </li>
-                          <li class="menu-item">
-                            <a href="{% url 'logout' %}">Logout</a>
-                          </li>
-                      </ul>
-                  </div>
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'forums' %}">
+                  <span class="menu-icon">
+                   <i class="fa-solid fa-people-arrows" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Discussion Forums</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
               </li>
-                
-                
-                <li class="menu-item sub-menu">
-                  <a href="{% url 'about' %}">
-                    <span class="menu-icon">
-                     <i class="fa-solid fa-user-group" style="color: #e6e6e6;"></i>
-                    </span>
-                    <span class="menu-title">About Us</span>
-                    <span class="menu-suffix">
-                      <!-- <span class="badge primary">Hot</span> -->
-                    </span>
-                  </a>
-                  <div class="sub-menu-list">
-                    
-                  </div>
-                </li>
-                
-                <li class="menu-item sub-menu">
-                  <a href="{% url 'forums' %}">
-                    <span class="menu-icon">
-                     <i class="fa-solid fa-people-arrows" style="color: #e6e6e6;"></i>
-                    </span>
-                    <span class="menu-title">Discussion Forums</span>
-                    <span class="menu-suffix">
-                      <!-- <span class="badge primary">Hot</span> -->
-                    </span>
-                  </a>
-                  <div class="sub-menu-list">
-                    
-                  </div>
-                </li>
-                
-                <li class="menu-item sub-menu">
-                  <a href="{% url 'about' %}">
-                    <span class="menu-icon">
-                     <i class="fa-solid ri-global-fill" style="color: #e6e6e6;"></i>
-                    </span>
-                    <span class="menu-title">Practice</span>
-                    <span class="menu-suffix">
-                      <!-- <span class="badge primary">Hot</span> -->
-                    </span>
-                  </a>
-                  <div class="sub-menu-list">
-                    
-                  </div>
-                </li>
-                
-                
-                <li class="menu-item sub-menu">
-                  <a href="{% url 'usersheet' %}">
-                    <span class="menu-icon">
-                     <i class="fa-solid ri-book-fill" style="color: #e6e6e6;"></i>
-                    </span>
-                    <span class="menu-title">Resources</span>
-                    <span class="menu-suffix">
-                      <!-- <span class="badge primary">Hot</span> -->
-                    </span>
-                  </a>
-                  <div class="sub-menu-list">
-                    
-                  </div>
-                </li>
-                
-                
-                <li class="menu-item sub-menu">
-                  <a href="{% url 'mix' %}" target="_blank">
-                    <span class="menu-icon">
-                     <i class="fa-solid ri-paint-brush-fill" style="color: #e6e6e6;"></i>
-                    </span>
-                    <span class="menu-title">Online IDE</span>
-                    <span class="menu-suffix">
-                      <!-- <span class="badge primary">Hot</span> -->
-                    </span>
-                  </a>
-                  <div class="sub-menu-list">
-                    
-                  </div>
-                </li>
-                
-               
-              </ul>
-            </nav>
-          </div>
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'practice' %}">
+                  <span class="menu-icon">
+                   <i class="fa-solid ri-global-fill" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Practice</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
+              </li>
+              
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'usersheet' %}">
+                  <span class="menu-icon">
+                   <i class="fa-solid ri-book-fill" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Resources</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
+              </li>
+              
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'mix' %}" target="_blank">
+                  <span class="menu-icon">
+                   <i class="fa-solid ri-paint-brush-fill" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Online IDE</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
+              </li>
+              
+             
+            </ul>
+          </nav>
+        </div>
+        
       </div>
     </aside>
     <div id="overlay" class="overlay"></div>
