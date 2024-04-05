@@ -141,6 +141,10 @@ def add_course(request):
     if request.method == 'POST':
         course_name = request.POST.get('course_name')
         course_description = request.POST.get('course_description')
+
+        if not course_name or not course_description:
+            messages.error(request, "Both course name and description are required.")
+            return redirect('adminpractice')
         
         course = Course.objects.create(course_name=course_name, course_description=course_description)
         room_name = course_name
@@ -149,6 +153,7 @@ def add_course(request):
         
         messages.success(request, "Course added successfully!")
         # Replace 'dashboard' with the name of your dashboard URL
+        return redirect('adminpractice')
         
     return render(request, 'base/add_course.html')
 
@@ -169,6 +174,11 @@ def add_question(request,pk):
         option3 = request.POST.get('option3')
         option4 = request.POST.get('option4')
         correct_option = request.POST.get('correct_option')
+
+        if not question_text or not option1 or not option2 or not option3 or not option4 or not correct_option:
+            # Add an error message if any field is missing
+            messages.error(request, "All fields are required.")
+            return redirect('add_question', pk=pk)
 
         # Create and save the Question instance
         question = Question.objects.create(
@@ -232,13 +242,12 @@ def coursequestion(request, pk):
     
     # Get attempts for the current user
     user = request.user.student
-    print(user)
     attempts = Attempt.objects.filter(student=user, question__in=questions)
     
     # Create a dictionary to store question IDs and attempts
     question_attempt_map = []
     for attempt in attempts:
-        print(attempt.question.id)
+        # print(attempt.question.id)
         question_attempt_map.append(attempt.question.id)
     
     context = {
@@ -384,6 +393,10 @@ def show_question(request, pk):
         if attempted:
             # User has already attempted the question, do not process the answer again
             messages.error(request, "You've already attempted this question.")
+            if int(selected_option) == question.correct_option:
+                messages.success(request,"You have correctly answered question.")
+            else:
+                messages.error(request, "Wrong answer.")
             return redirect('que', pk=pk)
         else:
             # Create a new attempt object to store the user's answer
@@ -396,8 +409,13 @@ def show_question(request, pk):
                 # Increase the user's score if the answer is correct
                 user.score += 1
                 user.save()
+                messages.success(request,"You have correctly answered question. You have earned a point. ")
+                return redirect('que',pk=pk)
             else:
                 attempt.correct_attempt = False
+                messages.error(request, "Wrong answer.")
+                return redirect(show_question,pk=pk)
+
             
             attempt.save()
             
@@ -456,6 +474,7 @@ def add_sheet(request):
             messages.success(request, "Cheat sheet added successfully!")
         else:
             messages.error(request, "Please fill in all required fields.")
+        return redirect('adminsheet')
 
     return render(request, 'base/addsheet.html')
 
