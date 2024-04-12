@@ -1,12 +1,16 @@
 {% comment %} {% extends "base/main.html" %} {% endcomment %}
 {% load static %}
 
+<link rel="stylesheet" href='{% static "css/practice.css" %}'>
 <link rel="stylesheet" href='{% static "css/adminhome.css" %}'>
+
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css'>
 <link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
 <link rel='stylesheet' href='https://fonts.googleaphttps://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.cssis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'>
-<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'><link rel="stylesheet" href="./style.css">
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-P0D0rqiGpblz5bd+VZ/euHJh2Q7gJXkecqpgQ7pvu3qJbV7axu8fMMDZ7xbOEF+fmBtHKfYXscBdb7m3xq3zJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 
 
@@ -535,6 +539,7 @@
     <div id="overlay" class="overlay"></div>
     <div class="layout">
       <span class="content">
+        <div class="unique-container">
         
         <!-- <div class="left-content">
             <div class="activities"> -->
@@ -545,7 +550,7 @@
                  <div class="weekly-schedule">
                   <h1>Courses</h1>
                   <a href="{% url 'add_course' %}" class="btn">Add Resource</a>
-                  <div class="calendar">
+                  
 
                     {% for resource in resources %}
                     <div class="day-and-activity activity-one">
@@ -572,12 +577,10 @@
                 <!-- <button class="btn">Add Course</button> -->
             </div>
   
-            <div class="left-bottom">
-              
-<!--   
+          
               
             </div>
-          </div> -->
+          </div>
   
         
       
