@@ -94,7 +94,6 @@ CHANNEL_LAYERS = {
 
 
 
-<<<<<<< HEAD
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.mysql',
@@ -102,22 +101,6 @@ DATABASES = {
 		'USER': 'root',
 		'PASSWORD': 'Cleopatra#123',
     	"HOST": "127.0.0.1",
-=======
-engine=os.getenv('DB_ENGINE')
-name=os.getenv('DB_NAME')
-user=os.getenv('DB_USER')
-password=os.getenv('DB_PASSWORD')
-host= os.getenv('DB_HOST')
-  
-
-DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.mysql',
-		'NAME': name,
-		'USER': user,
-		'PASSWORD': password,
-		'HOST':host ,
->>>>>>> origin/dev_shravani
 		'PORT':'3306',
 	}
 }
