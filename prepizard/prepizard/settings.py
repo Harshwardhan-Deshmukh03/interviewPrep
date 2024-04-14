@@ -12,12 +12,15 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+dotenv_path = os.path.join(BASE_DIR, '.env')
+load_dotenv(dotenv_path)
+db_engine = os.getenv('DB_ENGINE')
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -89,16 +92,38 @@ CHANNEL_LAYERS = {
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+
+engine=os.getenv('DB_ENGINE')
+name=os.getenv('DB_NAME')
+user=os.getenv('DB_USER')
+password=os.getenv('DB_PASSWORD')
+host= os.getenv('DB_HOST')
+  
+
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.mysql',
-		'NAME': 'prep',
-		'USER': 'root',
-		'PASSWORD': 'Areum_02',
-		'HOST':'localhost',
+		'NAME': name,
+		'USER': user,
+		'PASSWORD': password,
+		'HOST':host ,
 		'PORT':'3306',
 	}
 }
+
+
+
+# DATABASES = {
+# 	'default': {
+# 		'ENGINE': 'django.db.backends.mysql',
+# 		'NAME': 'prep',
+# 		'USER': 'root',
+# 		'PASSWORD': 'Areum_02',
+# 		'HOST':'localhost',
+# 		'PORT':'3306',
+# 	}
+# }
 
 
 
