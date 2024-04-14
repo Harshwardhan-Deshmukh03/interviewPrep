@@ -36,6 +36,25 @@
           <nav class="menu open-current-submenu">
             <ul>
               <li class="menu-header"><span> GENERAL </span></li>
+
+              <li class="menu-item sub-menu" id="userMenu">
+                <a href="#">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-user" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">User</span>
+                </a>
+                <div class="sub-menu-list" style="display: none;">
+                    <ul>
+                        <li class="menu-item">
+                            <a href="{% url 'profile' %}">Profile</a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="{% url 'logout' %}">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
               
               <li class="menu-item sub-menu">
                 <a href="{% url 'about' %}">
@@ -54,7 +73,7 @@
               
               
               <li class="menu-item sub-menu">
-                <a href="{% url 'about' %}" >
+                <a href="{% url 'practice' %}" >
                   <span class="menu-icon">
                     <i class="ri-global-fill"></i>
                   </span>
@@ -65,18 +84,18 @@
                 </div>
               </li>
               <li class="menu-item sub-menu">
-                <!--aaryapattern-->
-                  <span class="menu-icon">
-                    <i class="ri-book-2-fill"></i>
-                  </span>
-                  <span class="menu-title">Resources</span>
-                <!--aarya-->>
+                <a href = "http://127.0.0.1:8000/resources/" > 
+                <span class="menu-icon">
+                   <i class="ri-book-2-fill"></i>
+                </span>
+                <span class="menu-title">Resources</span>
+                </a>
                 <div class="sub-menu-list">
                   
                 </div>
               </li>
               <li class="menu-item sub-menu">
-                <a href="{% url 'onlineIDE' %}">
+                <a href="{% url 'mixide' %}">
                   <span class="menu-icon">
                    <i class="ri-paint-brush-fill"></i>
                   </span>
@@ -93,6 +112,7 @@
         </div>
         
       </div>
+
     </aside>
     <div id="overlay" class="overlay"></div>
     <div class="layout">
@@ -108,15 +128,15 @@
                   <h1>Courses</h1>
                   <div class="calendar">
                     {% for topic in topics %}
-                     <div class="day-and-activity activity-{{ loop.index }}">
+                     <div class="day-and-activity activity-one">
                        <div class="day">
                        </div>
-                       <div class="activity">
+                       <div class ="activity">
                           <h2>{{ topic }}</h2>
                        </div>
                        <a href="http://127.0.0.1:8000/cheatsheet/{{ topic }}"><button class="btn">View</button></a>
                      </div>
-                   {% endfor %}
+                    {% endfor %}
 
                   </div>
                 </div> 
