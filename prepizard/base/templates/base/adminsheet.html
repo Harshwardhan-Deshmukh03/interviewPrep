@@ -545,6 +545,15 @@
     <div class="layout">
       <span class="content">
         
+
+        {% if messages %}
+  {% for message in messages %}
+    <div class="alert {% if 'error' in message.tags %}alert-danger{% else %}alert-primary{% endif %}" role="alert">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+
         <!-- <div class="left-content">
             <div class="activities"> -->
               <h1>Learn and Practice Coding Online</h1>
@@ -555,6 +564,8 @@
                   <h1>CheatSheet</h1>
                   <a href="{% url 'addsheet' %}" class="btn">Add CheatSheet</a>
                   <div class="calendar">
+
+                    
 
                     {% for sheet in cheatsheets %}
                     <div class="day-and-activity activity-one">
