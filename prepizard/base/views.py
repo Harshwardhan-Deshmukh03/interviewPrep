@@ -314,7 +314,12 @@ def ide(request,pk):
 
 @login_required(login_url='login')
 def userhome(request):
-    return render(request,'base/userhome.html')
+    top_10_ranks = Student.objects.order_by('-score')[:10]
+    context = {
+    'top_10_ranks': top_10_ranks
+    }
+
+    return render(request,'base/userhome.html',context)
 
 
 

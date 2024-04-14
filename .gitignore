@@ -1,3 +1,4 @@
-interviewPrep\prepizard\base\.env
-interviewPrep\prepizard\prepizard\settings.py
-interviewPrep/prepizard/prepizard/.env
+/prepizard/prepizard/.env
+/prepizard/base/__pycache__/*
+/prepizard/base/migrations/*
+/prepizard/prepizard/__pycache__/*
