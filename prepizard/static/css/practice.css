@@ -809,9 +809,7 @@
     transform: translateY(-3px);
   }
   
-  .activity {
-    border-left: 3px solid #484d53;
-  }
+
   
   .participants {
     display: flex;
