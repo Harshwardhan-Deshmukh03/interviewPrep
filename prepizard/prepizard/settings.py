@@ -12,12 +12,15 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+dotenv_path = os.path.join(BASE_DIR, '.env')
+load_dotenv(dotenv_path)
+db_engine = os.getenv('DB_ENGINE')
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -41,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
+    # 'room.apps.RoomConfig',
+    'channels'
     # 'django-filters',
 ]
 
@@ -75,6 +80,13 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'prepizard.wsgi.application'
+ASGI_APPLICATION ='prepizard.asgi.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer'
+    }
+}
 
 
 # Database
@@ -82,6 +94,7 @@ WSGI_APPLICATION = 'prepizard.wsgi.application'
 
 
 
+<<<<<<< HEAD
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.mysql',
@@ -89,9 +102,38 @@ DATABASES = {
 		'USER': 'root',
 		'PASSWORD': 'Cleopatra#123',
     	"HOST": "127.0.0.1",
+=======
+engine=os.getenv('DB_ENGINE')
+name=os.getenv('DB_NAME')
+user=os.getenv('DB_USER')
+password=os.getenv('DB_PASSWORD')
+host= os.getenv('DB_HOST')
+  
+
+DATABASES = {
+	'default': {
+		'ENGINE': 'django.db.backends.mysql',
+		'NAME': name,
+		'USER': user,
+		'PASSWORD': password,
+		'HOST':host ,
+>>>>>>> origin/dev_shravani
 		'PORT':'3306',
 	}
 }
+
+
+
+# DATABASES = {
+# 	'default': {
+# 		'ENGINE': 'django.db.backends.mysql',
+# 		'NAME': 'prep',
+# 		'USER': 'root',
+# 		'PASSWORD': 'Areum_02',
+# 		'HOST':'localhost',
+# 		'PORT':'3306',
+# 	}
+# }
 
 
 
@@ -136,9 +178,10 @@ STATICFILES_DIRS=[
 
 
 
-MEDIA_URL= '/images/'
 
-MEDIA_ROOT=os.path.join(BASE_DIR,"static/images")
+MEDIA_ROOT=os.path.join(BASE_DIR,"media")
+
+MEDIA_URL='/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

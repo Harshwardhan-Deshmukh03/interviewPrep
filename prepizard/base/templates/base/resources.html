@@ -34,8 +34,6 @@
         <div class="sidebar-content">
           <nav class="menu open-current-submenu">
             <ul>
-              <li class="menu-header"><span> GENERAL </span></li>
-
               <li class="menu-item sub-menu" id="userMenu">
                 <a href="#">
                     <span class="menu-icon">
@@ -49,11 +47,30 @@
                             <a href="{% url 'profile' %}">Profile</a>
                         </li>
                         <li class="menu-item">
+                          <a href="{% url 'logout' %}">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+              <li class="menu-item sub-menu" id="userMenu">
+                <a href="{% url 'userhome' %}">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-home" style="color: #e6e6e6;"></i>
+                    </span>
+                    <span class="menu-title">Home</span>
+                </a>
+                <div class="sub-menu-list" style="display: none;">
+                    <ul>
+                        <li class="menu-item">
+                            <a href="{% url 'profile' %}">Profile</a>
+                        </li>
+                        <li class="menu-item">
                           <a href="{% url 'logout' %}">Logout</a>
                         </li>
                     </ul>
                 </div>
             </li>
+              
               
               <li class="menu-item sub-menu">
                 <a href="{% url 'about' %}">
@@ -62,7 +79,7 @@
                   </span>
                   <span class="menu-title">About Us</span>
                   <span class="menu-suffix">
-                    <span class="badge primary">Hot</span>
+                    <!-- <span class="badge primary">Hot</span> -->
                   </span>
                 </a>
                 <div class="sub-menu-list">
@@ -70,24 +87,48 @@
                 </div>
               </li>
               
+              <li class="menu-item sub-menu">
+                <a href="{% url 'forums' %}">
+                  <span class="menu-icon">
+                   <i class="fa-solid fa-people-arrows" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Discussion Forums</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
+              </li>
               
               <li class="menu-item sub-menu">
-                <a href="{% url 'practice' %}" >
+                <a href="{% url 'practice' %}">
                   <span class="menu-icon">
-                    <i class="ri-global-fill"></i>
+                   <i class="fa-solid ri-global-fill" style="color: #e6e6e6;"></i>
                   </span>
                   <span class="menu-title">Practice</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
                 </a>
                 <div class="sub-menu-list">
                   
                 </div>
               </li>
+              
+              
               <li class="menu-item sub-menu">
+<<<<<<< HEAD
                 <a href="">
+=======
+                <a href="{% url 'usersheet' %}">
+>>>>>>> origin/dev_shravani
                   <span class="menu-icon">
-                    <i class="ri-book-2-fill"></i>
+                   <i class="fa-solid ri-book-fill" style="color: #e6e6e6;"></i>
                   </span>
                   <span class="menu-title">Resources</span>
+<<<<<<< HEAD
                 <!--aarya-->>
                 <div class="sub-menu-list">
                   
@@ -97,15 +138,34 @@
                 <a href="{% url 'mixide' %}">
                   <span class="menu-icon">
                    <i class="ri-paint-brush-fill"></i>
+=======
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+>>>>>>> origin/dev_shravani
                   </span>
-                  <span class="menu-title">onlineIDE</span>
                 </a>
                 <div class="sub-menu-list">
                   
                 </div>
               </li>
-              <li class="menu-header" style="padding-top: 20px"><span> EXTRA </span></li>
               
+              
+              <li class="menu-item sub-menu">
+                <a href="{% url 'mix' %}" target="_blank">
+                  <span class="menu-icon">
+                   <i class="fa-solid ri-paint-brush-fill" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Online IDE</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  
+                </div>
+              </li>
+              
+             
             </ul>
           </nav>
         </div>
@@ -128,6 +188,7 @@
     <div id="overlay" class="overlay"></div>
     <div class="layout">
       <span class="content">
+        <div class="unique-container">
         
           <div class="left-content">
             <div class="activities">
@@ -135,7 +196,7 @@
                  <h2>
                   All you need, in one place!
                  </h2>
-                 <div class="weekly-schedule">
+                 
                   <h1>Courses</h1>
                   <div class="calendar">
                     <div class="day-and-activity activity-one">

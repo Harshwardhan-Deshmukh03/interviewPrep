@@ -9,6 +9,7 @@ from django.template.loader import get_template
 from xhtml2pdf import pisa
 from django.contrib.auth.models import User 
 from .models import *
+<<<<<<< HEAD
 import io
 
 
@@ -442,6 +443,9 @@ def que(request):
 # from django.contrib.auth import authenticate,login,logout
 # from django.contrib.auth.models import User 
 # from .models import *
+=======
+from django.utils.text import slugify
+>>>>>>> origin/dev_shravani
 
 
 # Create your views here.
@@ -575,11 +579,19 @@ def add_course(request):
     if request.method == 'POST':
         course_name = request.POST.get('course_name')
         course_description = request.POST.get('course_description')
+
+        if not course_name or not course_description:
+            messages.error(request, "Both course name and description are required.")
+            return redirect('adminpractice')
         
         course = Course.objects.create(course_name=course_name, course_description=course_description)
+        room_name = course_name
+        slug = slugify(course_name)
+        room = Room.objects.create(name=room_name, slug=slug)
         
         messages.success(request, "Course added successfully!")
         # Replace 'dashboard' with the name of your dashboard URL
+        return redirect('adminpractice')
         
     return render(request, 'base/add_course.html')
 
@@ -600,6 +612,11 @@ def add_question(request,pk):
         option3 = request.POST.get('option3')
         option4 = request.POST.get('option4')
         correct_option = request.POST.get('correct_option')
+
+        if not question_text or not option1 or not option2 or not option3 or not option4 or not correct_option:
+            # Add an error message if any field is missing
+            messages.error(request, "All fields are required.")
+            return redirect('add_question', pk=pk)
 
         # Create and save the Question instance
         question = Question.objects.create(
@@ -640,6 +657,46 @@ def adminpractice(request):
         'courses': courses
     }
     return render(request,'base/practice_admin.html',context )
+
+
+
+
+
+def practice(request):
+    courses = Course.objects.all()
+    context = {
+        'courses': courses
+    }
+    return render(request,'base/practice.html',context)
+
+
+
+
+
+
+def coursequestion(request, pk):
+    course = Course.objects.get(pk=pk)
+    questions = Question.objects.filter(course=course)
+    
+    # Get attempts for the current user
+    user = request.user.student
+    attempts = Attempt.objects.filter(student=user, question__in=questions)
+    
+    # Create a dictionary to store question IDs and attempts
+    question_attempt_map = []
+    for attempt in attempts:
+        # print(attempt.question.id)
+        question_attempt_map.append(attempt.question.id)
+    
+    context = {
+        'course': course,
+        'questions': questions,
+        'question_attempt_map': question_attempt_map,
+    }
+    return render(request, 'base/course_question.html', context)
+
+
+
 
 
 
@@ -724,9 +781,6 @@ def profile(request):
 def python(request):
     return render(request,'base/python.html')
 
-def practice(request):
-    return render(request,'base/practice.html')
-
 
 def about(request):
     return render(request, 'base/about.html')
@@ -761,8 +815,142 @@ def adminresource(request):
     }
     return render(request,'base/resource_admin.html',context )
 
-def que(request):
-    return render(request, 'base/que.html')
+
+
+def show_question(request, pk):
+    question = Question.objects.get(pk=pk)
+    
+    if request.method == 'POST':
+        selected_option = request.POST.get('selected_option')
+        
+        # Determine if the question has been attempted by the current user
+        user = request.user.student
+        print(user)
+        attempted = Attempt.objects.filter(student=user, question=question).exists()
+        
+        if attempted:
+            # User has already attempted the question, do not process the answer again
+            messages.error(request, "You've already attempted this question.")
+            if int(selected_option) == question.correct_option:
+                messages.success(request,"You have correctly answered question.")
+            else:
+                messages.error(request, "Wrong answer.")
+            return redirect('que', pk=pk)
+        else:
+            # Create a new attempt object to store the user's answer
+            attempt = Attempt(student=user, question=question)
+            attempt.attempted = True
+            
+            # Check if the selected option is correct
+            if int(selected_option) == question.correct_option:
+                attempt.correct_attempt = True
+                # Increase the user's score if the answer is correct
+                user.score += 1
+                user.save()
+                messages.success(request,"You have correctly answered question. You have earned a point. ")
+                return redirect('que',pk=pk)
+            else:
+                attempt.correct_attempt = False
+                messages.error(request, "Wrong answer.")
+                return redirect(show_question,pk=pk)
+
+            
+            attempt.save()
+            
+            # Redirect to the same question page after processing the answer
+            return redirect('que', pk=pk)
+    
+    # If it's a GET request, render the question page as usual
+    attempted_attempt = Attempt.objects.filter(student=request.user.student, question=question).first()
+    attempted = attempted_attempt is not None
+    correct_attempt = attempted_attempt.correct_attempt if attempted_attempt else False
+    
+    context = {
+        'question': question,
+        'attempted': attempted,
+        'correct_attempt': correct_attempt,  # Pass the 'correct_attempt' variable to the template
+    }
+    print(context)
+    return render(request, 'base/que.html', context)
+
+
+
+
+
+
+
+
+def forums(request):
+    rooms=Room.objects.all()
+    return render(request,'base/forums.html',{'rooms':rooms})
+
+
+def room(request,slug):
+    room=Room.objects.get(slug=slug)
+    messages = Message.objects.filter(room=room).order_by('-date_added')[:50][::-1]
+    return render(request,'base/room.html',{'room':room,'messages':messages})
+
+
+# FORUMULA SHEETS
+
+
+
+
+
+def add_sheet(request):
+    if request.method == 'POST':
+        topic_name = request.POST.get('topic_name')
+        description = request.POST.get('description')
+        pdf_file = request.FILES.get('pdf_file')  # Assuming file input name is 'pdf_file'
+        print(topic_name,description)
+        if topic_name and pdf_file:
+            cheatsheet = CheatSheet.objects.create(
+                topic_name=topic_name,
+                description=description,
+                pdf_file=pdf_file
+            )
+            messages.success(request, "Cheat sheet added successfully!")
+        else:
+            messages.error(request, "Please fill in all required fields.")
+        return redirect('adminsheet')
+
+    return render(request, 'base/addsheet.html')
+
+
+
+
+
+
+
+
+def adminsheet(request):
+    cheatsheets = CheatSheet.objects.all()
+    for sheet in cheatsheets:
+        print(sheet.pdf_file)
+    context = {
+        'cheatsheets': cheatsheets
+    }
+    return render(request, 'base/adminsheet.html', context)
+
+
+
+
+def usersheet(request):
+    cheatsheets = CheatSheet.objects.all()
+    for sheet in cheatsheets:
+        print(sheet.pdf_file)
+    context = {
+        'cheatsheets': cheatsheets
+    }
+    return render(request, 'base/usersheet.html', context)
+
+
+
+
+
+
+
+
 
 
 from .models import Resource

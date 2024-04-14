@@ -34,6 +34,7 @@ urlpatterns = [
      path('add_course/', views.add_course, name='add_course'),
      path('add_resource/', views.add_resource, name='add_resource'),
     path('add_question/<str:pk>', views.add_question, name='add_question'),
+    path('questions/<int:pk>', views.coursequestion, name='course_question'),
 
     path('python/' , views.python ,name = "python"),
     path('practice/' , views.practice ,name = "practice"),
@@ -41,13 +42,17 @@ urlpatterns = [
     path('about/', views.resources, name='resources'),
     path('adminabout/', views.adminabout, name='adminabout'),
     path('resources/', views.resources, name='resources'),
-    path('que/', views.que, name='que'),
+    # path('que/', views.que, name='que'),
  
     
-    path('que/', views.que, name='que'),
+    path('que/<int:pk>', views.show_question, name='que'),
+    path('forums/', views.forums, name='forums'),
+    path('room/<slug:slug>', views.room, name='room'),
 
     #Aarya's code :
-    path('resources/', views.resources, name='resources'),
+    path('add_sheet/', views.add_sheet, name='addsheet'),
+    path('adminsheet/', views.adminsheet, name='adminsheet'),
+    path('usersheet/', views.usersheet, name='usersheet'),
     path('cheatsheet/<str:topic>/', views.cheatsheet, name='cheatsheet'),
     path('generate-pdf/<str:topic>/', views.generate_pdf, name='generate_pdf'),
 

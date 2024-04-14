@@ -1,21 +1,20 @@
 {% comment %} {% extends "base/main.html" %} {% endcomment %}
 {% load static %}
 
-<link rel="stylesheet" href='{% static "css/adminhome.css" %}'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css'>
 <link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
 <link rel='stylesheet' href='https://fonts.googleaphttps://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.cssis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'>
-<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'><link rel="stylesheet" href="./style.css">
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-P0D0rqiGpblz5bd+VZ/euHJh2Q7gJXkecqpgQ7pvu3qJbV7axu8fMMDZ7xbOEF+fmBtHKfYXscBdb7m3xq3zJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+<link rel="stylesheet" href='{% static "css/about.css" %}'>
 
 
 {% block content %}
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css'>
+{% comment %} <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css'>
 <link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
 <link rel='stylesheet' href='https://fonts.googleaphttps://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.cssis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'>
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'><link rel="stylesheet" href="./style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-P0D0rqiGpblz5bd+VZ/euHJh2Q7gJXkecqpgQ7pvu3qJbV7axu8fMMDZ7xbOEF+fmBtHKfYXscBdb7m3xq3zJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-P0D0rqiGpblz5bd+VZ/euHJh2Q7gJXkecqpgQ7pvu3qJbV7axu8fMMDZ7xbOEF+fmBtHKfYXscBdb7m3xq3zJw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> {% endcomment %}
 
 
 
@@ -35,9 +34,87 @@
         <div class="sidebar-content">
           <nav class="menu open-current-submenu">
             <ul>
-              <li class="menu-header"><span> GENERAL </span></li>
+            
              
               
+              <li class="menu-item sub-menu">
+                <a href="{% url 'adminhome' %}">                  <span class="menu-icon">
+                   <i class="fa-solid fa-home" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Home</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  <ul>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Grid</span>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Layout</span>
+                      </a>
+                    </li>
+                    <li class="menu-item sub-menu">
+                      <a href="#">
+                        <span class="menu-title">Forms</span>
+                      </a>
+                      <div class="sub-menu-list">
+                        <ul>
+                          <li class="menu-item">
+                            <a href="#">
+                              <span class="menu-title">Input</span>
+                            </a>
+                          </li>
+                          <li class="menu-item">
+                            <a href="#">
+                              <span class="menu-title">Select</span>
+                            </a>
+                          </li>
+                          <li class="menu-item sub-menu">
+                            <a href="#">
+                              <span class="menu-title">More</span>
+                            </a>
+                            <div class="sub-menu-list">
+                              <ul>
+                                <li class="menu-item">
+                                  <a href="#">
+                                    <span class="menu-title">CheckBox</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item">
+                                  <a href="#">
+                                    <span class="menu-title">Radio</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item sub-menu">
+                                  <a href="#">
+                                    <span class="menu-title">Want more ?</span>
+                                    <span class="menu-suffix">&#x1F914;</span>
+                                  </a>
+                                  <div class="sub-menu-list">
+                                    <ul>
+                                      <li class="menu-item">
+                                        <a href="#">
+                                          <span class="menu-prefix">&#127881;</span>
+                                          <span class="menu-title">You made it </span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
               <li class="menu-item sub-menu">
                 <a href="{% url 'adminabout' %}">                  <span class="menu-icon">
                    <i class="fa-solid fa-user-group" style="color: #e6e6e6;"></i>
@@ -117,93 +194,13 @@
                 </div>
               </li>
               <li class="menu-item sub-menu">
-                <a href="{% url 'adminpractice' %}">
-                  <span class="menu-icon">
-                   <i class="fa-solid fa-user-magnifying-glass" style="color: #e6e6e6;"></i>
+                <a href="{% url 'adminpractice' %}">                 <span class="menu-icon">
+                  <i class="ri-global-fill"></i>
                   </span>
                   <span class="menu-title">Practice</span>
-                </a>
-                
-              </li>
-              
-              <li class="menu-item sub-menu">
-                <a href="{% url 'adminpractice' %}">
-                  <span class="menu-icon">
-                    <i class="ri-global-fill"></i>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
                   </span>
-                  <span class="menu-title">Practice</span>
-                </a>
-                <div class="sub-menu-list">
-                  <ul>
-                    <li class="menu-item">
-                      <a href="#">
-                        <span class="menu-title">Google maps</span>
-                      </a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="#">
-                        <span class="menu-title">Open street map</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="menu-item sub-menu">
-                <a href="{% url 'adminresource' %}">
-                  <span class="menu-icon">
-                    <i class="ri-book-2-fill"></i>
-                  </span>
-                  <span class="menu-title">Resources</span>
-                </a>
-                <div class="sub-menu-list">
-                  <ul>
-                    <li class="menu-item">
-                      <a href="#">
-                        <span class="menu-title">Pie chart</span>
-                      </a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="#">
-                        <span class="menu-title">Line chart</span>
-                      </a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="#">
-                        <span class="menu-title">Bar chart</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="menu-item sub-menu">
-                <a href="{% url 'mix' %}" target="_blank">
-                  <span class="menu-icon">
-                   <i class="ri-paint-brush-fill"></i>
-                  </span>
-                  <span class="menu-title">onlineIDE</span>
-                </a>
-                <div class="sub-menu-list">
-                  <ul>
-                    <li class="menu-item">
-                      <a href="#">
-                        <span class="menu-title">Dark</span>
-                      </a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="#">
-                        <span class="menu-title">Light</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="menu-item sub-menu">
-                <a href="{% url 'logout' %}">
-                  <span class="menu-icon">
-                   <i class="fa-solid fa-user" style="color: #e6e6e6;"></i>
-                  </span>
-                  <span class="menu-title">LOGOUT</span>
-                  
                 </a>
                 <div class="sub-menu-list">
                   <ul>
@@ -274,27 +271,424 @@
                   </ul>
                 </div>
               </li>
-              <li class="menu-header" style="padding-top: 20px"><span> EXTRA </span></li>
+              <li class="menu-item sub-menu">
+                <a href="{% url 'adminsheet' %}">                <span class="menu-icon">
+                   <i class="ri-book-2-fill" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Resource</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  <ul>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Grid</span>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Layout</span>
+                      </a>
+                    </li>
+                    <li class="menu-item sub-menu">
+                      <a href="#">
+                        <span class="menu-title">Forms</span>
+                      </a>
+                      <div class="sub-menu-list">
+                        <ul>
+                          <li class="menu-item">
+                            <a href="#">
+                              <span class="menu-title">Input</span>
+                            </a>
+                          </li>
+                          <li class="menu-item">
+                            <a href="#">
+                              <span class="menu-title">Select</span>
+                            </a>
+                          </li>
+                          <li class="menu-item sub-menu">
+                            <a href="#">
+                              <span class="menu-title">More</span>
+                            </a>
+                            <div class="sub-menu-list">
+                              <ul>
+                                <li class="menu-item">
+                                  <a href="#">
+                                    <span class="menu-title">CheckBox</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item">
+                                  <a href="#">
+                                    <span class="menu-title">Radio</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item sub-menu">
+                                  <a href="#">
+                                    <span class="menu-title">Want more ?</span>
+                                    <span class="menu-suffix">&#x1F914;</span>
+                                  </a>
+                                  <div class="sub-menu-list">
+                                    <ul>
+                                      <li class="menu-item">
+                                        <a href="#">
+                                          <span class="menu-prefix">&#127881;</span>
+                                          <span class="menu-title">You made it </span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item sub-menu">
+                <a href="{% url 'mix' %}" target="_blank">               <span class="menu-icon">
+                   <i class="ri-paint-brush-fill" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Online IDE</span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  <ul>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Grid</span>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Layout</span>
+                      </a>
+                    </li>
+                    <li class="menu-item sub-menu">
+                      <a href="#">
+                        <span class="menu-title">Forms</span>
+                      </a>
+                      <div class="sub-menu-list">
+                        <ul>
+                          <li class="menu-item">
+                            <a href="#">
+                              <span class="menu-title">Input</span>
+                            </a>
+                          </li>
+                          <li class="menu-item">
+                            <a href="#">
+                              <span class="menu-title">Select</span>
+                            </a>
+                          </li>
+                          <li class="menu-item sub-menu">
+                            <a href="#">
+                              <span class="menu-title">More</span>
+                            </a>
+                            <div class="sub-menu-list">
+                              <ul>
+                                <li class="menu-item">
+                                  <a href="#">
+                                    <span class="menu-title">CheckBox</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item">
+                                  <a href="#">
+                                    <span class="menu-title">Radio</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item sub-menu">
+                                  <a href="#">
+                                    <span class="menu-title">Want more ?</span>
+                                    <span class="menu-suffix">&#x1F914;</span>
+                                  </a>
+                                  <div class="sub-menu-list">
+                                    <ul>
+                                      <li class="menu-item">
+                                        <a href="#">
+                                          <span class="menu-prefix">&#127881;</span>
+                                          <span class="menu-title">You made it </span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item sub-menu">
+                <a href="{% url 'logout' %}">                 <span class="menu-icon">
+                   <i class="fa-solid fa-user" style="color: #e6e6e6;"></i>
+                  </span>
+                  <span class="menu-title">Logout </span>
+                  <span class="menu-suffix">
+                    <!-- <span class="badge primary">Hot</span> -->
+                  </span>
+                </a>
+                <div class="sub-menu-list">
+                  <ul>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Grid</span>
+                      </a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#">
+                        <span class="menu-title">Layout</span>
+                      </a>
+                    </li>
+                    <li class="menu-item sub-menu">
+                      <a href="#">
+                        <span class="menu-title">Forms</span>
+                      </a>
+                      <div class="sub-menu-list">
+                        <ul>
+                          <li class="menu-item">
+                            <a href="#">
+                              <span class="menu-title">Input</span>
+                            </a>
+                          </li>
+                          <li class="menu-item">
+                            <a href="#">
+                              <span class="menu-title">Select</span>
+                            </a>
+                          </li>
+                          <li class="menu-item sub-menu">
+                            <a href="#">
+                              <span class="menu-title">More</span>
+                            </a>
+                            <div class="sub-menu-list">
+                              <ul>
+                                <li class="menu-item">
+                                  <a href="#">
+                                    <span class="menu-title">CheckBox</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item">
+                                  <a href="#">
+                                    <span class="menu-title">Radio</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item sub-menu">
+                                  <a href="#">
+                                    <span class="menu-title">Want more ?</span>
+                                    <span class="menu-suffix">&#x1F914;</span>
+                                  </a>
+                                  <div class="sub-menu-list">
+                                    <ul>
+                                      <li class="menu-item">
+                                        <a href="#">
+                                          <span class="menu-prefix">&#127881;</span>
+                                          <span class="menu-title">You made it </span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             
+              
+             
               
             </ul>
           </nav>
         </div>
-        
       </div>
     </aside>
     <div id="overlay" class="overlay"></div>
     <div class="layout">
       <span class="content">
         
-        
+  
+           
+<div class="unique-container">
+  <div class="container">
+      <div class="box">
+        <h1>Welcome to PrepIzard 🔥</h1>
+          
+          <div class="activities">
+            <img class="banner__image banner__image--vertical" srcset="https://assets.interviewbit.com/assets/ibpp/banner-mobile-figure-dd109a64c8f9d02a43ae2eb971929c9be87869687d9767ca4c848c5ebcef0b28.svg.gz 387w,
+          https://assets.interviewbit.com/assets/ibpp/banner-large-figure-b0a3ed9907d90e08b1c0132cf6cca0ddb5fae5ad74fe96bc3551b0f6dc1e7333.svg.gz 1040w" sizes="(max-width: 768px) 275px,
+          800px" src="https://assets.interviewbit.com/assets/ibpp/banner-mobile-figure-dd109a64c8f9d02a43ae2eb971929c9be87869687d9767ca4c848c5ebcef0b28.svg.gz" alt="ib landing page hero image" fetchpriority="high">
+          
+          <h1></h1>
+          <h1></h1>
+          <h1></h1>
+
+              
+                 <h2>
+                  At Prepizard, we understand the challenges and anxieties that come with preparing for interviews. Whether you're a fresh graduate seeking your first job or a seasoned professional aiming for career advancement, we're here to support you every step of the way.
+
+Our Mission
+
+Our mission is to empower individuals to excel in their interviews through comprehensive resources, expert guidance, and personalized support. We believe that with the right preparation and confidence-building techniques, anyone can succeed in their interview endeavors.                         .
+                 </h2>
+                 
+              
+              
+              
+            </div>
+          
+      </div>
       
-        </span>
-      <div class="overlay"></div>
-    </div>
   </div>
+
+  <div class="container">
+    <div class="box">
+        
+        <div class="activities">
+          <div data-gtm-element="sat_banner_section" data-gtm-allowed-actions="scroll" class="gtm-track-element sr-container">
+            <div class="sat-banner">
+              <div class="sat-banner__wrap">
+                
+                
+                <div class="sat-banner__poster hide-in-tablet">
+                  <div> 
+                    <h1>  You can practice your coding with us !!!</h>
+                  </div>
+                  <div class="sat-banner__poster-img">
+                    <img src="https://assets.interviewbit.com/assets/ibpp/SAT-2a8bf1f7f36e5528324b05cba08730e687a5c6a1db6449b2e25e497b2da43771.svg.gz" alt="Sat 2a8bf1f7f36e5528324b05cba08730e687a5c6a1db6449b2e25e497b2da43771.svg">
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div> 
+        
+        
+        </div>
+        
+    </div>
+    
+</div>
+
+<div class="container">
+  <div class="box">
+      
+      <div class="activities">
+          <h1>learn and practice question</h1>
+             <h2>
+              "Empower Your Learning: Dive Deep into Practice Questions, Forge Unstoppable Mastery!"                         .
+             </h2>
+             <div class="weekly-schedule">
+              <h1>Courses</h1>
+              <div class="calendar">
+                <div class="day-and-activity activity-one">
+                  <div class="day">
+                    
+                  </div>
+                  <div class="activity">
+                    <h2>Data Science</h2>
+                    
+                  </div>
+                  <button class="btn">solve</button>
+                </div>
+
+                <div class="day-and-activity activity-two">
+                  <div class="day">
+                    
+                  </div>
+                  <div class="activity">
+                    <h2>Programming</h2>
+                    
+                  </div>
+                   <button class="btn">solve</button>
+                </div>
+
+                <div class="day-and-activity activity-three">
+                  <div class="day">
+                    
+                  </div>
+                  <div class="activity">
+                    <h2>Databases</h2>
+                    
+                  </div>
+                  <button class="btn">solve</button>
+                </div>
+
+                <div class="day-and-activity activity-four">
+                  <div class="day">
+                    
+                  </div>
+                  <div class="activity">
+                    <h2>System Design</h2>
+                    
+                  </div>
+                  <button class="btn">solve</button>
+                </div>
+              </div>
+            </div> 
+          
+          
+          
+        </div>
+      
+  </div>
+  
+</div>
+
+  <div class="overlay"></div>
+
+</div>
+
+
+
+
+
+
+
+
 
 <script src='https://unpkg.com/@popperjs/core@2'></script>
 
-<script src='{% static "js/adminhome.js" %}'></script>
+<script src="{% static "js/landing.js" %}"></script>
+
+<script>
+  document.getElementById('userMenu').addEventListener('click', function() {
+      var subMenu = this.querySelector('.sub-menu-list');
+      if (subMenu.style.display === 'none' || subMenu.style.display === '') {
+          subMenu.style.display = 'block';
+      } else {
+          subMenu.style.display = 'none';
+      }
+  });
+</script>
+
 
 {% endblock %}
