@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.shortcuts import render, redirect 
+from django.shortcuts import render, redirect ,get_object_or_404
 from .utils import *
 from django.contrib import messages
 from .decorators import *
@@ -17,6 +17,7 @@ from django.utils.text import slugify
 # 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['User'])
 def home(request):
     user = request.user
     context = {
@@ -137,6 +138,8 @@ def logoutUser(request):
 
 
 
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['Admin'])
 def add_course(request):
     if request.method == 'POST':
         course_name = request.POST.get('course_name')
@@ -162,6 +165,8 @@ def add_course(request):
 
 
 
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['Admin'])
 def add_question(request,pk):
     # Handle adding a question logic here
     if request.method == 'POST':
@@ -213,6 +218,8 @@ def add_question(request,pk):
 
 
 
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['Admin'])
 def adminpractice(request):
     courses = Course.objects.all()
     context = {
@@ -224,6 +231,8 @@ def adminpractice(request):
 
 
 
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['User'])
 def practice(request):
     courses = Course.objects.all()
     context = {
@@ -236,6 +245,8 @@ def practice(request):
 
 
 
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['User'])
 def coursequestion(request, pk):
     course = Course.objects.get(pk=pk)
     questions = Question.objects.filter(course=course)
@@ -243,12 +254,16 @@ def coursequestion(request, pk):
     # Get attempts for the current user
     user = request.user.student
     attempts = Attempt.objects.filter(student=user, question__in=questions)
-    
+    print(attempts)
+    print("hi")
+    for attempt in attempts:
+        print("hi")
     # Create a dictionary to store question IDs and attempts
     question_attempt_map = []
     for attempt in attempts:
-        # print(attempt.question.id)
+        print(attempt.question.id)
         question_attempt_map.append(attempt.question.id)
+
     
     context = {
         'course': course,
@@ -256,7 +271,6 @@ def coursequestion(request, pk):
         'question_attempt_map': question_attempt_map,
     }
     return render(request, 'base/course_question.html', context)
-
 
 
 
@@ -313,6 +327,7 @@ def ide(request,pk):
 # 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['User'])
 def userhome(request):
     top_10_ranks = Student.objects.order_by('-score')[:10]
     context = {
@@ -331,9 +346,14 @@ def adminhome(request):
     return render(request,'base/adminhome.html')
 
 
+
 def mcq(request):
     return render(request,'base/mcq.html')
 
+
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['User'])
 def profile(request):
     student = Student.objects.get(user=request.user)
     higher_score_count = Student.objects.filter(score__gt=student.score).count()
@@ -344,6 +364,38 @@ def profile(request):
     }
     # print(student.phone)
     return render(request,'base/profile.html',context )
+
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['User'])
+def editprofile(request):
+    student = request.user.student
+
+    if request.method == 'POST':
+        student.name = request.POST.get('name')
+        student.email = request.POST.get('email')
+        student.phone = request.POST.get('phone')
+        student.college = request.POST.get('college')
+        student.save()
+
+        # Update associated User's username
+        user = student.user
+        user.username = request.POST.get('email')
+        user.save()
+
+        return redirect('profile')
+
+    context = {'student': student}
+    return render(request, 'base/editprofile.html', context)
+
+
+# def editprofile(request):
+#     student = Student.objects.get(user=request.user)
+#     context = {
+#         'student': student
+#     }
+#     # print(student.phone)
+#     return render(request,'base/editprofile.html',context )
 
 def python(request):
     return render(request,'base/python.html')
@@ -356,6 +408,8 @@ def resources(request):
     return render(request, 'base/resources.html')
 
 
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['Admin'])
 def adminabout(request):
     return render(request, 'base/adminabout.html')
 
@@ -375,6 +429,8 @@ def add_resource(request):
     return render(request, 'base/add_resource.html')
 
 
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['Admin'])
 def adminresource(request):
     resources = Resource.objects.all()
     context = {
@@ -383,6 +439,9 @@ def adminresource(request):
     return render(request,'base/resource_admin.html',context )
 
 
+
+def error(request):
+    return render(request,'base/error.html')
 
 def show_question(request, pk):
     question = Question.objects.get(pk=pk)
@@ -415,11 +474,11 @@ def show_question(request, pk):
                 user.score += 1
                 user.save()
                 messages.success(request,"You have correctly answered question. You have earned a point. ")
-                return redirect('que',pk=pk)
+               
             else:
                 attempt.correct_attempt = False
                 messages.error(request, "Wrong answer.")
-                return redirect(show_question,pk=pk)
+                
 
             
             attempt.save()
@@ -447,6 +506,9 @@ def show_question(request, pk):
 
 
 
+
+
+
 def forums(request):
     rooms=Room.objects.all()
     return render(request,'base/forums.html',{'rooms':rooms})
@@ -460,8 +522,34 @@ def room(request,slug):
 
 # FORUMULA SHEETS
 
+def delete_cheatsheet(request, sheet_id):
+    cheatsheet = get_object_or_404(CheatSheet, id=sheet_id)
+   
+    
+    # Delete the cheatsheet
+    cheatsheet.delete()
+    return redirect('adminsheet')
 
 
+def delete_course(request, course):
+    coursenow = get_object_or_404(Course, id=course)
+    # Delete the cheatsheet
+    coursenow.delete()
+    return redirect('adminpractice')
+
+def delete_course(request, sheet_id):
+    coursenow = get_object_or_404(Course, id=sheet_id)
+    
+    # Delete associated questions
+    questions = Question.objects.filter(course=coursenow)
+    questions.delete()
+
+    # Delete associated rooms
+    
+    # Delete the course
+    coursenow.delete()
+
+    return redirect('adminpractice')
 
 
 def add_sheet(request):

@@ -10,6 +10,8 @@ urlpatterns = [
     path('login/',views.loginPage,name="login"),
     path('logout/',views.logoutUser,name="logout"),
     path('register/',views.register,name="register"),
+     path('delete_cheatsheet/<int:sheet_id>/', views.delete_cheatsheet, name='delete_cheatsheet'),
+     path('delete_course/<str:sheet_id>/', views.delete_course, name='delete_course'),
 
 
 
@@ -27,6 +29,7 @@ urlpatterns = [
 
     path('mcq/' , views.mcq ,name = "mcq"),
     path('profile/' , views.profile ,name = "profile"),
+    path('editprofile/' , views.editprofile ,name = "editprofile"),
     path('adminpractice/' , views.adminpractice ,name = "adminpractice"),
     path('adminresource/' , views.adminresource ,name = "adminresource"),
 
@@ -41,6 +44,7 @@ urlpatterns = [
     path('about/', views.resources, name='resources'),
     path('adminabout/', views.adminabout, name='adminabout'),
     path('resources/', views.resources, name='resources'),
+    path('error/', views.error, name='error'),
     # path('que/', views.que, name='que'),
  
     
